@@ -12,8 +12,8 @@
 			<button style="margin-top: 20px;" type="primary" @click="createAdds">创建地址</button>
 			<button style="margin-top: 20px;" type="primary" @click="exportAdds">导出地址</button>
 		</div>
-		<uni-section title="地址数据" type="line">
-			<div style="background-color: aliceblue;margin-bottom: 20px;display: flex;" v-for="(item,index) in adds"
+		<uni-section style="" title="地址数据 显示前100" type="line">
+			<div style="background-color: aliceblue;margin-bottom: 20px;display: flex;" v-for="(item,index) in showAdds"
 				:key="index">
 				<div class="index-text">
 					{{index +1}}
@@ -53,6 +53,7 @@
 					text: "SOL"
 				}, ],
 				count: "10",
+				showAdds: [],
 				adds: []
 			}
 		},
@@ -84,6 +85,7 @@
 						data.push(info);
 					}
 					this.adds = data;
+					this.showAdds = data.slice(0, 100);
 					console.log(data);
 					uni.hideLoading();
 				} catch (e) {
@@ -122,7 +124,7 @@
 				return newHex;
 			},
 			exportToExcel(data, sheetName, fileName) {
-				
+
 				uni.shareWithSystem({
 					summary: data,
 				})
@@ -136,7 +138,7 @@
 	.index-text {}
 
 	.long-text {
-		width: 100%;
 		text-overflow: ellipsis;
+		overflow-wrap: anywhere;
 	}
 </style>

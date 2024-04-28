@@ -17967,13 +17967,14 @@ ${i3}
           text: "SOL"
         }],
         count: "10",
+        showAdds: [],
         adds: []
       };
     },
     methods: {
       change(e2) {
         this.chooseCoin = e2;
-        formatAppLog("log", "at pages/adds_manager/adds_manager.vue:62", "e:", e2);
+        formatAppLog("log", "at pages/adds_manager/adds_manager.vue:63", "e:", e2);
       },
       async createAdds() {
         try {
@@ -17997,7 +17998,8 @@ ${i3}
             data.push(info);
           }
           this.adds = data;
-          formatAppLog("log", "at pages/adds_manager/adds_manager.vue:87", data);
+          this.showAdds = data.slice(0, 100);
+          formatAppLog("log", "at pages/adds_manager/adds_manager.vue:89", data);
           uni.hideLoading();
         } catch (e2) {
           uni.hideLoading();
@@ -18016,7 +18018,7 @@ ${i3}
           return;
         }
         const jsonData = JSON.stringify(this.adds);
-        formatAppLog("log", "at pages/adds_manager/adds_manager.vue:107", jsonData);
+        formatAppLog("log", "at pages/adds_manager/adds_manager.vue:109", jsonData);
         this.exportToExcel(jsonData, "Sheet1", "地址数据");
       },
       byteToHex(byte) {
@@ -18033,7 +18035,6 @@ ${i3}
         return newHex;
       },
       exportToExcel(data, sheetName, fileName) {
-        uni.saveFile({});
         uni.shareWithSystem({
           summary: data
         });
@@ -18089,14 +18090,15 @@ ${i3}
         }, "导出地址")
       ]),
       vue.createVNode(_component_uni_section, {
-        title: "地址数据",
+        style: {},
+        title: "地址数据 显示前100",
         type: "line"
       }, {
         default: vue.withCtx(() => [
           (vue.openBlock(true), vue.createElementBlock(
             vue.Fragment,
             null,
-            vue.renderList($data.adds, (item, index) => {
+            vue.renderList($data.showAdds, (item, index) => {
               return vue.openBlock(), vue.createElementBlock("div", {
                 style: { "background-color": "aliceblue", "margin-bottom": "20px", "display": "flex" },
                 key: index

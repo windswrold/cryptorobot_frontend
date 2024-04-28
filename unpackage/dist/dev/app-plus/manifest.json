@@ -17,6 +17,7 @@
     "url": ""
   },
   "permissions": {
+    "Share": {},
     "UniNView": {
       "description": "UniNView原生渲染"
     }
@@ -60,6 +61,7 @@
           "<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>",
           "<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>",
           "<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>",
+          "<uses-permission android:name=\"android.permission.INTERNET\" />",
           "<uses-feature android:name=\"android.hardware.camera\"/>",
           "<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>"
         ]
@@ -69,6 +71,7 @@
       },
       "plugins": {
         "ad": {},
+        "share": {},
         "audio": {
           "mp3": {
             "description": "Android平台录音支持MP3格式文件"

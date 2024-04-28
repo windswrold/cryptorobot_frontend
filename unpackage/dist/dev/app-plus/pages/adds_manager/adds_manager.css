@@ -952,6 +952,6 @@
 
 .index-text {}
 .long-text {
-		width: 100%;
 		text-overflow: ellipsis;
+		overflow-wrap: anywhere;
 }

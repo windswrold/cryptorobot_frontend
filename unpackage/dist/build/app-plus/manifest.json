@@ -17,6 +17,7 @@
     "url": ""
   },
   "permissions": {
+    "Share": {},
     "UniNView": {
       "description": "UniNView原生渲染"
     }
@@ -69,6 +70,7 @@
       },
       "plugins": {
         "ad": {},
+        "share": {},
         "audio": {
           "mp3": {
             "description": "Android平台录音支持MP3格式文件"
