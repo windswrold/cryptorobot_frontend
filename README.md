@@ -1,1 +1,0 @@
-# cryptorobot_frontend
