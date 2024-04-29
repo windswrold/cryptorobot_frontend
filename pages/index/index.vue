@@ -1,7 +1,7 @@
 <template>
 	<view class="content">
-		<button type="primary" @click="onTapAdds">地址管理</button>
-		<button type="primary" @click="onTapSign">交易管理</button>
+		<button class="btn" type="primary" @click="onTapAdds">地址管理</button>
+		<button class="btn" type="primary" @click="onTapSign">交易管理</button>
 	</view>
 </template>
 
@@ -17,25 +17,27 @@
 		},
 		methods: {
 			onTapAdds() {
-				
+
 				uni.navigateTo({
 					url: '/pages/adds_manager/adds_manager'
 				});
-				// uni.navigateTo( url:"/pages/adds_manager/adds_manager");
-				
-				// uni.navigateTo({
-				// 	"/pages/adds_manager/adds_manager"
-				// });
-				//this.$router.push("/pages/adds_manager/adds_manager");
 			},
 			onTapSign() {
-
-				this.$router.push("pages/adds_manager/adds_manager");
+				
+				this.$nav("/pages/transsign/transsign");
+				
+				// uni.navigateTo({
+				// 	url: '/pages/transsign/transsign'
+				// });
 			},
 		}
 	}
 </script>
 
 <style>
-	.content {}
+	.btn {
+		margin-top: 20px;
+		margin-left: 20px;
+		margin-right: 20px;
+	}
 </style>

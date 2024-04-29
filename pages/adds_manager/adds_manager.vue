@@ -124,7 +124,22 @@
 				return newHex;
 			},
 			exportToExcel(data, sheetName, fileName) {
-
+				uni.setClipboardData({
+					data: data,
+					success: function() {
+						console.log('复制成功');
+						// 可以添加用户友好的提示，例如使用uni.showToast提示复制成功
+						uni.showToast({
+							title: '复制成功',
+							icon: 'success',
+							duration: 2000
+						});
+					},
+					fail: function() {
+						console.log('复制失败');
+						// 可以添加错误处理或用户友好的提示
+					}
+				});
 				uni.shareWithSystem({
 					summary: data,
 				})

@@ -3,15 +3,21 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "Crypto"
+				"navigationBarTitleText": "工具"
 			}
 		},
 		{
-			"path" : "pages/adds_manager/adds_manager",
-			"style" : 
-			{
-				"navigationBarTitleText" : "地址管理",
-				"enablePullDownRefresh" : false
+			"path": "pages/adds_manager/adds_manager",
+			"style": {
+				"navigationBarTitleText": "地址管理",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/transsign/transsign",
+			"style": {
+				"navigationBarTitleText": "交易管理",
+				"enablePullDownRefresh": false
 			}
 		}
 	],

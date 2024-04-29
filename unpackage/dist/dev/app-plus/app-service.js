@@ -38,7 +38,7 @@ if (uni.restoreGlobal) {
     }
     return target;
   };
-  const _sfc_main$6 = {
+  const _sfc_main$7 = {
     data() {
       return {
         title: "Hello"
@@ -53,23 +53,25 @@ if (uni.restoreGlobal) {
         });
       },
       onTapSign() {
-        this.$router.push("pages/adds_manager/adds_manager");
+        this.$nav("/pages/transsign/transsign");
       }
     }
   };
-  function _sfc_render$5(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$6(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", { class: "content" }, [
       vue.createElementVNode("button", {
+        class: "btn",
         type: "primary",
         onClick: _cache[0] || (_cache[0] = (...args) => $options.onTapAdds && $options.onTapAdds(...args))
       }, "地址管理"),
       vue.createElementVNode("button", {
+        class: "btn",
         type: "primary",
         onClick: _cache[1] || (_cache[1] = (...args) => $options.onTapSign && $options.onTapSign(...args))
       }, "交易管理")
     ]);
   }
-  const PagesIndexIndex = /* @__PURE__ */ _export_sfc(_sfc_main$6, [["render", _sfc_render$5], ["__file", "/Users/windpro/Documents/Code/cryptorobot_frontend/pages/index/index.vue"]]);
+  const PagesIndexIndex = /* @__PURE__ */ _export_sfc(_sfc_main$7, [["render", _sfc_render$6], ["__file", "/Users/windpro/Documents/Code/cryptorobot_frontend/pages/index/index.vue"]]);
   function requireNativePlugin(name) {
     return weex.requireModule(name);
   }
@@ -251,13 +253,20 @@ if (uni.restoreGlobal) {
     {
       path: "pages/index/index",
       style: {
-        navigationBarTitleText: "Crypto"
+        navigationBarTitleText: "工具"
       }
     },
     {
       path: "pages/adds_manager/adds_manager",
       style: {
         navigationBarTitleText: "地址管理",
+        enablePullDownRefresh: false
+      }
+    },
+    {
+      path: "pages/transsign/transsign",
+      style: {
+        navigationBarTitleText: "交易管理",
         enablePullDownRefresh: false
       }
     }
@@ -3610,7 +3619,7 @@ ${i3}
     const reg = /^[0-9]*$/g;
     return typeof val === "number" || reg.test(val) ? val + "px" : val;
   };
-  const _sfc_main$5 = {
+  const _sfc_main$6 = {
     name: "UniIcons",
     emits: ["click"],
     props: {
@@ -3664,7 +3673,7 @@ ${i3}
       }
     }
   };
-  function _sfc_render$4(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$5(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock(
       "text",
       {
@@ -3679,8 +3688,8 @@ ${i3}
       /* CLASS, STYLE */
     );
   }
-  const __easycom_0$1 = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["render", _sfc_render$4], ["__scopeId", "data-v-d31e1c47"], ["__file", "/Users/windpro/Documents/Code/cryptorobot_frontend/uni_modules/uni-icons/components/uni-icons/uni-icons.vue"]]);
-  const _sfc_main$4 = {
+  const __easycom_0$2 = /* @__PURE__ */ _export_sfc(_sfc_main$6, [["render", _sfc_render$5], ["__scopeId", "data-v-d31e1c47"], ["__file", "/Users/windpro/Documents/Code/cryptorobot_frontend/uni_modules/uni-icons/components/uni-icons/uni-icons.vue"]]);
+  const _sfc_main$5 = {
     name: "uni-data-select",
     mixins: [Ws.mixinDatacom || {}],
     props: {
@@ -3932,8 +3941,8 @@ ${i3}
       }
     }
   };
-  function _sfc_render$3(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_uni_icons = resolveEasycom(vue.resolveDynamicComponent("uni-icons"), __easycom_0$1);
+  function _sfc_render$4(_ctx, _cache, $props, $setup, $data, $options) {
+    const _component_uni_icons = resolveEasycom(vue.resolveDynamicComponent("uni-icons"), __easycom_0$2);
     return vue.openBlock(), vue.createElementBlock("view", { class: "uni-stat__select" }, [
       $props.label ? (vue.openBlock(), vue.createElementBlock(
         "span",
@@ -4072,8 +4081,8 @@ ${i3}
       )
     ]);
   }
-  const __easycom_0 = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["render", _sfc_render$3], ["__scopeId", "data-v-ddf9e0a2"], ["__file", "/Users/windpro/Documents/Code/cryptorobot_frontend/uni_modules/uni-data-select/components/uni-data-select/uni-data-select.vue"]]);
-  const _sfc_main$3 = {
+  const __easycom_0$1 = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["render", _sfc_render$4], ["__scopeId", "data-v-ddf9e0a2"], ["__file", "/Users/windpro/Documents/Code/cryptorobot_frontend/uni_modules/uni-data-select/components/uni-data-select/uni-data-select.vue"]]);
+  const _sfc_main$4 = {
     name: "UniSection",
     emits: ["click"],
     props: {
@@ -4132,7 +4141,7 @@ ${i3}
       }
     }
   };
-  function _sfc_render$2(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$3(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", { class: "uni-section" }, [
       vue.createElementVNode("view", {
         class: "uni-section-header",
@@ -4189,7 +4198,7 @@ ${i3}
       )
     ]);
   }
-  const __easycom_1 = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["render", _sfc_render$2], ["__scopeId", "data-v-637fd36b"], ["__file", "/Users/windpro/Documents/Code/cryptorobot_frontend/uni_modules/uni-section/components/uni-section/uni-section.vue"]]);
+  const __easycom_1 = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["render", _sfc_render$3], ["__scopeId", "data-v-637fd36b"], ["__file", "/Users/windpro/Documents/Code/cryptorobot_frontend/uni_modules/uni-section/components/uni-section/uni-section.vue"]]);
   function obj2strClass(obj) {
     let classess = "";
     for (let key in obj) {
@@ -4208,7 +4217,7 @@ ${i3}
     }
     return style;
   }
-  const _sfc_main$2 = {
+  const _sfc_main$3 = {
     name: "uni-easyinput",
     emits: [
       "click",
@@ -4557,8 +4566,8 @@ ${i3}
       }
     }
   };
-  function _sfc_render$1(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_uni_icons = resolveEasycom(vue.resolveDynamicComponent("uni-icons"), __easycom_0$1);
+  function _sfc_render$2(_ctx, _cache, $props, $setup, $data, $options) {
+    const _component_uni_icons = resolveEasycom(vue.resolveDynamicComponent("uni-icons"), __easycom_0$2);
     return vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -4682,9 +4691,9 @@ ${i3}
       /* CLASS, STYLE */
     );
   }
-  const __easycom_2 = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["render", _sfc_render$1], ["__scopeId", "data-v-09fd5285"], ["__file", "/Users/windpro/Documents/Code/cryptorobot_frontend/uni_modules/uni-easyinput/components/uni-easyinput/uni-easyinput.vue"]]);
+  const __easycom_0 = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["render", _sfc_render$2], ["__scopeId", "data-v-09fd5285"], ["__file", "/Users/windpro/Documents/Code/cryptorobot_frontend/uni_modules/uni-easyinput/components/uni-easyinput/uni-easyinput.vue"]]);
   var commonjsGlobal = typeof globalThis !== "undefined" ? globalThis : typeof window !== "undefined" ? window : typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : {};
-  function getDefaultExportFromCjs(x) {
+  function getDefaultExportFromCjs$1(x) {
     return x && x.__esModule && Object.prototype.hasOwnProperty.call(x, "default") ? x["default"] : x;
   }
   function getAugmentedNamespace(n2) {
@@ -7963,7 +7972,7 @@ ${i3}
       const msg = concatBytes(...msgs);
       return modN_LE(cHash(domain(msg, ensureBytes("context", context), !!prehash)));
     }
-    function sign(msg, privKey, options = {}) {
+    function sign2(msg, privKey, options = {}) {
       msg = ensureBytes("message", msg);
       if (prehash)
         msg = prehash(msg);
@@ -7977,7 +7986,7 @@ ${i3}
       return ensureBytes("result", res, nByteLength * 2);
     }
     const verifyOpts = VERIFY_DEFAULT;
-    function verify(sig, msg, publicKey2, options = verifyOpts) {
+    function verify2(sig, msg, publicKey2, options = verifyOpts) {
       const { context, zip215 } = options;
       const len2 = Fp2.BYTES;
       sig = ensureBytes("signature", sig, 2 * len2);
@@ -8019,8 +8028,8 @@ ${i3}
     return {
       CURVE,
       getPublicKey: getPublicKey2,
-      sign,
-      verify,
+      sign: sign2,
+      verify: verify2,
       ExtendedPoint: Point,
       utils: utils2
     };
@@ -10927,7 +10936,7 @@ ${i3}
     })(module, commonjsGlobal);
   })(bn);
   var bnExports = bn.exports;
-  const BN = /* @__PURE__ */ getDefaultExportFromCjs(bnExports);
+  const BN = /* @__PURE__ */ getDefaultExportFromCjs$1(bnExports);
   var safeBuffer = { exports: {} };
   /*! safe-buffer. MIT License. Feross Aboukhadijeh <https://feross.org/opensource> */
   (function(module, exports) {
@@ -11112,7 +11121,7 @@ ${i3}
   var basex$1 = src$1;
   var ALPHABET$1 = "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz";
   var bs58$1 = basex$1(ALPHABET$1);
-  const bs58$2 = /* @__PURE__ */ getDefaultExportFromCjs(bs58$1);
+  const bs58$2 = /* @__PURE__ */ getDefaultExportFromCjs$1(bs58$1);
   const SHA256_K = /* @__PURE__ */ new Uint32Array([
     1116352408,
     1899447441,
@@ -13534,8 +13543,8 @@ ${i3}
   Layout$1.cstr = (property) => new CString(property);
   Layout$1.utf8 = (maxSpan, property) => new UTF8(maxSpan, property);
   Layout$1.constant = (value, property) => new Constant(value, property);
-  var browser = {};
-  Object.defineProperty(browser, "__esModule", { value: true });
+  var browser$1 = {};
+  Object.defineProperty(browser$1, "__esModule", { value: true });
   function toBigIntLE(buf) {
     {
       const reversed = Buffer.from(buf);
@@ -13547,7 +13556,7 @@ ${i3}
       return BigInt(`0x${hex}`);
     }
   }
-  var toBigIntLE_1 = browser.toBigIntLE = toBigIntLE;
+  var toBigIntLE_1 = browser$1.toBigIntLE = toBigIntLE;
   function toBigIntBE(buf) {
     {
       const hex = buf.toString("hex");
@@ -13557,7 +13566,7 @@ ${i3}
       return BigInt(`0x${hex}`);
     }
   }
-  browser.toBigIntBE = toBigIntBE;
+  browser$1.toBigIntBE = toBigIntBE;
   function toBufferLE(num, width) {
     {
       const hex = num.toString(16);
@@ -13566,14 +13575,14 @@ ${i3}
       return buffer2;
     }
   }
-  var toBufferLE_1 = browser.toBufferLE = toBufferLE;
+  var toBufferLE_1 = browser$1.toBufferLE = toBufferLE;
   function toBufferBE(num, width) {
     {
       const hex = num.toString(16);
       return Buffer.from(hex.padStart(width * 2, "0").slice(0, width * 2), "hex");
     }
   }
-  browser.toBufferBE = toBufferBE;
+  browser$1.toBufferBE = toBufferBE;
   class StructError extends TypeError {
     constructor(failure, failures) {
       let cached;
@@ -13750,7 +13759,7 @@ ${i3}
      * Assert that a value passes the struct's validation, throwing if it doesn't.
      */
     assert(value) {
-      return assert(value, this);
+      return assert$1(value, this);
     }
     /**
      * Create a value with the struct's coercion logic, then validate it.
@@ -13783,7 +13792,7 @@ ${i3}
       return validate$1(value, this, options);
     }
   };
-  function assert(value, struct2) {
+  function assert$1(value, struct2) {
     const result = validate$1(value, struct2);
     if (result[0]) {
       throw result[0];
@@ -14015,7 +14024,7 @@ ${i3}
   for (var i = 0; i < 256; ++i) {
     byteToHex.push((i + 256).toString(16).substr(1));
   }
-  function stringify(arr) {
+  function stringify$1(arr) {
     var offset2 = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : 0;
     var uuid2 = (byteToHex[arr[offset2 + 0]] + byteToHex[arr[offset2 + 1]] + byteToHex[arr[offset2 + 2]] + byteToHex[arr[offset2 + 3]] + "-" + byteToHex[arr[offset2 + 4]] + byteToHex[arr[offset2 + 5]] + "-" + byteToHex[arr[offset2 + 6]] + byteToHex[arr[offset2 + 7]] + "-" + byteToHex[arr[offset2 + 8]] + byteToHex[arr[offset2 + 9]] + "-" + byteToHex[arr[offset2 + 10]] + byteToHex[arr[offset2 + 11]] + byteToHex[arr[offset2 + 12]] + byteToHex[arr[offset2 + 13]] + byteToHex[arr[offset2 + 14]] + byteToHex[arr[offset2 + 15]]).toLowerCase();
     if (!validate(uuid2)) {
@@ -14073,7 +14082,7 @@ ${i3}
     for (var n2 = 0; n2 < 6; ++n2) {
       b2[i2 + n2] = node[n2];
     }
-    return buf || stringify(b2);
+    return buf || stringify$1(b2);
   }
   function parse(uuid2) {
     if (!validate(uuid2)) {
@@ -14133,7 +14142,7 @@ ${i3}
         }
         return buf;
       }
-      return stringify(bytes2);
+      return stringify$1(bytes2);
     }
     try {
       generateUUID.name = name;
@@ -14298,7 +14307,7 @@ ${i3}
       }
       return buf;
     }
-    return stringify(rnds);
+    return stringify$1(rnds);
   }
   function f(s2, x, y2, z2) {
     switch (s2) {
@@ -14384,7 +14393,7 @@ ${i3}
     __proto__: null,
     NIL: nil,
     parse,
-    stringify,
+    stringify: stringify$1,
     v1,
     v3: v3$1,
     v4,
@@ -14450,6 +14459,7 @@ ${i3}
     };
     this.callServer = callServer;
   };
+  var browser = ClientBrowser;
   ClientBrowser.prototype.request = function(method, params, id, callback) {
     const self2 = this;
     let request = null;
@@ -14523,6 +14533,7 @@ ${i3}
     }
     callback(null, response);
   };
+  const RpcClient = /* @__PURE__ */ getDefaultExportFromCjs$1(browser);
   var client = {};
   var interopRequireDefault = { exports: {} };
   (function(module) {
@@ -15758,6 +15769,7 @@ ${i3}
       }]);
     }(_eventemitter.EventEmitter);
   })(client);
+  const RpcWebSocketCommonClient = /* @__PURE__ */ getDefaultExportFromCjs$1(client);
   var websocket_browser = {};
   (function(exports) {
     var _interopRequireDefault = interopRequireDefaultExports;
@@ -15840,6 +15852,7 @@ ${i3}
       return new WebSocketBrowserImpl(address, options);
     }
   })(websocket_browser);
+  const createRpc = /* @__PURE__ */ getDefaultExportFromCjs$1(websocket_browser);
   /*! noble-curves - MIT License (c) 2022 Paul Miller (paulmillr.com) */
   function validatePointOpts(curve) {
     const opts = validateBasic(curve);
@@ -16572,14 +16585,14 @@ ${i3}
     }
     const defaultSigOpts = { lowS: CURVE.lowS, prehash: false };
     const defaultVerOpts = { lowS: CURVE.lowS, prehash: false };
-    function sign(msgHash, privKey, opts = defaultSigOpts) {
+    function sign2(msgHash, privKey, opts = defaultSigOpts) {
       const { seed, k2sig } = prepSig(msgHash, privKey, opts);
       const C2 = CURVE;
       const drbg = createHmacDrbg(C2.hash.outputLen, C2.nByteLength, C2.hmac);
       return drbg(seed, k2sig);
     }
     Point.BASE._setWindowSize(8);
-    function verify(signature, msgHash, publicKey2, opts = defaultVerOpts) {
+    function verify2(signature, msgHash, publicKey2, opts = defaultVerOpts) {
       var _a;
       const sg = signature;
       msgHash = ensureBytes("msgHash", msgHash);
@@ -16629,8 +16642,8 @@ ${i3}
       CURVE,
       getPublicKey: getPublicKey2,
       getSharedSecret,
-      sign,
-      verify,
+      sign: sign2,
+      verify: verify2,
       ProjectivePoint: Point,
       Signature,
       utils: utils2
@@ -16811,6 +16824,8 @@ ${i3}
       return false;
     }
   }
+  const sign = (message, secretKey) => ed25519.sign(message, secretKey.slice(0, 32));
+  const verify = ed25519.verify;
   const toBuffer = (arr) => {
     if (buffer.Buffer.isBuffer(arr)) {
       return arr;
@@ -17013,7 +17028,91 @@ ${i3}
     fields: [["_bn", "u256"]]
   });
   new PublicKey("BPFLoader1111111111111111111111111111111111");
+  const PACKET_DATA_SIZE = 1280 - 40 - 8;
+  const VERSION_PREFIX_MASK = 127;
   const SIGNATURE_LENGTH_IN_BYTES = 64;
+  class TransactionExpiredBlockheightExceededError extends Error {
+    constructor(signature) {
+      super(`Signature ${signature} has expired: block height exceeded.`);
+      this.signature = void 0;
+      this.signature = signature;
+    }
+  }
+  Object.defineProperty(TransactionExpiredBlockheightExceededError.prototype, "name", {
+    value: "TransactionExpiredBlockheightExceededError"
+  });
+  class TransactionExpiredTimeoutError extends Error {
+    constructor(signature, timeoutSeconds) {
+      super(`Transaction was not confirmed in ${timeoutSeconds.toFixed(2)} seconds. It is unknown if it succeeded or failed. Check signature ${signature} using the Solana Explorer or CLI tools.`);
+      this.signature = void 0;
+      this.signature = signature;
+    }
+  }
+  Object.defineProperty(TransactionExpiredTimeoutError.prototype, "name", {
+    value: "TransactionExpiredTimeoutError"
+  });
+  class TransactionExpiredNonceInvalidError extends Error {
+    constructor(signature) {
+      super(`Signature ${signature} has expired: the nonce is no longer valid.`);
+      this.signature = void 0;
+      this.signature = signature;
+    }
+  }
+  Object.defineProperty(TransactionExpiredNonceInvalidError.prototype, "name", {
+    value: "TransactionExpiredNonceInvalidError"
+  });
+  class MessageAccountKeys {
+    constructor(staticAccountKeys, accountKeysFromLookups) {
+      this.staticAccountKeys = void 0;
+      this.accountKeysFromLookups = void 0;
+      this.staticAccountKeys = staticAccountKeys;
+      this.accountKeysFromLookups = accountKeysFromLookups;
+    }
+    keySegments() {
+      const keySegments = [this.staticAccountKeys];
+      if (this.accountKeysFromLookups) {
+        keySegments.push(this.accountKeysFromLookups.writable);
+        keySegments.push(this.accountKeysFromLookups.readonly);
+      }
+      return keySegments;
+    }
+    get(index) {
+      for (const keySegment of this.keySegments()) {
+        if (index < keySegment.length) {
+          return keySegment[index];
+        } else {
+          index -= keySegment.length;
+        }
+      }
+      return;
+    }
+    get length() {
+      return this.keySegments().flat().length;
+    }
+    compileInstructions(instructions) {
+      const U8_MAX = 255;
+      if (this.length > U8_MAX + 1) {
+        throw new Error("Account index overflow encountered during compilation");
+      }
+      const keyIndexMap = /* @__PURE__ */ new Map();
+      this.keySegments().flat().forEach((key, index) => {
+        keyIndexMap.set(key.toBase58(), index);
+      });
+      const findKeyIndex = (key) => {
+        const keyIndex = keyIndexMap.get(key.toBase58());
+        if (keyIndex === void 0)
+          throw new Error("Encountered an unknown instruction account key during compilation");
+        return keyIndex;
+      };
+      return instructions.map((instruction) => {
+        return {
+          programIdIndex: findKeyIndex(instruction.programId),
+          accountKeyIndexes: instruction.keys.map((meta) => findKeyIndex(meta.pubkey)),
+          data: instruction.data
+        };
+      });
+    }
+  }
   const publicKey = (property = "publicKey") => {
     return blob(32, property);
   };
@@ -17049,7 +17148,1188 @@ ${i3}
   const voteAuthorizeWithSeedArgs = (property = "voteAuthorizeWithSeedArgs") => {
     return struct([u32("voteAuthorizationType"), publicKey("currentAuthorityDerivedKeyOwnerPubkey"), rustString("currentAuthorityDerivedKeySeed"), publicKey("newAuthorized")], property);
   };
-  buffer.Buffer.alloc(SIGNATURE_LENGTH_IN_BYTES).fill(0);
+  function decodeLength(bytes2) {
+    let len2 = 0;
+    let size = 0;
+    for (; ; ) {
+      let elem = bytes2.shift();
+      len2 |= (elem & 127) << size * 7;
+      size += 1;
+      if ((elem & 128) === 0) {
+        break;
+      }
+    }
+    return len2;
+  }
+  function encodeLength(bytes2, len2) {
+    let rem_len = len2;
+    for (; ; ) {
+      let elem = rem_len & 127;
+      rem_len >>= 7;
+      if (rem_len == 0) {
+        bytes2.push(elem);
+        break;
+      } else {
+        elem |= 128;
+        bytes2.push(elem);
+      }
+    }
+  }
+  function assert(condition, message) {
+    if (!condition) {
+      throw new Error(message || "Assertion failed");
+    }
+  }
+  class CompiledKeys {
+    constructor(payer, keyMetaMap) {
+      this.payer = void 0;
+      this.keyMetaMap = void 0;
+      this.payer = payer;
+      this.keyMetaMap = keyMetaMap;
+    }
+    static compile(instructions, payer) {
+      const keyMetaMap = /* @__PURE__ */ new Map();
+      const getOrInsertDefault = (pubkey) => {
+        const address = pubkey.toBase58();
+        let keyMeta = keyMetaMap.get(address);
+        if (keyMeta === void 0) {
+          keyMeta = {
+            isSigner: false,
+            isWritable: false,
+            isInvoked: false
+          };
+          keyMetaMap.set(address, keyMeta);
+        }
+        return keyMeta;
+      };
+      const payerKeyMeta = getOrInsertDefault(payer);
+      payerKeyMeta.isSigner = true;
+      payerKeyMeta.isWritable = true;
+      for (const ix of instructions) {
+        getOrInsertDefault(ix.programId).isInvoked = true;
+        for (const accountMeta of ix.keys) {
+          const keyMeta = getOrInsertDefault(accountMeta.pubkey);
+          keyMeta.isSigner || (keyMeta.isSigner = accountMeta.isSigner);
+          keyMeta.isWritable || (keyMeta.isWritable = accountMeta.isWritable);
+        }
+      }
+      return new CompiledKeys(payer, keyMetaMap);
+    }
+    getMessageComponents() {
+      const mapEntries = [...this.keyMetaMap.entries()];
+      assert(mapEntries.length <= 256, "Max static account keys length exceeded");
+      const writableSigners = mapEntries.filter(([, meta]) => meta.isSigner && meta.isWritable);
+      const readonlySigners = mapEntries.filter(([, meta]) => meta.isSigner && !meta.isWritable);
+      const writableNonSigners = mapEntries.filter(([, meta]) => !meta.isSigner && meta.isWritable);
+      const readonlyNonSigners = mapEntries.filter(([, meta]) => !meta.isSigner && !meta.isWritable);
+      const header = {
+        numRequiredSignatures: writableSigners.length + readonlySigners.length,
+        numReadonlySignedAccounts: readonlySigners.length,
+        numReadonlyUnsignedAccounts: readonlyNonSigners.length
+      };
+      {
+        assert(writableSigners.length > 0, "Expected at least one writable signer key");
+        const [payerAddress] = writableSigners[0];
+        assert(payerAddress === this.payer.toBase58(), "Expected first writable signer key to be the fee payer");
+      }
+      const staticAccountKeys = [...writableSigners.map(([address]) => new PublicKey(address)), ...readonlySigners.map(([address]) => new PublicKey(address)), ...writableNonSigners.map(([address]) => new PublicKey(address)), ...readonlyNonSigners.map(([address]) => new PublicKey(address))];
+      return [header, staticAccountKeys];
+    }
+    extractTableLookup(lookupTable) {
+      const [writableIndexes, drainedWritableKeys] = this.drainKeysFoundInLookupTable(lookupTable.state.addresses, (keyMeta) => !keyMeta.isSigner && !keyMeta.isInvoked && keyMeta.isWritable);
+      const [readonlyIndexes, drainedReadonlyKeys] = this.drainKeysFoundInLookupTable(lookupTable.state.addresses, (keyMeta) => !keyMeta.isSigner && !keyMeta.isInvoked && !keyMeta.isWritable);
+      if (writableIndexes.length === 0 && readonlyIndexes.length === 0) {
+        return;
+      }
+      return [{
+        accountKey: lookupTable.key,
+        writableIndexes,
+        readonlyIndexes
+      }, {
+        writable: drainedWritableKeys,
+        readonly: drainedReadonlyKeys
+      }];
+    }
+    /** @internal */
+    drainKeysFoundInLookupTable(lookupTableEntries, keyMetaFilter) {
+      const lookupTableIndexes = new Array();
+      const drainedKeys = new Array();
+      for (const [address, keyMeta] of this.keyMetaMap.entries()) {
+        if (keyMetaFilter(keyMeta)) {
+          const key = new PublicKey(address);
+          const lookupTableIndex = lookupTableEntries.findIndex((entry) => entry.equals(key));
+          if (lookupTableIndex >= 0) {
+            assert(lookupTableIndex < 256, "Max lookup table index exceeded");
+            lookupTableIndexes.push(lookupTableIndex);
+            drainedKeys.push(key);
+            this.keyMetaMap.delete(address);
+          }
+        }
+      }
+      return [lookupTableIndexes, drainedKeys];
+    }
+  }
+  const END_OF_BUFFER_ERROR_MESSAGE = "Reached end of buffer unexpectedly";
+  function guardedShift(byteArray) {
+    if (byteArray.length === 0) {
+      throw new Error(END_OF_BUFFER_ERROR_MESSAGE);
+    }
+    return byteArray.shift();
+  }
+  function guardedSplice(byteArray, ...args) {
+    const [start] = args;
+    if (args.length === 2 ? start + (args[1] ?? 0) > byteArray.length : start >= byteArray.length) {
+      throw new Error(END_OF_BUFFER_ERROR_MESSAGE);
+    }
+    return byteArray.splice(...args);
+  }
+  class Message {
+    constructor(args) {
+      this.header = void 0;
+      this.accountKeys = void 0;
+      this.recentBlockhash = void 0;
+      this.instructions = void 0;
+      this.indexToProgramIds = /* @__PURE__ */ new Map();
+      this.header = args.header;
+      this.accountKeys = args.accountKeys.map((account) => new PublicKey(account));
+      this.recentBlockhash = args.recentBlockhash;
+      this.instructions = args.instructions;
+      this.instructions.forEach((ix) => this.indexToProgramIds.set(ix.programIdIndex, this.accountKeys[ix.programIdIndex]));
+    }
+    get version() {
+      return "legacy";
+    }
+    get staticAccountKeys() {
+      return this.accountKeys;
+    }
+    get compiledInstructions() {
+      return this.instructions.map((ix) => ({
+        programIdIndex: ix.programIdIndex,
+        accountKeyIndexes: ix.accounts,
+        data: bs58$2.decode(ix.data)
+      }));
+    }
+    get addressTableLookups() {
+      return [];
+    }
+    getAccountKeys() {
+      return new MessageAccountKeys(this.staticAccountKeys);
+    }
+    static compile(args) {
+      const compiledKeys = CompiledKeys.compile(args.instructions, args.payerKey);
+      const [header, staticAccountKeys] = compiledKeys.getMessageComponents();
+      const accountKeys = new MessageAccountKeys(staticAccountKeys);
+      const instructions = accountKeys.compileInstructions(args.instructions).map((ix) => ({
+        programIdIndex: ix.programIdIndex,
+        accounts: ix.accountKeyIndexes,
+        data: bs58$2.encode(ix.data)
+      }));
+      return new Message({
+        header,
+        accountKeys: staticAccountKeys,
+        recentBlockhash: args.recentBlockhash,
+        instructions
+      });
+    }
+    isAccountSigner(index) {
+      return index < this.header.numRequiredSignatures;
+    }
+    isAccountWritable(index) {
+      const numSignedAccounts = this.header.numRequiredSignatures;
+      if (index >= this.header.numRequiredSignatures) {
+        const unsignedAccountIndex = index - numSignedAccounts;
+        const numUnsignedAccounts = this.accountKeys.length - numSignedAccounts;
+        const numWritableUnsignedAccounts = numUnsignedAccounts - this.header.numReadonlyUnsignedAccounts;
+        return unsignedAccountIndex < numWritableUnsignedAccounts;
+      } else {
+        const numWritableSignedAccounts = numSignedAccounts - this.header.numReadonlySignedAccounts;
+        return index < numWritableSignedAccounts;
+      }
+    }
+    isProgramId(index) {
+      return this.indexToProgramIds.has(index);
+    }
+    programIds() {
+      return [...this.indexToProgramIds.values()];
+    }
+    nonProgramIds() {
+      return this.accountKeys.filter((_2, index) => !this.isProgramId(index));
+    }
+    serialize() {
+      const numKeys = this.accountKeys.length;
+      let keyCount = [];
+      encodeLength(keyCount, numKeys);
+      const instructions = this.instructions.map((instruction) => {
+        const {
+          accounts,
+          programIdIndex
+        } = instruction;
+        const data = Array.from(bs58$2.decode(instruction.data));
+        let keyIndicesCount = [];
+        encodeLength(keyIndicesCount, accounts.length);
+        let dataCount = [];
+        encodeLength(dataCount, data.length);
+        return {
+          programIdIndex,
+          keyIndicesCount: buffer.Buffer.from(keyIndicesCount),
+          keyIndices: accounts,
+          dataLength: buffer.Buffer.from(dataCount),
+          data
+        };
+      });
+      let instructionCount = [];
+      encodeLength(instructionCount, instructions.length);
+      let instructionBuffer = buffer.Buffer.alloc(PACKET_DATA_SIZE);
+      buffer.Buffer.from(instructionCount).copy(instructionBuffer);
+      let instructionBufferLength = instructionCount.length;
+      instructions.forEach((instruction) => {
+        const instructionLayout = struct([u8("programIdIndex"), blob(instruction.keyIndicesCount.length, "keyIndicesCount"), seq(u8("keyIndex"), instruction.keyIndices.length, "keyIndices"), blob(instruction.dataLength.length, "dataLength"), seq(u8("userdatum"), instruction.data.length, "data")]);
+        const length2 = instructionLayout.encode(instruction, instructionBuffer, instructionBufferLength);
+        instructionBufferLength += length2;
+      });
+      instructionBuffer = instructionBuffer.slice(0, instructionBufferLength);
+      const signDataLayout = struct([blob(1, "numRequiredSignatures"), blob(1, "numReadonlySignedAccounts"), blob(1, "numReadonlyUnsignedAccounts"), blob(keyCount.length, "keyCount"), seq(publicKey("key"), numKeys, "keys"), publicKey("recentBlockhash")]);
+      const transaction = {
+        numRequiredSignatures: buffer.Buffer.from([this.header.numRequiredSignatures]),
+        numReadonlySignedAccounts: buffer.Buffer.from([this.header.numReadonlySignedAccounts]),
+        numReadonlyUnsignedAccounts: buffer.Buffer.from([this.header.numReadonlyUnsignedAccounts]),
+        keyCount: buffer.Buffer.from(keyCount),
+        keys: this.accountKeys.map((key) => toBuffer(key.toBytes())),
+        recentBlockhash: bs58$2.decode(this.recentBlockhash)
+      };
+      let signData = buffer.Buffer.alloc(2048);
+      const length = signDataLayout.encode(transaction, signData);
+      instructionBuffer.copy(signData, length);
+      return signData.slice(0, length + instructionBuffer.length);
+    }
+    /**
+     * Decode a compiled message into a Message object.
+     */
+    static from(buffer$1) {
+      let byteArray = [...buffer$1];
+      const numRequiredSignatures = guardedShift(byteArray);
+      if (numRequiredSignatures !== (numRequiredSignatures & VERSION_PREFIX_MASK)) {
+        throw new Error("Versioned messages must be deserialized with VersionedMessage.deserialize()");
+      }
+      const numReadonlySignedAccounts = guardedShift(byteArray);
+      const numReadonlyUnsignedAccounts = guardedShift(byteArray);
+      const accountCount = decodeLength(byteArray);
+      let accountKeys = [];
+      for (let i2 = 0; i2 < accountCount; i2++) {
+        const account = guardedSplice(byteArray, 0, PUBLIC_KEY_LENGTH);
+        accountKeys.push(new PublicKey(buffer.Buffer.from(account)));
+      }
+      const recentBlockhash = guardedSplice(byteArray, 0, PUBLIC_KEY_LENGTH);
+      const instructionCount = decodeLength(byteArray);
+      let instructions = [];
+      for (let i2 = 0; i2 < instructionCount; i2++) {
+        const programIdIndex = guardedShift(byteArray);
+        const accountCount2 = decodeLength(byteArray);
+        const accounts = guardedSplice(byteArray, 0, accountCount2);
+        const dataLength = decodeLength(byteArray);
+        const dataSlice = guardedSplice(byteArray, 0, dataLength);
+        const data = bs58$2.encode(buffer.Buffer.from(dataSlice));
+        instructions.push({
+          programIdIndex,
+          accounts,
+          data
+        });
+      }
+      const messageArgs = {
+        header: {
+          numRequiredSignatures,
+          numReadonlySignedAccounts,
+          numReadonlyUnsignedAccounts
+        },
+        recentBlockhash: bs58$2.encode(buffer.Buffer.from(recentBlockhash)),
+        accountKeys,
+        instructions
+      };
+      return new Message(messageArgs);
+    }
+  }
+  class MessageV0 {
+    constructor(args) {
+      this.header = void 0;
+      this.staticAccountKeys = void 0;
+      this.recentBlockhash = void 0;
+      this.compiledInstructions = void 0;
+      this.addressTableLookups = void 0;
+      this.header = args.header;
+      this.staticAccountKeys = args.staticAccountKeys;
+      this.recentBlockhash = args.recentBlockhash;
+      this.compiledInstructions = args.compiledInstructions;
+      this.addressTableLookups = args.addressTableLookups;
+    }
+    get version() {
+      return 0;
+    }
+    get numAccountKeysFromLookups() {
+      let count = 0;
+      for (const lookup2 of this.addressTableLookups) {
+        count += lookup2.readonlyIndexes.length + lookup2.writableIndexes.length;
+      }
+      return count;
+    }
+    getAccountKeys(args) {
+      let accountKeysFromLookups;
+      if (args && "accountKeysFromLookups" in args && args.accountKeysFromLookups) {
+        if (this.numAccountKeysFromLookups != args.accountKeysFromLookups.writable.length + args.accountKeysFromLookups.readonly.length) {
+          throw new Error("Failed to get account keys because of a mismatch in the number of account keys from lookups");
+        }
+        accountKeysFromLookups = args.accountKeysFromLookups;
+      } else if (args && "addressLookupTableAccounts" in args && args.addressLookupTableAccounts) {
+        accountKeysFromLookups = this.resolveAddressTableLookups(args.addressLookupTableAccounts);
+      } else if (this.addressTableLookups.length > 0) {
+        throw new Error("Failed to get account keys because address table lookups were not resolved");
+      }
+      return new MessageAccountKeys(this.staticAccountKeys, accountKeysFromLookups);
+    }
+    isAccountSigner(index) {
+      return index < this.header.numRequiredSignatures;
+    }
+    isAccountWritable(index) {
+      const numSignedAccounts = this.header.numRequiredSignatures;
+      const numStaticAccountKeys = this.staticAccountKeys.length;
+      if (index >= numStaticAccountKeys) {
+        const lookupAccountKeysIndex = index - numStaticAccountKeys;
+        const numWritableLookupAccountKeys = this.addressTableLookups.reduce((count, lookup2) => count + lookup2.writableIndexes.length, 0);
+        return lookupAccountKeysIndex < numWritableLookupAccountKeys;
+      } else if (index >= this.header.numRequiredSignatures) {
+        const unsignedAccountIndex = index - numSignedAccounts;
+        const numUnsignedAccounts = numStaticAccountKeys - numSignedAccounts;
+        const numWritableUnsignedAccounts = numUnsignedAccounts - this.header.numReadonlyUnsignedAccounts;
+        return unsignedAccountIndex < numWritableUnsignedAccounts;
+      } else {
+        const numWritableSignedAccounts = numSignedAccounts - this.header.numReadonlySignedAccounts;
+        return index < numWritableSignedAccounts;
+      }
+    }
+    resolveAddressTableLookups(addressLookupTableAccounts) {
+      const accountKeysFromLookups = {
+        writable: [],
+        readonly: []
+      };
+      for (const tableLookup of this.addressTableLookups) {
+        const tableAccount = addressLookupTableAccounts.find((account) => account.key.equals(tableLookup.accountKey));
+        if (!tableAccount) {
+          throw new Error(`Failed to find address lookup table account for table key ${tableLookup.accountKey.toBase58()}`);
+        }
+        for (const index of tableLookup.writableIndexes) {
+          if (index < tableAccount.state.addresses.length) {
+            accountKeysFromLookups.writable.push(tableAccount.state.addresses[index]);
+          } else {
+            throw new Error(`Failed to find address for index ${index} in address lookup table ${tableLookup.accountKey.toBase58()}`);
+          }
+        }
+        for (const index of tableLookup.readonlyIndexes) {
+          if (index < tableAccount.state.addresses.length) {
+            accountKeysFromLookups.readonly.push(tableAccount.state.addresses[index]);
+          } else {
+            throw new Error(`Failed to find address for index ${index} in address lookup table ${tableLookup.accountKey.toBase58()}`);
+          }
+        }
+      }
+      return accountKeysFromLookups;
+    }
+    static compile(args) {
+      const compiledKeys = CompiledKeys.compile(args.instructions, args.payerKey);
+      const addressTableLookups = new Array();
+      const accountKeysFromLookups = {
+        writable: new Array(),
+        readonly: new Array()
+      };
+      const lookupTableAccounts = args.addressLookupTableAccounts || [];
+      for (const lookupTable of lookupTableAccounts) {
+        const extractResult = compiledKeys.extractTableLookup(lookupTable);
+        if (extractResult !== void 0) {
+          const [addressTableLookup, {
+            writable,
+            readonly
+          }] = extractResult;
+          addressTableLookups.push(addressTableLookup);
+          accountKeysFromLookups.writable.push(...writable);
+          accountKeysFromLookups.readonly.push(...readonly);
+        }
+      }
+      const [header, staticAccountKeys] = compiledKeys.getMessageComponents();
+      const accountKeys = new MessageAccountKeys(staticAccountKeys, accountKeysFromLookups);
+      const compiledInstructions = accountKeys.compileInstructions(args.instructions);
+      return new MessageV0({
+        header,
+        staticAccountKeys,
+        recentBlockhash: args.recentBlockhash,
+        compiledInstructions,
+        addressTableLookups
+      });
+    }
+    serialize() {
+      const encodedStaticAccountKeysLength = Array();
+      encodeLength(encodedStaticAccountKeysLength, this.staticAccountKeys.length);
+      const serializedInstructions = this.serializeInstructions();
+      const encodedInstructionsLength = Array();
+      encodeLength(encodedInstructionsLength, this.compiledInstructions.length);
+      const serializedAddressTableLookups = this.serializeAddressTableLookups();
+      const encodedAddressTableLookupsLength = Array();
+      encodeLength(encodedAddressTableLookupsLength, this.addressTableLookups.length);
+      const messageLayout = struct([u8("prefix"), struct([u8("numRequiredSignatures"), u8("numReadonlySignedAccounts"), u8("numReadonlyUnsignedAccounts")], "header"), blob(encodedStaticAccountKeysLength.length, "staticAccountKeysLength"), seq(publicKey(), this.staticAccountKeys.length, "staticAccountKeys"), publicKey("recentBlockhash"), blob(encodedInstructionsLength.length, "instructionsLength"), blob(serializedInstructions.length, "serializedInstructions"), blob(encodedAddressTableLookupsLength.length, "addressTableLookupsLength"), blob(serializedAddressTableLookups.length, "serializedAddressTableLookups")]);
+      const serializedMessage = new Uint8Array(PACKET_DATA_SIZE);
+      const MESSAGE_VERSION_0_PREFIX = 1 << 7;
+      const serializedMessageLength = messageLayout.encode({
+        prefix: MESSAGE_VERSION_0_PREFIX,
+        header: this.header,
+        staticAccountKeysLength: new Uint8Array(encodedStaticAccountKeysLength),
+        staticAccountKeys: this.staticAccountKeys.map((key) => key.toBytes()),
+        recentBlockhash: bs58$2.decode(this.recentBlockhash),
+        instructionsLength: new Uint8Array(encodedInstructionsLength),
+        serializedInstructions,
+        addressTableLookupsLength: new Uint8Array(encodedAddressTableLookupsLength),
+        serializedAddressTableLookups
+      }, serializedMessage);
+      return serializedMessage.slice(0, serializedMessageLength);
+    }
+    serializeInstructions() {
+      let serializedLength = 0;
+      const serializedInstructions = new Uint8Array(PACKET_DATA_SIZE);
+      for (const instruction of this.compiledInstructions) {
+        const encodedAccountKeyIndexesLength = Array();
+        encodeLength(encodedAccountKeyIndexesLength, instruction.accountKeyIndexes.length);
+        const encodedDataLength = Array();
+        encodeLength(encodedDataLength, instruction.data.length);
+        const instructionLayout = struct([u8("programIdIndex"), blob(encodedAccountKeyIndexesLength.length, "encodedAccountKeyIndexesLength"), seq(u8(), instruction.accountKeyIndexes.length, "accountKeyIndexes"), blob(encodedDataLength.length, "encodedDataLength"), blob(instruction.data.length, "data")]);
+        serializedLength += instructionLayout.encode({
+          programIdIndex: instruction.programIdIndex,
+          encodedAccountKeyIndexesLength: new Uint8Array(encodedAccountKeyIndexesLength),
+          accountKeyIndexes: instruction.accountKeyIndexes,
+          encodedDataLength: new Uint8Array(encodedDataLength),
+          data: instruction.data
+        }, serializedInstructions, serializedLength);
+      }
+      return serializedInstructions.slice(0, serializedLength);
+    }
+    serializeAddressTableLookups() {
+      let serializedLength = 0;
+      const serializedAddressTableLookups = new Uint8Array(PACKET_DATA_SIZE);
+      for (const lookup2 of this.addressTableLookups) {
+        const encodedWritableIndexesLength = Array();
+        encodeLength(encodedWritableIndexesLength, lookup2.writableIndexes.length);
+        const encodedReadonlyIndexesLength = Array();
+        encodeLength(encodedReadonlyIndexesLength, lookup2.readonlyIndexes.length);
+        const addressTableLookupLayout = struct([publicKey("accountKey"), blob(encodedWritableIndexesLength.length, "encodedWritableIndexesLength"), seq(u8(), lookup2.writableIndexes.length, "writableIndexes"), blob(encodedReadonlyIndexesLength.length, "encodedReadonlyIndexesLength"), seq(u8(), lookup2.readonlyIndexes.length, "readonlyIndexes")]);
+        serializedLength += addressTableLookupLayout.encode({
+          accountKey: lookup2.accountKey.toBytes(),
+          encodedWritableIndexesLength: new Uint8Array(encodedWritableIndexesLength),
+          writableIndexes: lookup2.writableIndexes,
+          encodedReadonlyIndexesLength: new Uint8Array(encodedReadonlyIndexesLength),
+          readonlyIndexes: lookup2.readonlyIndexes
+        }, serializedAddressTableLookups, serializedLength);
+      }
+      return serializedAddressTableLookups.slice(0, serializedLength);
+    }
+    static deserialize(serializedMessage) {
+      let byteArray = [...serializedMessage];
+      const prefix = guardedShift(byteArray);
+      const maskedPrefix = prefix & VERSION_PREFIX_MASK;
+      assert(prefix !== maskedPrefix, `Expected versioned message but received legacy message`);
+      const version2 = maskedPrefix;
+      assert(version2 === 0, `Expected versioned message with version 0 but found version ${version2}`);
+      const header = {
+        numRequiredSignatures: guardedShift(byteArray),
+        numReadonlySignedAccounts: guardedShift(byteArray),
+        numReadonlyUnsignedAccounts: guardedShift(byteArray)
+      };
+      const staticAccountKeys = [];
+      const staticAccountKeysLength = decodeLength(byteArray);
+      for (let i2 = 0; i2 < staticAccountKeysLength; i2++) {
+        staticAccountKeys.push(new PublicKey(guardedSplice(byteArray, 0, PUBLIC_KEY_LENGTH)));
+      }
+      const recentBlockhash = bs58$2.encode(guardedSplice(byteArray, 0, PUBLIC_KEY_LENGTH));
+      const instructionCount = decodeLength(byteArray);
+      const compiledInstructions = [];
+      for (let i2 = 0; i2 < instructionCount; i2++) {
+        const programIdIndex = guardedShift(byteArray);
+        const accountKeyIndexesLength = decodeLength(byteArray);
+        const accountKeyIndexes = guardedSplice(byteArray, 0, accountKeyIndexesLength);
+        const dataLength = decodeLength(byteArray);
+        const data = new Uint8Array(guardedSplice(byteArray, 0, dataLength));
+        compiledInstructions.push({
+          programIdIndex,
+          accountKeyIndexes,
+          data
+        });
+      }
+      const addressTableLookupsCount = decodeLength(byteArray);
+      const addressTableLookups = [];
+      for (let i2 = 0; i2 < addressTableLookupsCount; i2++) {
+        const accountKey = new PublicKey(guardedSplice(byteArray, 0, PUBLIC_KEY_LENGTH));
+        const writableIndexesLength = decodeLength(byteArray);
+        const writableIndexes = guardedSplice(byteArray, 0, writableIndexesLength);
+        const readonlyIndexesLength = decodeLength(byteArray);
+        const readonlyIndexes = guardedSplice(byteArray, 0, readonlyIndexesLength);
+        addressTableLookups.push({
+          accountKey,
+          writableIndexes,
+          readonlyIndexes
+        });
+      }
+      return new MessageV0({
+        header,
+        staticAccountKeys,
+        recentBlockhash,
+        compiledInstructions,
+        addressTableLookups
+      });
+    }
+  }
+  let TransactionStatus = /* @__PURE__ */ function(TransactionStatus2) {
+    TransactionStatus2[TransactionStatus2["BLOCKHEIGHT_EXCEEDED"] = 0] = "BLOCKHEIGHT_EXCEEDED";
+    TransactionStatus2[TransactionStatus2["PROCESSED"] = 1] = "PROCESSED";
+    TransactionStatus2[TransactionStatus2["TIMED_OUT"] = 2] = "TIMED_OUT";
+    TransactionStatus2[TransactionStatus2["NONCE_INVALID"] = 3] = "NONCE_INVALID";
+    return TransactionStatus2;
+  }({});
+  const DEFAULT_SIGNATURE = buffer.Buffer.alloc(SIGNATURE_LENGTH_IN_BYTES).fill(0);
+  class TransactionInstruction {
+    constructor(opts) {
+      this.keys = void 0;
+      this.programId = void 0;
+      this.data = buffer.Buffer.alloc(0);
+      this.programId = opts.programId;
+      this.keys = opts.keys;
+      if (opts.data) {
+        this.data = opts.data;
+      }
+    }
+    /**
+     * @internal
+     */
+    toJSON() {
+      return {
+        keys: this.keys.map(({
+          pubkey,
+          isSigner,
+          isWritable
+        }) => ({
+          pubkey: pubkey.toJSON(),
+          isSigner,
+          isWritable
+        })),
+        programId: this.programId.toJSON(),
+        data: [...this.data]
+      };
+    }
+  }
+  class Transaction {
+    /**
+     * The first (payer) Transaction signature
+     *
+     * @returns {Buffer | null} Buffer of payer's signature
+     */
+    get signature() {
+      if (this.signatures.length > 0) {
+        return this.signatures[0].signature;
+      }
+      return null;
+    }
+    /**
+     * The transaction fee payer
+     */
+    // Construct a transaction with a blockhash and lastValidBlockHeight
+    // Construct a transaction using a durable nonce
+    /**
+     * @deprecated `TransactionCtorFields` has been deprecated and will be removed in a future version.
+     * Please supply a `TransactionBlockhashCtor` instead.
+     */
+    /**
+     * Construct an empty Transaction
+     */
+    constructor(opts) {
+      this.signatures = [];
+      this.feePayer = void 0;
+      this.instructions = [];
+      this.recentBlockhash = void 0;
+      this.lastValidBlockHeight = void 0;
+      this.nonceInfo = void 0;
+      this.minNonceContextSlot = void 0;
+      this._message = void 0;
+      this._json = void 0;
+      if (!opts) {
+        return;
+      }
+      if (opts.feePayer) {
+        this.feePayer = opts.feePayer;
+      }
+      if (opts.signatures) {
+        this.signatures = opts.signatures;
+      }
+      if (Object.prototype.hasOwnProperty.call(opts, "nonceInfo")) {
+        const {
+          minContextSlot,
+          nonceInfo
+        } = opts;
+        this.minNonceContextSlot = minContextSlot;
+        this.nonceInfo = nonceInfo;
+      } else if (Object.prototype.hasOwnProperty.call(opts, "lastValidBlockHeight")) {
+        const {
+          blockhash,
+          lastValidBlockHeight
+        } = opts;
+        this.recentBlockhash = blockhash;
+        this.lastValidBlockHeight = lastValidBlockHeight;
+      } else {
+        const {
+          recentBlockhash,
+          nonceInfo
+        } = opts;
+        if (nonceInfo) {
+          this.nonceInfo = nonceInfo;
+        }
+        this.recentBlockhash = recentBlockhash;
+      }
+    }
+    /**
+     * @internal
+     */
+    toJSON() {
+      return {
+        recentBlockhash: this.recentBlockhash || null,
+        feePayer: this.feePayer ? this.feePayer.toJSON() : null,
+        nonceInfo: this.nonceInfo ? {
+          nonce: this.nonceInfo.nonce,
+          nonceInstruction: this.nonceInfo.nonceInstruction.toJSON()
+        } : null,
+        instructions: this.instructions.map((instruction) => instruction.toJSON()),
+        signers: this.signatures.map(({
+          publicKey: publicKey2
+        }) => {
+          return publicKey2.toJSON();
+        })
+      };
+    }
+    /**
+     * Add one or more instructions to this Transaction
+     *
+     * @param {Array< Transaction | TransactionInstruction | TransactionInstructionCtorFields >} items - Instructions to add to the Transaction
+     */
+    add(...items) {
+      if (items.length === 0) {
+        throw new Error("No instructions");
+      }
+      items.forEach((item) => {
+        if ("instructions" in item) {
+          this.instructions = this.instructions.concat(item.instructions);
+        } else if ("data" in item && "programId" in item && "keys" in item) {
+          this.instructions.push(item);
+        } else {
+          this.instructions.push(new TransactionInstruction(item));
+        }
+      });
+      return this;
+    }
+    /**
+     * Compile transaction data
+     */
+    compileMessage() {
+      if (this._message && JSON.stringify(this.toJSON()) === JSON.stringify(this._json)) {
+        return this._message;
+      }
+      let recentBlockhash;
+      let instructions;
+      if (this.nonceInfo) {
+        recentBlockhash = this.nonceInfo.nonce;
+        if (this.instructions[0] != this.nonceInfo.nonceInstruction) {
+          instructions = [this.nonceInfo.nonceInstruction, ...this.instructions];
+        } else {
+          instructions = this.instructions;
+        }
+      } else {
+        recentBlockhash = this.recentBlockhash;
+        instructions = this.instructions;
+      }
+      if (!recentBlockhash) {
+        throw new Error("Transaction recentBlockhash required");
+      }
+      if (instructions.length < 1) {
+        formatAppLog("warn", "at node_modules/@solana/web3.js/lib/index.browser.esm.js:1430", "No instructions provided");
+      }
+      let feePayer;
+      if (this.feePayer) {
+        feePayer = this.feePayer;
+      } else if (this.signatures.length > 0 && this.signatures[0].publicKey) {
+        feePayer = this.signatures[0].publicKey;
+      } else {
+        throw new Error("Transaction fee payer required");
+      }
+      for (let i2 = 0; i2 < instructions.length; i2++) {
+        if (instructions[i2].programId === void 0) {
+          throw new Error(`Transaction instruction index ${i2} has undefined program id`);
+        }
+      }
+      const programIds = [];
+      const accountMetas = [];
+      instructions.forEach((instruction) => {
+        instruction.keys.forEach((accountMeta) => {
+          accountMetas.push({
+            ...accountMeta
+          });
+        });
+        const programId = instruction.programId.toString();
+        if (!programIds.includes(programId)) {
+          programIds.push(programId);
+        }
+      });
+      programIds.forEach((programId) => {
+        accountMetas.push({
+          pubkey: new PublicKey(programId),
+          isSigner: false,
+          isWritable: false
+        });
+      });
+      const uniqueMetas = [];
+      accountMetas.forEach((accountMeta) => {
+        const pubkeyString = accountMeta.pubkey.toString();
+        const uniqueIndex = uniqueMetas.findIndex((x) => {
+          return x.pubkey.toString() === pubkeyString;
+        });
+        if (uniqueIndex > -1) {
+          uniqueMetas[uniqueIndex].isWritable = uniqueMetas[uniqueIndex].isWritable || accountMeta.isWritable;
+          uniqueMetas[uniqueIndex].isSigner = uniqueMetas[uniqueIndex].isSigner || accountMeta.isSigner;
+        } else {
+          uniqueMetas.push(accountMeta);
+        }
+      });
+      uniqueMetas.sort(function(x, y2) {
+        if (x.isSigner !== y2.isSigner) {
+          return x.isSigner ? -1 : 1;
+        }
+        if (x.isWritable !== y2.isWritable) {
+          return x.isWritable ? -1 : 1;
+        }
+        const options = {
+          localeMatcher: "best fit",
+          usage: "sort",
+          sensitivity: "variant",
+          ignorePunctuation: false,
+          numeric: false,
+          caseFirst: "lower"
+        };
+        return x.pubkey.toBase58().localeCompare(y2.pubkey.toBase58(), "en", options);
+      });
+      const feePayerIndex = uniqueMetas.findIndex((x) => {
+        return x.pubkey.equals(feePayer);
+      });
+      if (feePayerIndex > -1) {
+        const [payerMeta] = uniqueMetas.splice(feePayerIndex, 1);
+        payerMeta.isSigner = true;
+        payerMeta.isWritable = true;
+        uniqueMetas.unshift(payerMeta);
+      } else {
+        uniqueMetas.unshift({
+          pubkey: feePayer,
+          isSigner: true,
+          isWritable: true
+        });
+      }
+      for (const signature of this.signatures) {
+        const uniqueIndex = uniqueMetas.findIndex((x) => {
+          return x.pubkey.equals(signature.publicKey);
+        });
+        if (uniqueIndex > -1) {
+          if (!uniqueMetas[uniqueIndex].isSigner) {
+            uniqueMetas[uniqueIndex].isSigner = true;
+            formatAppLog("warn", "at node_modules/@solana/web3.js/lib/index.browser.esm.js:1531", "Transaction references a signature that is unnecessary, only the fee payer and instruction signer accounts should sign a transaction. This behavior is deprecated and will throw an error in the next major version release.");
+          }
+        } else {
+          throw new Error(`unknown signer: ${signature.publicKey.toString()}`);
+        }
+      }
+      let numRequiredSignatures = 0;
+      let numReadonlySignedAccounts = 0;
+      let numReadonlyUnsignedAccounts = 0;
+      const signedKeys = [];
+      const unsignedKeys = [];
+      uniqueMetas.forEach(({
+        pubkey,
+        isSigner,
+        isWritable
+      }) => {
+        if (isSigner) {
+          signedKeys.push(pubkey.toString());
+          numRequiredSignatures += 1;
+          if (!isWritable) {
+            numReadonlySignedAccounts += 1;
+          }
+        } else {
+          unsignedKeys.push(pubkey.toString());
+          if (!isWritable) {
+            numReadonlyUnsignedAccounts += 1;
+          }
+        }
+      });
+      const accountKeys = signedKeys.concat(unsignedKeys);
+      const compiledInstructions = instructions.map((instruction) => {
+        const {
+          data,
+          programId
+        } = instruction;
+        return {
+          programIdIndex: accountKeys.indexOf(programId.toString()),
+          accounts: instruction.keys.map((meta) => accountKeys.indexOf(meta.pubkey.toString())),
+          data: bs58$2.encode(data)
+        };
+      });
+      compiledInstructions.forEach((instruction) => {
+        assert(instruction.programIdIndex >= 0);
+        instruction.accounts.forEach((keyIndex) => assert(keyIndex >= 0));
+      });
+      return new Message({
+        header: {
+          numRequiredSignatures,
+          numReadonlySignedAccounts,
+          numReadonlyUnsignedAccounts
+        },
+        accountKeys,
+        recentBlockhash,
+        instructions: compiledInstructions
+      });
+    }
+    /**
+     * @internal
+     */
+    _compile() {
+      const message = this.compileMessage();
+      const signedKeys = message.accountKeys.slice(0, message.header.numRequiredSignatures);
+      if (this.signatures.length === signedKeys.length) {
+        const valid = this.signatures.every((pair, index) => {
+          return signedKeys[index].equals(pair.publicKey);
+        });
+        if (valid)
+          return message;
+      }
+      this.signatures = signedKeys.map((publicKey2) => ({
+        signature: null,
+        publicKey: publicKey2
+      }));
+      return message;
+    }
+    /**
+     * Get a buffer of the Transaction data that need to be covered by signatures
+     */
+    serializeMessage() {
+      return this._compile().serialize();
+    }
+    /**
+     * Get the estimated fee associated with a transaction
+     *
+     * @param {Connection} connection Connection to RPC Endpoint.
+     *
+     * @returns {Promise<number | null>} The estimated fee for the transaction
+     */
+    async getEstimatedFee(connection) {
+      return (await connection.getFeeForMessage(this.compileMessage())).value;
+    }
+    /**
+     * Specify the public keys which will be used to sign the Transaction.
+     * The first signer will be used as the transaction fee payer account.
+     *
+     * Signatures can be added with either `partialSign` or `addSignature`
+     *
+     * @deprecated Deprecated since v0.84.0. Only the fee payer needs to be
+     * specified and it can be set in the Transaction constructor or with the
+     * `feePayer` property.
+     */
+    setSigners(...signers) {
+      if (signers.length === 0) {
+        throw new Error("No signers");
+      }
+      const seen = /* @__PURE__ */ new Set();
+      this.signatures = signers.filter((publicKey2) => {
+        const key = publicKey2.toString();
+        if (seen.has(key)) {
+          return false;
+        } else {
+          seen.add(key);
+          return true;
+        }
+      }).map((publicKey2) => ({
+        signature: null,
+        publicKey: publicKey2
+      }));
+    }
+    /**
+     * Sign the Transaction with the specified signers. Multiple signatures may
+     * be applied to a Transaction. The first signature is considered "primary"
+     * and is used identify and confirm transactions.
+     *
+     * If the Transaction `feePayer` is not set, the first signer will be used
+     * as the transaction fee payer account.
+     *
+     * Transaction fields should not be modified after the first call to `sign`,
+     * as doing so may invalidate the signature and cause the Transaction to be
+     * rejected.
+     *
+     * The Transaction must be assigned a valid `recentBlockhash` before invoking this method
+     *
+     * @param {Array<Signer>} signers Array of signers that will sign the transaction
+     */
+    sign(...signers) {
+      if (signers.length === 0) {
+        throw new Error("No signers");
+      }
+      const seen = /* @__PURE__ */ new Set();
+      const uniqueSigners = [];
+      for (const signer of signers) {
+        const key = signer.publicKey.toString();
+        if (seen.has(key)) {
+          continue;
+        } else {
+          seen.add(key);
+          uniqueSigners.push(signer);
+        }
+      }
+      this.signatures = uniqueSigners.map((signer) => ({
+        signature: null,
+        publicKey: signer.publicKey
+      }));
+      const message = this._compile();
+      this._partialSign(message, ...uniqueSigners);
+    }
+    /**
+     * Partially sign a transaction with the specified accounts. All accounts must
+     * correspond to either the fee payer or a signer account in the transaction
+     * instructions.
+     *
+     * All the caveats from the `sign` method apply to `partialSign`
+     *
+     * @param {Array<Signer>} signers Array of signers that will sign the transaction
+     */
+    partialSign(...signers) {
+      if (signers.length === 0) {
+        throw new Error("No signers");
+      }
+      const seen = /* @__PURE__ */ new Set();
+      const uniqueSigners = [];
+      for (const signer of signers) {
+        const key = signer.publicKey.toString();
+        if (seen.has(key)) {
+          continue;
+        } else {
+          seen.add(key);
+          uniqueSigners.push(signer);
+        }
+      }
+      const message = this._compile();
+      this._partialSign(message, ...uniqueSigners);
+    }
+    /**
+     * @internal
+     */
+    _partialSign(message, ...signers) {
+      const signData = message.serialize();
+      signers.forEach((signer) => {
+        const signature = sign(signData, signer.secretKey);
+        this._addSignature(signer.publicKey, toBuffer(signature));
+      });
+    }
+    /**
+     * Add an externally created signature to a transaction. The public key
+     * must correspond to either the fee payer or a signer account in the transaction
+     * instructions.
+     *
+     * @param {PublicKey} pubkey Public key that will be added to the transaction.
+     * @param {Buffer} signature An externally created signature to add to the transaction.
+     */
+    addSignature(pubkey, signature) {
+      this._compile();
+      this._addSignature(pubkey, signature);
+    }
+    /**
+     * @internal
+     */
+    _addSignature(pubkey, signature) {
+      assert(signature.length === 64);
+      const index = this.signatures.findIndex((sigpair) => pubkey.equals(sigpair.publicKey));
+      if (index < 0) {
+        throw new Error(`unknown signer: ${pubkey.toString()}`);
+      }
+      this.signatures[index].signature = buffer.Buffer.from(signature);
+    }
+    /**
+     * Verify signatures of a Transaction
+     * Optional parameter specifies if we're expecting a fully signed Transaction or a partially signed one.
+     * If no boolean is provided, we expect a fully signed Transaction by default.
+     *
+     * @param {boolean} [requireAllSignatures=true] Require a fully signed Transaction
+     */
+    verifySignatures(requireAllSignatures = true) {
+      const signatureErrors = this._getMessageSignednessErrors(this.serializeMessage(), requireAllSignatures);
+      return !signatureErrors;
+    }
+    /**
+     * @internal
+     */
+    _getMessageSignednessErrors(message, requireAllSignatures) {
+      const errors = {};
+      for (const {
+        signature,
+        publicKey: publicKey2
+      } of this.signatures) {
+        if (signature === null) {
+          if (requireAllSignatures) {
+            (errors.missing || (errors.missing = [])).push(publicKey2);
+          }
+        } else {
+          if (!verify(signature, message, publicKey2.toBytes())) {
+            (errors.invalid || (errors.invalid = [])).push(publicKey2);
+          }
+        }
+      }
+      return errors.invalid || errors.missing ? errors : void 0;
+    }
+    /**
+     * Serialize the Transaction in the wire format.
+     *
+     * @param {Buffer} [config] Config of transaction.
+     *
+     * @returns {Buffer} Signature of transaction in wire format.
+     */
+    serialize(config) {
+      const {
+        requireAllSignatures,
+        verifySignatures
+      } = Object.assign({
+        requireAllSignatures: true,
+        verifySignatures: true
+      }, config);
+      const signData = this.serializeMessage();
+      if (verifySignatures) {
+        const sigErrors = this._getMessageSignednessErrors(signData, requireAllSignatures);
+        if (sigErrors) {
+          let errorMessage = "Signature verification failed.";
+          if (sigErrors.invalid) {
+            errorMessage += `
+Invalid signature for public key${sigErrors.invalid.length === 1 ? "" : "(s)"} [\`${sigErrors.invalid.map((p2) => p2.toBase58()).join("`, `")}\`].`;
+          }
+          if (sigErrors.missing) {
+            errorMessage += `
+Missing signature for public key${sigErrors.missing.length === 1 ? "" : "(s)"} [\`${sigErrors.missing.map((p2) => p2.toBase58()).join("`, `")}\`].`;
+          }
+          throw new Error(errorMessage);
+        }
+      }
+      return this._serialize(signData);
+    }
+    /**
+     * @internal
+     */
+    _serialize(signData) {
+      const {
+        signatures
+      } = this;
+      const signatureCount = [];
+      encodeLength(signatureCount, signatures.length);
+      const transactionLength = signatureCount.length + signatures.length * 64 + signData.length;
+      const wireTransaction = buffer.Buffer.alloc(transactionLength);
+      assert(signatures.length < 256);
+      buffer.Buffer.from(signatureCount).copy(wireTransaction, 0);
+      signatures.forEach(({
+        signature
+      }, index) => {
+        if (signature !== null) {
+          assert(signature.length === 64, `signature has invalid length`);
+          buffer.Buffer.from(signature).copy(wireTransaction, signatureCount.length + index * 64);
+        }
+      });
+      signData.copy(wireTransaction, signatureCount.length + signatures.length * 64);
+      assert(wireTransaction.length <= PACKET_DATA_SIZE, `Transaction too large: ${wireTransaction.length} > ${PACKET_DATA_SIZE}`);
+      return wireTransaction;
+    }
+    /**
+     * Deprecated method
+     * @internal
+     */
+    get keys() {
+      assert(this.instructions.length === 1);
+      return this.instructions[0].keys.map((keyObj) => keyObj.pubkey);
+    }
+    /**
+     * Deprecated method
+     * @internal
+     */
+    get programId() {
+      assert(this.instructions.length === 1);
+      return this.instructions[0].programId;
+    }
+    /**
+     * Deprecated method
+     * @internal
+     */
+    get data() {
+      assert(this.instructions.length === 1);
+      return this.instructions[0].data;
+    }
+    /**
+     * Parse a wire transaction into a Transaction object.
+     *
+     * @param {Buffer | Uint8Array | Array<number>} buffer Signature of wire Transaction
+     *
+     * @returns {Transaction} Transaction associated with the signature
+     */
+    static from(buffer$1) {
+      let byteArray = [...buffer$1];
+      const signatureCount = decodeLength(byteArray);
+      let signatures = [];
+      for (let i2 = 0; i2 < signatureCount; i2++) {
+        const signature = guardedSplice(byteArray, 0, SIGNATURE_LENGTH_IN_BYTES);
+        signatures.push(bs58$2.encode(buffer.Buffer.from(signature)));
+      }
+      return Transaction.populate(Message.from(byteArray), signatures);
+    }
+    /**
+     * Populate Transaction object from message and signatures
+     *
+     * @param {Message} message Message of transaction
+     * @param {Array<string>} signatures List of signatures to assign to the transaction
+     *
+     * @returns {Transaction} The populated Transaction
+     */
+    static populate(message, signatures = []) {
+      const transaction = new Transaction();
+      transaction.recentBlockhash = message.recentBlockhash;
+      if (message.header.numRequiredSignatures > 0) {
+        transaction.feePayer = message.accountKeys[0];
+      }
+      signatures.forEach((signature, index) => {
+        const sigPubkeyPair = {
+          signature: signature == bs58$2.encode(DEFAULT_SIGNATURE) ? null : bs58$2.decode(signature),
+          publicKey: message.accountKeys[index]
+        };
+        transaction.signatures.push(sigPubkeyPair);
+      });
+      message.instructions.forEach((instruction) => {
+        const keys = instruction.accounts.map((account) => {
+          const pubkey = message.accountKeys[account];
+          return {
+            pubkey,
+            isSigner: transaction.signatures.some((keyObj) => keyObj.publicKey.toString() === pubkey.toString()) || message.isAccountSigner(account),
+            isWritable: message.isAccountWritable(account)
+          };
+        });
+        transaction.instructions.push(new TransactionInstruction({
+          keys,
+          programId: message.accountKeys[instruction.programIdIndex],
+          data: bs58$2.decode(instruction.data)
+        }));
+      });
+      transaction._message = message;
+      transaction._json = transaction.toJSON();
+      return transaction;
+    }
+  }
+  const NUM_TICKS_PER_SECOND = 160;
+  const DEFAULT_TICKS_PER_SLOT = 64;
+  const NUM_SLOTS_PER_SECOND = NUM_TICKS_PER_SECOND / DEFAULT_TICKS_PER_SLOT;
+  const MS_PER_SLOT = 1e3 / NUM_SLOTS_PER_SECOND;
   new PublicKey("SysvarC1ock11111111111111111111111111111111");
   new PublicKey("SysvarEpochSchedu1e111111111111111111111111");
   new PublicKey("Sysvar1nstructions1111111111111111111111111");
@@ -17059,9 +18339,39 @@ ${i3}
   new PublicKey("SysvarS1otHashes111111111111111111111111111");
   new PublicKey("SysvarS1otHistory11111111111111111111111111");
   new PublicKey("SysvarStakeHistory1111111111111111111111111");
+  function sleep(ms2) {
+    return new Promise((resolve) => setTimeout(resolve, ms2));
+  }
   const FeeCalculatorLayout = nu64("lamportsPerSignature");
   const NonceAccountLayout = struct([u32("version"), u32("state"), publicKey("authorizedPubkey"), publicKey("nonce"), struct([FeeCalculatorLayout], "feeCalculator")]);
   NonceAccountLayout.span;
+  class NonceAccount {
+    /**
+     * @internal
+     */
+    constructor(args) {
+      this.authorizedPubkey = void 0;
+      this.nonce = void 0;
+      this.feeCalculator = void 0;
+      this.authorizedPubkey = args.authorizedPubkey;
+      this.nonce = args.nonce;
+      this.feeCalculator = args.feeCalculator;
+    }
+    /**
+     * Deserialize NonceAccount from the account data.
+     *
+     * @param buffer account data
+     * @return NonceAccount
+     */
+    static fromAccountData(buffer2) {
+      const nonceAccount = NonceAccountLayout.decode(toBuffer(buffer2), 0);
+      return new NonceAccount({
+        authorizedPubkey: new PublicKey(nonceAccount.authorizedPubkey),
+        nonce: new PublicKey(nonceAccount.nonce).toString(),
+        feeCalculator: nonceAccount.feeCalculator
+      });
+    }
+  }
   const encodeDecode = (layout) => {
     const decode = layout.decode.bind(layout);
     const encode = layout.encode.bind(layout);
@@ -17144,7 +18454,251 @@ ${i3}
   });
   new PublicKey("11111111111111111111111111111111");
   new PublicKey("BPFLoader2111111111111111111111111111111111");
-  ({
+  function getDefaultExportFromCjs(x) {
+    return x && x.__esModule && Object.prototype.hasOwnProperty.call(x, "default") ? x["default"] : x;
+  }
+  var objToString = Object.prototype.toString;
+  var objKeys = Object.keys || function(obj) {
+    var keys = [];
+    for (var name in obj) {
+      keys.push(name);
+    }
+    return keys;
+  };
+  function stringify(val, isArrayProp) {
+    var i2, max, str, keys, key, propVal, toStr;
+    if (val === true) {
+      return "true";
+    }
+    if (val === false) {
+      return "false";
+    }
+    switch (typeof val) {
+      case "object":
+        if (val === null) {
+          return null;
+        } else if (val.toJSON && typeof val.toJSON === "function") {
+          return stringify(val.toJSON(), isArrayProp);
+        } else {
+          toStr = objToString.call(val);
+          if (toStr === "[object Array]") {
+            str = "[";
+            max = val.length - 1;
+            for (i2 = 0; i2 < max; i2++) {
+              str += stringify(val[i2], true) + ",";
+            }
+            if (max > -1) {
+              str += stringify(val[i2], true);
+            }
+            return str + "]";
+          } else if (toStr === "[object Object]") {
+            keys = objKeys(val).sort();
+            max = keys.length;
+            str = "";
+            i2 = 0;
+            while (i2 < max) {
+              key = keys[i2];
+              propVal = stringify(val[key], false);
+              if (propVal !== void 0) {
+                if (str) {
+                  str += ",";
+                }
+                str += JSON.stringify(key) + ":" + propVal;
+              }
+              i2++;
+            }
+            return "{" + str + "}";
+          } else {
+            return JSON.stringify(val);
+          }
+        }
+      case "function":
+      case "undefined":
+        return isArrayProp ? null : void 0;
+      case "string":
+        return JSON.stringify(val);
+      default:
+        return isFinite(val) ? val : null;
+    }
+  }
+  var fastStableStringify = function(val) {
+    var returnVal = stringify(val, false);
+    if (returnVal !== void 0) {
+      return "" + returnVal;
+    }
+  };
+  var fastStableStringify$1 = /* @__PURE__ */ getDefaultExportFromCjs(fastStableStringify);
+  const MINIMUM_SLOT_PER_EPOCH = 32;
+  function trailingZeros(n2) {
+    let trailingZeros2 = 0;
+    while (n2 > 1) {
+      n2 /= 2;
+      trailingZeros2++;
+    }
+    return trailingZeros2;
+  }
+  function nextPowerOfTwo(n2) {
+    if (n2 === 0)
+      return 1;
+    n2--;
+    n2 |= n2 >> 1;
+    n2 |= n2 >> 2;
+    n2 |= n2 >> 4;
+    n2 |= n2 >> 8;
+    n2 |= n2 >> 16;
+    n2 |= n2 >> 32;
+    return n2 + 1;
+  }
+  class EpochSchedule {
+    constructor(slotsPerEpoch, leaderScheduleSlotOffset, warmup, firstNormalEpoch, firstNormalSlot) {
+      this.slotsPerEpoch = void 0;
+      this.leaderScheduleSlotOffset = void 0;
+      this.warmup = void 0;
+      this.firstNormalEpoch = void 0;
+      this.firstNormalSlot = void 0;
+      this.slotsPerEpoch = slotsPerEpoch;
+      this.leaderScheduleSlotOffset = leaderScheduleSlotOffset;
+      this.warmup = warmup;
+      this.firstNormalEpoch = firstNormalEpoch;
+      this.firstNormalSlot = firstNormalSlot;
+    }
+    getEpoch(slot) {
+      return this.getEpochAndSlotIndex(slot)[0];
+    }
+    getEpochAndSlotIndex(slot) {
+      if (slot < this.firstNormalSlot) {
+        const epoch = trailingZeros(nextPowerOfTwo(slot + MINIMUM_SLOT_PER_EPOCH + 1)) - trailingZeros(MINIMUM_SLOT_PER_EPOCH) - 1;
+        const epochLen = this.getSlotsInEpoch(epoch);
+        const slotIndex = slot - (epochLen - MINIMUM_SLOT_PER_EPOCH);
+        return [epoch, slotIndex];
+      } else {
+        const normalSlotIndex = slot - this.firstNormalSlot;
+        const normalEpochIndex = Math.floor(normalSlotIndex / this.slotsPerEpoch);
+        const epoch = this.firstNormalEpoch + normalEpochIndex;
+        const slotIndex = normalSlotIndex % this.slotsPerEpoch;
+        return [epoch, slotIndex];
+      }
+    }
+    getFirstSlotInEpoch(epoch) {
+      if (epoch <= this.firstNormalEpoch) {
+        return (Math.pow(2, epoch) - 1) * MINIMUM_SLOT_PER_EPOCH;
+      } else {
+        return (epoch - this.firstNormalEpoch) * this.slotsPerEpoch + this.firstNormalSlot;
+      }
+    }
+    getLastSlotInEpoch(epoch) {
+      return this.getFirstSlotInEpoch(epoch) + this.getSlotsInEpoch(epoch) - 1;
+    }
+    getSlotsInEpoch(epoch) {
+      if (epoch < this.firstNormalEpoch) {
+        return Math.pow(2, epoch + trailingZeros(MINIMUM_SLOT_PER_EPOCH));
+      } else {
+        return this.slotsPerEpoch;
+      }
+    }
+  }
+  class SendTransactionError extends Error {
+    constructor(message, logs) {
+      super(message);
+      this.logs = void 0;
+      this.logs = logs;
+    }
+  }
+  class SolanaJSONRPCError extends Error {
+    constructor({
+      code: code2,
+      message,
+      data
+    }, customMessage) {
+      super(customMessage != null ? `${customMessage}: ${message}` : message);
+      this.code = void 0;
+      this.data = void 0;
+      this.code = code2;
+      this.data = data;
+      this.name = "SolanaJSONRPCError";
+    }
+  }
+  var fetchImpl = globalThis.fetch;
+  class RpcWebSocketClient extends RpcWebSocketCommonClient {
+    constructor(address, options, generate_request_id) {
+      const webSocketFactory = (url) => {
+        const rpc = createRpc(url, {
+          autoconnect: true,
+          max_reconnects: 5,
+          reconnect: true,
+          reconnect_interval: 1e3,
+          ...options
+        });
+        if ("socket" in rpc) {
+          this.underlyingSocket = rpc.socket;
+        } else {
+          this.underlyingSocket = rpc;
+        }
+        return rpc;
+      };
+      super(webSocketFactory, address, options, generate_request_id);
+      this.underlyingSocket = void 0;
+    }
+    call(...args) {
+      var _a;
+      const readyState = (_a = this.underlyingSocket) == null ? void 0 : _a.readyState;
+      if (readyState === 1) {
+        return super.call(...args);
+      }
+      return Promise.reject(new Error("Tried to call a JSON-RPC method `" + args[0] + "` but the socket was not `CONNECTING` or `OPEN` (`readyState` was " + readyState + ")"));
+    }
+    notify(...args) {
+      var _a;
+      const readyState = (_a = this.underlyingSocket) == null ? void 0 : _a.readyState;
+      if (readyState === 1) {
+        return super.notify(...args);
+      }
+      return Promise.reject(new Error("Tried to send a JSON-RPC notification `" + args[0] + "` but the socket was not `CONNECTING` or `OPEN` (`readyState` was " + readyState + ")"));
+    }
+  }
+  function decodeData(type2, data) {
+    let decoded;
+    try {
+      decoded = type2.layout.decode(data);
+    } catch (err) {
+      throw new Error("invalid instruction; " + err);
+    }
+    if (decoded.typeIndex !== type2.index) {
+      throw new Error(`invalid account data; account type mismatch ${decoded.typeIndex} != ${type2.index}`);
+    }
+    return decoded;
+  }
+  const LOOKUP_TABLE_META_SIZE = 56;
+  class AddressLookupTableAccount {
+    constructor(args) {
+      this.key = void 0;
+      this.state = void 0;
+      this.key = args.key;
+      this.state = args.state;
+    }
+    isActive() {
+      const U64_MAX = BigInt("0xffffffffffffffff");
+      return this.state.deactivationSlot === U64_MAX;
+    }
+    static deserialize(accountData) {
+      const meta = decodeData(LookupTableMetaLayout, accountData);
+      const serializedAddressesLen = accountData.length - LOOKUP_TABLE_META_SIZE;
+      assert(serializedAddressesLen >= 0, "lookup table is invalid");
+      assert(serializedAddressesLen % 32 === 0, "lookup table is invalid");
+      const numSerializedAddresses = serializedAddressesLen / 32;
+      const {
+        addresses
+      } = struct([seq(publicKey(), numSerializedAddresses, "addresses")]).decode(accountData.slice(LOOKUP_TABLE_META_SIZE));
+      return {
+        deactivationSlot: meta.deactivationSlot,
+        lastExtendedSlot: meta.lastExtendedSlot,
+        lastExtendedSlotStartIndex: meta.lastExtendedStartIndex,
+        authority: meta.authority.length !== 0 ? new PublicKey(meta.authority[0]) : void 0,
+        addresses: addresses.map((address) => new PublicKey(address))
+      };
+    }
+  }
+  const LookupTableMetaLayout = {
     index: 1,
     layout: struct([
       u32("typeIndex"),
@@ -17155,10 +18709,61 @@ ${i3}
       // option
       seq(publicKey(), offset(u8(), -1), "authority")
     ])
-  });
+  };
+  const URL_RE = /^[^:]+:\/\/([^:[]+|\[[^\]]+\])(:\d+)?(.*)/i;
+  function makeWebsocketUrl(endpoint2) {
+    const matches = endpoint2.match(URL_RE);
+    if (matches == null) {
+      throw TypeError(`Failed to validate endpoint URL \`${endpoint2}\``);
+    }
+    const [
+      _2,
+      // eslint-disable-line @typescript-eslint/no-unused-vars
+      hostish,
+      portWithColon,
+      rest
+    ] = matches;
+    const protocol = endpoint2.startsWith("https:") ? "wss:" : "ws:";
+    const startPort = portWithColon == null ? null : parseInt(portWithColon.slice(1), 10);
+    const websocketPort = (
+      // Only shift the port by +1 as a convention for ws(s) only if given endpoint
+      // is explicitly specifying the endpoint port (HTTP-based RPC), assuming
+      // we're directly trying to connect to solana-validator's ws listening port.
+      // When the endpoint omits the port, we're connecting to the protocol
+      // default ports: http(80) or https(443) and it's assumed we're behind a reverse
+      // proxy which manages WebSocket upgrade and backend port redirection.
+      startPort == null ? "" : `:${startPort + 1}`
+    );
+    return `${protocol}//${hostish}${websocketPort}${rest}`;
+  }
   const PublicKeyFromString = coerce(instance(PublicKey), string(), (value) => new PublicKey(value));
   const RawAccountDataResult = tuple([string(), literal("base64")]);
   const BufferFromRawAccountData = coerce(instance(buffer.Buffer), RawAccountDataResult, (value) => buffer.Buffer.from(value[0], "base64"));
+  const BLOCKHASH_CACHE_TIMEOUT_MS = 30 * 1e3;
+  function assertEndpointUrl(putativeUrl) {
+    if (/^https?:/.test(putativeUrl) === false) {
+      throw new TypeError("Endpoint URL must start with `http:` or `https:`.");
+    }
+    return putativeUrl;
+  }
+  function extractCommitmentFromConfig(commitmentOrConfig) {
+    let commitment;
+    let config;
+    if (typeof commitmentOrConfig === "string") {
+      commitment = commitmentOrConfig;
+    } else if (commitmentOrConfig) {
+      const {
+        commitment: specifiedCommitment,
+        ...specifiedConfig
+      } = commitmentOrConfig;
+      commitment = specifiedCommitment;
+      config = specifiedConfig;
+    }
+    return {
+      commitment,
+      config
+    };
+  }
   function createRpcResult(result) {
     return union([type({
       jsonrpc: literal("2.0"),
@@ -17203,6 +18808,23 @@ ${i3}
       value
     });
   }
+  function versionedMessageFromResponse(version2, response) {
+    if (version2 === 0) {
+      return new MessageV0({
+        header: response.header,
+        staticAccountKeys: response.accountKeys.map((accountKey) => new PublicKey(accountKey)),
+        recentBlockhash: response.recentBlockhash,
+        compiledInstructions: response.instructions.map((ix) => ({
+          programIdIndex: ix.programIdIndex,
+          accountKeyIndexes: ix.accounts,
+          data: bs58$2.decode(ix.data)
+        })),
+        addressTableLookups: response.addressTableLookups
+      });
+    } else {
+      return new Message(response);
+    }
+  }
   const GetInflationGovernorResult = type({
     foundation: number(),
     foundationTerm: number(),
@@ -17210,7 +18832,7 @@ ${i3}
     taper: number(),
     terminal: number()
   });
-  jsonRpcResult(array(nullable(type({
+  const GetInflationRewardResult = jsonRpcResult(array(nullable(type({
     epoch: number(),
     effectiveSlot: number(),
     amount: number(),
@@ -17248,11 +18870,11 @@ ${i3}
     err: TransactionErrorResult
   });
   const SignatureReceivedResult = literal("receivedSignature");
-  type({
+  const VersionResult = type({
     "solana-core": string(),
     "feature-set": optional(number())
   });
-  jsonRpcResultAndContext(type({
+  const SimulatedTransactionResponseStruct = jsonRpcResultAndContext(type({
     err: nullable(union([type({}), string()])),
     logs: nullable(array(string())),
     accounts: optional(nullable(array(nullable(type({
@@ -17268,21 +18890,119 @@ ${i3}
       data: tuple([string(), literal("base64")])
     })))
   }));
-  jsonRpcResultAndContext(type({
+  const BlockProductionResponseStruct = jsonRpcResultAndContext(type({
     byIdentity: record(string(), array(number())),
     range: type({
       firstSlot: number(),
       lastSlot: number()
     })
   }));
-  jsonRpcResult(GetInflationGovernorResult);
-  jsonRpcResult(GetInflationRateResult);
-  jsonRpcResult(GetRecentPrioritizationFeesResult);
-  jsonRpcResult(GetEpochInfoResult);
-  jsonRpcResult(GetEpochScheduleResult);
-  jsonRpcResult(GetLeaderScheduleResult);
-  jsonRpcResult(number());
-  jsonRpcResultAndContext(type({
+  function createRpcClient(url, httpHeaders, customFetch, fetchMiddleware, disableRetryOnRateLimit, httpAgent) {
+    const fetch = customFetch ? customFetch : fetchImpl;
+    let agent;
+    {
+      if (httpAgent != null) {
+        formatAppLog("warn", "at node_modules/@solana/web3.js/lib/index.browser.esm.js:4168", "You have supplied an `httpAgent` when creating a `Connection` in a browser environment.It has been ignored; `httpAgent` is only used in Node environments.");
+      }
+    }
+    let fetchWithMiddleware;
+    if (fetchMiddleware) {
+      fetchWithMiddleware = async (info, init) => {
+        const modifiedFetchArgs = await new Promise((resolve, reject) => {
+          try {
+            fetchMiddleware(info, init, (modifiedInfo, modifiedInit) => resolve([modifiedInfo, modifiedInit]));
+          } catch (error) {
+            reject(error);
+          }
+        });
+        return await fetch(...modifiedFetchArgs);
+      };
+    }
+    const clientBrowser = new RpcClient(async (request, callback) => {
+      const options = {
+        method: "POST",
+        body: request,
+        agent,
+        headers: Object.assign({
+          "Content-Type": "application/json"
+        }, httpHeaders || {}, COMMON_HTTP_HEADERS)
+      };
+      try {
+        let too_many_requests_retries = 5;
+        let res;
+        let waitTime = 500;
+        for (; ; ) {
+          if (fetchWithMiddleware) {
+            res = await fetchWithMiddleware(url, options);
+          } else {
+            res = await fetch(url, options);
+          }
+          if (res.status !== 429) {
+            break;
+          }
+          if (disableRetryOnRateLimit === true) {
+            break;
+          }
+          too_many_requests_retries -= 1;
+          if (too_many_requests_retries === 0) {
+            break;
+          }
+          formatAppLog("error", "at node_modules/@solana/web3.js/lib/index.browser.esm.js:4213", `Server responded with ${res.status} ${res.statusText}.  Retrying after ${waitTime}ms delay...`);
+          await sleep(waitTime);
+          waitTime *= 2;
+        }
+        const text = await res.text();
+        if (res.ok) {
+          callback(null, text);
+        } else {
+          callback(new Error(`${res.status} ${res.statusText}: ${text}`));
+        }
+      } catch (err) {
+        if (err instanceof Error)
+          callback(err);
+      }
+    }, {});
+    return clientBrowser;
+  }
+  function createRpcRequest(client2) {
+    return (method, args) => {
+      return new Promise((resolve, reject) => {
+        client2.request(method, args, (err, response) => {
+          if (err) {
+            reject(err);
+            return;
+          }
+          resolve(response);
+        });
+      });
+    };
+  }
+  function createRpcBatchRequest(client2) {
+    return (requests) => {
+      return new Promise((resolve, reject) => {
+        if (requests.length === 0)
+          resolve([]);
+        const batch = requests.map((params) => {
+          return client2.request(params.methodName, params.args);
+        });
+        client2.request(batch, (err, response) => {
+          if (err) {
+            reject(err);
+            return;
+          }
+          resolve(response);
+        });
+      });
+    };
+  }
+  const GetInflationGovernorRpcResult = jsonRpcResult(GetInflationGovernorResult);
+  const GetInflationRateRpcResult = jsonRpcResult(GetInflationRateResult);
+  const GetRecentPrioritizationFeesRpcResult = jsonRpcResult(GetRecentPrioritizationFeesResult);
+  const GetEpochInfoRpcResult = jsonRpcResult(GetEpochInfoResult);
+  const GetEpochScheduleRpcResult = jsonRpcResult(GetEpochScheduleResult);
+  const GetLeaderScheduleRpcResult = jsonRpcResult(GetLeaderScheduleResult);
+  const SlotRpcResult = jsonRpcResult(number());
+  const GetSupplyRpcResult = jsonRpcResultAndContext(type({
     total: number(),
     circulating: number(),
     nonCirculating: number(),
@@ -17294,14 +19014,14 @@ ${i3}
     decimals: number(),
     uiAmountString: optional(string())
   });
-  jsonRpcResultAndContext(array(type({
+  const GetTokenLargestAccountsResult = jsonRpcResultAndContext(array(type({
     address: PublicKeyFromString,
     amount: string(),
     uiAmount: nullable(number()),
     decimals: number(),
     uiAmountString: optional(string())
   })));
-  jsonRpcResultAndContext(array(type({
+  const GetTokenAccountsByOwner = jsonRpcResultAndContext(array(type({
     pubkey: PublicKeyFromString,
     account: type({
       executable: boolean(),
@@ -17316,7 +19036,7 @@ ${i3}
     parsed: unknown(),
     space: number()
   });
-  jsonRpcResultAndContext(array(type({
+  const GetParsedTokenAccountsByOwner = jsonRpcResultAndContext(array(type({
     pubkey: PublicKeyFromString,
     account: type({
       executable: boolean(),
@@ -17326,7 +19046,7 @@ ${i3}
       rentEpoch: number()
     })
   })));
-  jsonRpcResultAndContext(array(type({
+  const GetLargestAccountsRpcResult = jsonRpcResultAndContext(array(type({
     lamports: number(),
     address: PublicKeyFromString
   })));
@@ -17337,7 +19057,7 @@ ${i3}
     data: BufferFromRawAccountData,
     rentEpoch: number()
   });
-  type({
+  const KeyedAccountInfoResult = type({
     pubkey: PublicKeyFromString,
     account: AccountInfoResult
   });
@@ -17355,30 +19075,30 @@ ${i3}
     data: ParsedOrRawAccountData,
     rentEpoch: number()
   });
-  type({
+  const KeyedParsedAccountInfoResult = type({
     pubkey: PublicKeyFromString,
     account: ParsedAccountInfoResult
   });
-  type({
+  const StakeActivationResult = type({
     state: union([literal("active"), literal("inactive"), literal("activating"), literal("deactivating")]),
     active: number(),
     inactive: number()
   });
-  jsonRpcResult(array(type({
+  const GetConfirmedSignaturesForAddress2RpcResult = jsonRpcResult(array(type({
     signature: string(),
     slot: number(),
     err: TransactionErrorResult,
     memo: nullable(string()),
     blockTime: optional(nullable(number()))
   })));
-  jsonRpcResult(array(type({
+  const GetSignaturesForAddressRpcResult = jsonRpcResult(array(type({
     signature: string(),
     slot: number(),
     err: TransactionErrorResult,
     memo: nullable(string()),
     blockTime: optional(nullable(number()))
   })));
-  type({
+  const AccountNotificationResult = type({
     subscription: number(),
     result: notificationResultAndContext(AccountInfoResult)
   });
@@ -17386,7 +19106,7 @@ ${i3}
     pubkey: PublicKeyFromString,
     account: AccountInfoResult
   });
-  type({
+  const ProgramAccountNotificationResult = type({
     subscription: number(),
     result: notificationResultAndContext(ProgramAccountInfoResult)
   });
@@ -17395,7 +19115,7 @@ ${i3}
     slot: number(),
     root: number()
   });
-  type({
+  const SlotNotificationResult = type({
     subscription: number(),
     result: SlotInfoResult
   });
@@ -17424,19 +19144,19 @@ ${i3}
     timestamp: number(),
     err: string()
   })]);
-  type({
+  const SlotUpdateNotificationResult = type({
     subscription: number(),
     result: SlotUpdateResult
   });
-  type({
+  const SignatureNotificationResult = type({
     subscription: number(),
     result: notificationResultAndContext(union([SignatureStatusResult, SignatureReceivedResult]))
   });
-  type({
+  const RootNotificationResult = type({
     subscription: number(),
     result: number()
   });
-  type({
+  const ContactInfoResult = type({
     pubkey: string(),
     gossip: nullable(string()),
     tpu: nullable(string()),
@@ -17453,7 +19173,7 @@ ${i3}
     lastVote: number(),
     rootSlot: nullable(number())
   });
-  jsonRpcResult(type({
+  const GetVoteAccounts = jsonRpcResult(type({
     current: array(VoteAccountInfoResult),
     delinquent: array(VoteAccountInfoResult)
   }));
@@ -17464,8 +19184,8 @@ ${i3}
     err: TransactionErrorResult,
     confirmationStatus: optional(ConfirmationStatus)
   });
-  jsonRpcResultAndContext(array(nullable(SignatureStatusResponse)));
-  jsonRpcResult(number());
+  const GetSignatureStatusesRpcResult = jsonRpcResultAndContext(array(nullable(SignatureStatusResponse)));
+  const GetMinimumBalanceForRentExemptionRpcResult = jsonRpcResult(number());
   const AddressTableLookupStruct = type({
     accountKey: PublicKeyFromString,
     writableIndexes: array(number()),
@@ -17587,7 +19307,7 @@ ${i3}
     rewardType: nullable(string()),
     commission: optional(nullable(number()))
   });
-  jsonRpcResult(nullable(type({
+  const GetBlockRpcResult = jsonRpcResult(nullable(type({
     blockhash: string(),
     previousBlockhash: string(),
     parentSlot: number(),
@@ -17600,7 +19320,7 @@ ${i3}
     blockTime: nullable(number()),
     blockHeight: nullable(number())
   })));
-  jsonRpcResult(nullable(type({
+  const GetNoneModeBlockRpcResult = jsonRpcResult(nullable(type({
     blockhash: string(),
     previousBlockhash: string(),
     parentSlot: number(),
@@ -17608,7 +19328,7 @@ ${i3}
     blockTime: nullable(number()),
     blockHeight: nullable(number())
   })));
-  jsonRpcResult(nullable(type({
+  const GetAccountsModeBlockRpcResult = jsonRpcResult(nullable(type({
     blockhash: string(),
     previousBlockhash: string(),
     parentSlot: number(),
@@ -17621,7 +19341,7 @@ ${i3}
     blockTime: nullable(number()),
     blockHeight: nullable(number())
   })));
-  jsonRpcResult(nullable(type({
+  const GetParsedBlockRpcResult = jsonRpcResult(nullable(type({
     blockhash: string(),
     previousBlockhash: string(),
     parentSlot: number(),
@@ -17634,7 +19354,7 @@ ${i3}
     blockTime: nullable(number()),
     blockHeight: nullable(number())
   })));
-  jsonRpcResult(nullable(type({
+  const GetParsedAccountsModeBlockRpcResult = jsonRpcResult(nullable(type({
     blockhash: string(),
     previousBlockhash: string(),
     parentSlot: number(),
@@ -17647,7 +19367,7 @@ ${i3}
     blockTime: nullable(number()),
     blockHeight: nullable(number())
   })));
-  jsonRpcResult(nullable(type({
+  const GetParsedNoneModeBlockRpcResult = jsonRpcResult(nullable(type({
     blockhash: string(),
     previousBlockhash: string(),
     parentSlot: number(),
@@ -17655,7 +19375,7 @@ ${i3}
     blockTime: nullable(number()),
     blockHeight: nullable(number())
   })));
-  jsonRpcResult(nullable(type({
+  const GetConfirmedBlockRpcResult = jsonRpcResult(nullable(type({
     blockhash: string(),
     previousBlockhash: string(),
     parentSlot: number(),
@@ -17666,61 +19386,2730 @@ ${i3}
     rewards: optional(array(RewardsResult)),
     blockTime: nullable(number())
   })));
-  jsonRpcResult(nullable(type({
+  const GetBlockSignaturesRpcResult = jsonRpcResult(nullable(type({
     blockhash: string(),
     previousBlockhash: string(),
     parentSlot: number(),
     signatures: array(string()),
     blockTime: nullable(number())
   })));
-  jsonRpcResult(nullable(type({
+  const GetTransactionRpcResult = jsonRpcResult(nullable(type({
     slot: number(),
     meta: nullable(ConfirmedTransactionMetaResult),
     blockTime: optional(nullable(number())),
     transaction: ConfirmedTransactionResult,
     version: optional(TransactionVersionStruct)
   })));
-  jsonRpcResult(nullable(type({
+  const GetParsedTransactionRpcResult = jsonRpcResult(nullable(type({
     slot: number(),
     transaction: ParsedConfirmedTransactionResult,
     meta: nullable(ParsedConfirmedTransactionMetaResult),
     blockTime: optional(nullable(number())),
     version: optional(TransactionVersionStruct)
   })));
-  jsonRpcResultAndContext(type({
+  const GetRecentBlockhashAndContextRpcResult = jsonRpcResultAndContext(type({
     blockhash: string(),
     feeCalculator: type({
       lamportsPerSignature: number()
     })
   }));
-  jsonRpcResultAndContext(type({
+  const GetLatestBlockhashRpcResult = jsonRpcResultAndContext(type({
     blockhash: string(),
     lastValidBlockHeight: number()
   }));
-  jsonRpcResultAndContext(boolean());
+  const IsBlockhashValidRpcResult = jsonRpcResultAndContext(boolean());
   const PerfSampleResult = type({
     slot: number(),
     numTransactions: number(),
     numSlots: number(),
     samplePeriodSecs: number()
   });
-  jsonRpcResult(array(PerfSampleResult));
-  jsonRpcResultAndContext(nullable(type({
+  const GetRecentPerformanceSamplesRpcResult = jsonRpcResult(array(PerfSampleResult));
+  const GetFeeCalculatorRpcResult = jsonRpcResultAndContext(nullable(type({
     feeCalculator: type({
       lamportsPerSignature: number()
     })
   })));
-  jsonRpcResult(string());
-  jsonRpcResult(string());
+  const RequestAirdropRpcResult = jsonRpcResult(string());
+  const SendTransactionRpcResult = jsonRpcResult(string());
   const LogsResult = type({
     err: TransactionErrorResult,
     logs: array(string()),
     signature: string()
   });
-  type({
+  const LogsNotificationResult = type({
     result: notificationResultAndContext(LogsResult),
     subscription: number()
   });
+  const COMMON_HTTP_HEADERS = {
+    "solana-client": `js/${"0.0.0-development"}`
+  };
+  class Connection {
+    /**
+     * Establish a JSON RPC connection
+     *
+     * @param endpoint URL to the fullnode JSON RPC endpoint
+     * @param commitmentOrConfig optional default commitment level or optional ConnectionConfig configuration object
+     */
+    constructor(endpoint2, _commitmentOrConfig) {
+      this._commitment = void 0;
+      this._confirmTransactionInitialTimeout = void 0;
+      this._rpcEndpoint = void 0;
+      this._rpcWsEndpoint = void 0;
+      this._rpcClient = void 0;
+      this._rpcRequest = void 0;
+      this._rpcBatchRequest = void 0;
+      this._rpcWebSocket = void 0;
+      this._rpcWebSocketConnected = false;
+      this._rpcWebSocketHeartbeat = null;
+      this._rpcWebSocketIdleTimeout = null;
+      this._rpcWebSocketGeneration = 0;
+      this._disableBlockhashCaching = false;
+      this._pollingBlockhash = false;
+      this._blockhashInfo = {
+        latestBlockhash: null,
+        lastFetch: 0,
+        transactionSignatures: [],
+        simulatedSignatures: []
+      };
+      this._nextClientSubscriptionId = 0;
+      this._subscriptionDisposeFunctionsByClientSubscriptionId = {};
+      this._subscriptionHashByClientSubscriptionId = {};
+      this._subscriptionStateChangeCallbacksByHash = {};
+      this._subscriptionCallbacksByServerSubscriptionId = {};
+      this._subscriptionsByHash = {};
+      this._subscriptionsAutoDisposedByRpc = /* @__PURE__ */ new Set();
+      this.getBlockHeight = (() => {
+        const requestPromises = {};
+        return async (commitmentOrConfig) => {
+          const {
+            commitment,
+            config
+          } = extractCommitmentFromConfig(commitmentOrConfig);
+          const args = this._buildArgs([], commitment, void 0, config);
+          const requestHash = fastStableStringify$1(args);
+          requestPromises[requestHash] = requestPromises[requestHash] ?? (async () => {
+            try {
+              const unsafeRes = await this._rpcRequest("getBlockHeight", args);
+              const res = create(unsafeRes, jsonRpcResult(number()));
+              if ("error" in res) {
+                throw new SolanaJSONRPCError(res.error, "failed to get block height information");
+              }
+              return res.result;
+            } finally {
+              delete requestPromises[requestHash];
+            }
+          })();
+          return await requestPromises[requestHash];
+        };
+      })();
+      let wsEndpoint;
+      let httpHeaders;
+      let fetch;
+      let fetchMiddleware;
+      let disableRetryOnRateLimit;
+      let httpAgent;
+      if (_commitmentOrConfig && typeof _commitmentOrConfig === "string") {
+        this._commitment = _commitmentOrConfig;
+      } else if (_commitmentOrConfig) {
+        this._commitment = _commitmentOrConfig.commitment;
+        this._confirmTransactionInitialTimeout = _commitmentOrConfig.confirmTransactionInitialTimeout;
+        wsEndpoint = _commitmentOrConfig.wsEndpoint;
+        httpHeaders = _commitmentOrConfig.httpHeaders;
+        fetch = _commitmentOrConfig.fetch;
+        fetchMiddleware = _commitmentOrConfig.fetchMiddleware;
+        disableRetryOnRateLimit = _commitmentOrConfig.disableRetryOnRateLimit;
+        httpAgent = _commitmentOrConfig.httpAgent;
+      }
+      this._rpcEndpoint = assertEndpointUrl(endpoint2);
+      this._rpcWsEndpoint = wsEndpoint || makeWebsocketUrl(endpoint2);
+      this._rpcClient = createRpcClient(endpoint2, httpHeaders, fetch, fetchMiddleware, disableRetryOnRateLimit, httpAgent);
+      this._rpcRequest = createRpcRequest(this._rpcClient);
+      this._rpcBatchRequest = createRpcBatchRequest(this._rpcClient);
+      this._rpcWebSocket = new RpcWebSocketClient(this._rpcWsEndpoint, {
+        autoconnect: false,
+        max_reconnects: Infinity
+      });
+      this._rpcWebSocket.on("open", this._wsOnOpen.bind(this));
+      this._rpcWebSocket.on("error", this._wsOnError.bind(this));
+      this._rpcWebSocket.on("close", this._wsOnClose.bind(this));
+      this._rpcWebSocket.on("accountNotification", this._wsOnAccountNotification.bind(this));
+      this._rpcWebSocket.on("programNotification", this._wsOnProgramAccountNotification.bind(this));
+      this._rpcWebSocket.on("slotNotification", this._wsOnSlotNotification.bind(this));
+      this._rpcWebSocket.on("slotsUpdatesNotification", this._wsOnSlotUpdatesNotification.bind(this));
+      this._rpcWebSocket.on("signatureNotification", this._wsOnSignatureNotification.bind(this));
+      this._rpcWebSocket.on("rootNotification", this._wsOnRootNotification.bind(this));
+      this._rpcWebSocket.on("logsNotification", this._wsOnLogsNotification.bind(this));
+    }
+    /**
+     * The default commitment used for requests
+     */
+    get commitment() {
+      return this._commitment;
+    }
+    /**
+     * The RPC endpoint
+     */
+    get rpcEndpoint() {
+      return this._rpcEndpoint;
+    }
+    /**
+     * Fetch the balance for the specified public key, return with context
+     */
+    async getBalanceAndContext(publicKey2, commitmentOrConfig) {
+      const {
+        commitment,
+        config
+      } = extractCommitmentFromConfig(commitmentOrConfig);
+      const args = this._buildArgs([publicKey2.toBase58()], commitment, void 0, config);
+      const unsafeRes = await this._rpcRequest("getBalance", args);
+      const res = create(unsafeRes, jsonRpcResultAndContext(number()));
+      if ("error" in res) {
+        throw new SolanaJSONRPCError(res.error, `failed to get balance for ${publicKey2.toBase58()}`);
+      }
+      return res.result;
+    }
+    /**
+     * Fetch the balance for the specified public key
+     */
+    async getBalance(publicKey2, commitmentOrConfig) {
+      return await this.getBalanceAndContext(publicKey2, commitmentOrConfig).then((x) => x.value).catch((e2) => {
+        throw new Error("failed to get balance of account " + publicKey2.toBase58() + ": " + e2);
+      });
+    }
+    /**
+     * Fetch the estimated production time of a block
+     */
+    async getBlockTime(slot) {
+      const unsafeRes = await this._rpcRequest("getBlockTime", [slot]);
+      const res = create(unsafeRes, jsonRpcResult(nullable(number())));
+      if ("error" in res) {
+        throw new SolanaJSONRPCError(res.error, `failed to get block time for slot ${slot}`);
+      }
+      return res.result;
+    }
+    /**
+     * Fetch the lowest slot that the node has information about in its ledger.
+     * This value may increase over time if the node is configured to purge older ledger data
+     */
+    async getMinimumLedgerSlot() {
+      const unsafeRes = await this._rpcRequest("minimumLedgerSlot", []);
+      const res = create(unsafeRes, jsonRpcResult(number()));
+      if ("error" in res) {
+        throw new SolanaJSONRPCError(res.error, "failed to get minimum ledger slot");
+      }
+      return res.result;
+    }
+    /**
+     * Fetch the slot of the lowest confirmed block that has not been purged from the ledger
+     */
+    async getFirstAvailableBlock() {
+      const unsafeRes = await this._rpcRequest("getFirstAvailableBlock", []);
+      const res = create(unsafeRes, SlotRpcResult);
+      if ("error" in res) {
+        throw new SolanaJSONRPCError(res.error, "failed to get first available block");
+      }
+      return res.result;
+    }
+    /**
+     * Fetch information about the current supply
+     */
+    async getSupply(config) {
+      let configArg = {};
+      if (typeof config === "string") {
+        configArg = {
+          commitment: config
+        };
+      } else if (config) {
+        configArg = {
+          ...config,
+          commitment: config && config.commitment || this.commitment
+        };
+      } else {
+        configArg = {
+          commitment: this.commitment
+        };
+      }
+      const unsafeRes = await this._rpcRequest("getSupply", [configArg]);
+      const res = create(unsafeRes, GetSupplyRpcResult);
+      if ("error" in res) {
+        throw new SolanaJSONRPCError(res.error, "failed to get supply");
+      }
+      return res.result;
+    }
+    /**
+     * Fetch the current supply of a token mint
+     */
+    async getTokenSupply(tokenMintAddress, commitment) {
+      const args = this._buildArgs([tokenMintAddress.toBase58()], commitment);
+      const unsafeRes = await this._rpcRequest("getTokenSupply", args);
+      const res = create(unsafeRes, jsonRpcResultAndContext(TokenAmountResult));
+      if ("error" in res) {
+        throw new SolanaJSONRPCError(res.error, "failed to get token supply");
+      }
+      return res.result;
+    }
+    /**
+     * Fetch the current balance of a token account
+     */
+    async getTokenAccountBalance(tokenAddress, commitment) {
+      const args = this._buildArgs([tokenAddress.toBase58()], commitment);
+      const unsafeRes = await this._rpcRequest("getTokenAccountBalance", args);
+      const res = create(unsafeRes, jsonRpcResultAndContext(TokenAmountResult));
+      if ("error" in res) {
+        throw new SolanaJSONRPCError(res.error, "failed to get token account balance");
+      }
+      return res.result;
+    }
+    /**
+     * Fetch all the token accounts owned by the specified account
+     *
+     * @return {Promise<RpcResponseAndContext<GetProgramAccountsResponse>}
+     */
+    async getTokenAccountsByOwner(ownerAddress, filter, commitmentOrConfig) {
+      const {
+        commitment,
+        config
+      } = extractCommitmentFromConfig(commitmentOrConfig);
+      let _args = [ownerAddress.toBase58()];
+      if ("mint" in filter) {
+        _args.push({
+          mint: filter.mint.toBase58()
+        });
+      } else {
+        _args.push({
+          programId: filter.programId.toBase58()
+        });
+      }
+      const args = this._buildArgs(_args, commitment, "base64", config);
+      const unsafeRes = await this._rpcRequest("getTokenAccountsByOwner", args);
+      const res = create(unsafeRes, GetTokenAccountsByOwner);
+      if ("error" in res) {
+        throw new SolanaJSONRPCError(res.error, `failed to get token accounts owned by account ${ownerAddress.toBase58()}`);
+      }
+      return res.result;
+    }
+    /**
+     * Fetch parsed token accounts owned by the specified account
+     *
+     * @return {Promise<RpcResponseAndContext<Array<{pubkey: PublicKey, account: AccountInfo<ParsedAccountData>}>>>}
+     */
+    async getParsedTokenAccountsByOwner(ownerAddress, filter, commitment) {
+      let _args = [ownerAddress.toBase58()];
+      if ("mint" in filter) {
+        _args.push({
+          mint: filter.mint.toBase58()
+        });
+      } else {
+        _args.push({
+          programId: filter.programId.toBase58()
+        });
+      }
+      const args = this._buildArgs(_args, commitment, "jsonParsed");
+      const unsafeRes = await this._rpcRequest("getTokenAccountsByOwner", args);
+      const res = create(unsafeRes, GetParsedTokenAccountsByOwner);
+      if ("error" in res) {
+        throw new SolanaJSONRPCError(res.error, `failed to get token accounts owned by account ${ownerAddress.toBase58()}`);
+      }
+      return res.result;
+    }
+    /**
+     * Fetch the 20 largest accounts with their current balances
+     */
+    async getLargestAccounts(config) {
+      const arg = {
+        ...config,
+        commitment: config && config.commitment || this.commitment
+      };
+      const args = arg.filter || arg.commitment ? [arg] : [];
+      const unsafeRes = await this._rpcRequest("getLargestAccounts", args);
+      const res = create(unsafeRes, GetLargestAccountsRpcResult);
+      if ("error" in res) {
+        throw new SolanaJSONRPCError(res.error, "failed to get largest accounts");
+      }
+      return res.result;
+    }
+    /**
+     * Fetch the 20 largest token accounts with their current balances
+     * for a given mint.
+     */
+    async getTokenLargestAccounts(mintAddress, commitment) {
+      const args = this._buildArgs([mintAddress.toBase58()], commitment);
+      const unsafeRes = await this._rpcRequest("getTokenLargestAccounts", args);
+      const res = create(unsafeRes, GetTokenLargestAccountsResult);
+      if ("error" in res) {
+        throw new SolanaJSONRPCError(res.error, "failed to get token largest accounts");
+      }
+      return res.result;
+    }
+    /**
+     * Fetch all the account info for the specified public key, return with context
+     */
+    async getAccountInfoAndContext(publicKey2, commitmentOrConfig) {
+      const {
+        commitment,
+        config
+      } = extractCommitmentFromConfig(commitmentOrConfig);
+      const args = this._buildArgs([publicKey2.toBase58()], commitment, "base64", config);
+      const unsafeRes = await this._rpcRequest("getAccountInfo", args);
+      const res = create(unsafeRes, jsonRpcResultAndContext(nullable(AccountInfoResult)));
+      if ("error" in res) {
+        throw new SolanaJSONRPCError(res.error, `failed to get info about account ${publicKey2.toBase58()}`);
+      }
+      return res.result;
+    }
+    /**
+     * Fetch parsed account info for the specified public key
+     */
+    async getParsedAccountInfo(publicKey2, commitmentOrConfig) {
+      const {
+        commitment,
+        config
+      } = extractCommitmentFromConfig(commitmentOrConfig);
+      const args = this._buildArgs([publicKey2.toBase58()], commitment, "jsonParsed", config);
+      const unsafeRes = await this._rpcRequest("getAccountInfo", args);
+      const res = create(unsafeRes, jsonRpcResultAndContext(nullable(ParsedAccountInfoResult)));
+      if ("error" in res) {
+        throw new SolanaJSONRPCError(res.error, `failed to get info about account ${publicKey2.toBase58()}`);
+      }
+      return res.result;
+    }
+    /**
+     * Fetch all the account info for the specified public key
+     */
+    async getAccountInfo(publicKey2, commitmentOrConfig) {
+      try {
+        const res = await this.getAccountInfoAndContext(publicKey2, commitmentOrConfig);
+        return res.value;
+      } catch (e2) {
+        throw new Error("failed to get info about account " + publicKey2.toBase58() + ": " + e2);
+      }
+    }
+    /**
+     * Fetch all the account info for multiple accounts specified by an array of public keys, return with context
+     */
+    async getMultipleParsedAccounts(publicKeys, rawConfig) {
+      const {
+        commitment,
+        config
+      } = extractCommitmentFromConfig(rawConfig);
+      const keys = publicKeys.map((key) => key.toBase58());
+      const args = this._buildArgs([keys], commitment, "jsonParsed", config);
+      const unsafeRes = await this._rpcRequest("getMultipleAccounts", args);
+      const res = create(unsafeRes, jsonRpcResultAndContext(array(nullable(ParsedAccountInfoResult))));
+      if ("error" in res) {
+        throw new SolanaJSONRPCError(res.error, `failed to get info for accounts ${keys}`);
+      }
+      return res.result;
+    }
+    /**
+     * Fetch all the account info for multiple accounts specified by an array of public keys, return with context
+     */
+    async getMultipleAccountsInfoAndContext(publicKeys, commitmentOrConfig) {
+      const {
+        commitment,
+        config
+      } = extractCommitmentFromConfig(commitmentOrConfig);
+      const keys = publicKeys.map((key) => key.toBase58());
+      const args = this._buildArgs([keys], commitment, "base64", config);
+      const unsafeRes = await this._rpcRequest("getMultipleAccounts", args);
+      const res = create(unsafeRes, jsonRpcResultAndContext(array(nullable(AccountInfoResult))));
+      if ("error" in res) {
+        throw new SolanaJSONRPCError(res.error, `failed to get info for accounts ${keys}`);
+      }
+      return res.result;
+    }
+    /**
+     * Fetch all the account info for multiple accounts specified by an array of public keys
+     */
+    async getMultipleAccountsInfo(publicKeys, commitmentOrConfig) {
+      const res = await this.getMultipleAccountsInfoAndContext(publicKeys, commitmentOrConfig);
+      return res.value;
+    }
+    /**
+     * Returns epoch activation information for a stake account that has been delegated
+     */
+    async getStakeActivation(publicKey2, commitmentOrConfig, epoch) {
+      const {
+        commitment,
+        config
+      } = extractCommitmentFromConfig(commitmentOrConfig);
+      const args = this._buildArgs([publicKey2.toBase58()], commitment, void 0, {
+        ...config,
+        epoch: epoch != null ? epoch : config == null ? void 0 : config.epoch
+      });
+      const unsafeRes = await this._rpcRequest("getStakeActivation", args);
+      const res = create(unsafeRes, jsonRpcResult(StakeActivationResult));
+      if ("error" in res) {
+        throw new SolanaJSONRPCError(res.error, `failed to get Stake Activation ${publicKey2.toBase58()}`);
+      }
+      return res.result;
+    }
+    /**
+     * Fetch all the accounts owned by the specified program id
+     *
+     * @return {Promise<Array<{pubkey: PublicKey, account: AccountInfo<Buffer>}>>}
+     */
+    // eslint-disable-next-line no-dupe-class-members
+    // eslint-disable-next-line no-dupe-class-members
+    async getProgramAccounts(programId, configOrCommitment) {
+      const {
+        commitment,
+        config
+      } = extractCommitmentFromConfig(configOrCommitment);
+      const {
+        encoding: encoding2,
+        ...configWithoutEncoding
+      } = config || {};
+      const args = this._buildArgs([programId.toBase58()], commitment, encoding2 || "base64", configWithoutEncoding);
+      const unsafeRes = await this._rpcRequest("getProgramAccounts", args);
+      const baseSchema = array(KeyedAccountInfoResult);
+      const res = configWithoutEncoding.withContext === true ? create(unsafeRes, jsonRpcResultAndContext(baseSchema)) : create(unsafeRes, jsonRpcResult(baseSchema));
+      if ("error" in res) {
+        throw new SolanaJSONRPCError(res.error, `failed to get accounts owned by program ${programId.toBase58()}`);
+      }
+      return res.result;
+    }
+    /**
+     * Fetch and parse all the accounts owned by the specified program id
+     *
+     * @return {Promise<Array<{pubkey: PublicKey, account: AccountInfo<Buffer | ParsedAccountData>}>>}
+     */
+    async getParsedProgramAccounts(programId, configOrCommitment) {
+      const {
+        commitment,
+        config
+      } = extractCommitmentFromConfig(configOrCommitment);
+      const args = this._buildArgs([programId.toBase58()], commitment, "jsonParsed", config);
+      const unsafeRes = await this._rpcRequest("getProgramAccounts", args);
+      const res = create(unsafeRes, jsonRpcResult(array(KeyedParsedAccountInfoResult)));
+      if ("error" in res) {
+        throw new SolanaJSONRPCError(res.error, `failed to get accounts owned by program ${programId.toBase58()}`);
+      }
+      return res.result;
+    }
+    /** @deprecated Instead, call `confirmTransaction` and pass in {@link TransactionConfirmationStrategy} */
+    // eslint-disable-next-line no-dupe-class-members
+    // eslint-disable-next-line no-dupe-class-members
+    async confirmTransaction(strategy, commitment) {
+      var _a;
+      let rawSignature;
+      if (typeof strategy == "string") {
+        rawSignature = strategy;
+      } else {
+        const config = strategy;
+        if ((_a = config.abortSignal) == null ? void 0 : _a.aborted) {
+          return Promise.reject(config.abortSignal.reason);
+        }
+        rawSignature = config.signature;
+      }
+      let decodedSignature;
+      try {
+        decodedSignature = bs58$2.decode(rawSignature);
+      } catch (err) {
+        throw new Error("signature must be base58 encoded: " + rawSignature);
+      }
+      assert(decodedSignature.length === 64, "signature has invalid length");
+      if (typeof strategy === "string") {
+        return await this.confirmTransactionUsingLegacyTimeoutStrategy({
+          commitment: commitment || this.commitment,
+          signature: rawSignature
+        });
+      } else if ("lastValidBlockHeight" in strategy) {
+        return await this.confirmTransactionUsingBlockHeightExceedanceStrategy({
+          commitment: commitment || this.commitment,
+          strategy
+        });
+      } else {
+        return await this.confirmTransactionUsingDurableNonceStrategy({
+          commitment: commitment || this.commitment,
+          strategy
+        });
+      }
+    }
+    getCancellationPromise(signal) {
+      return new Promise((_2, reject) => {
+        if (signal == null) {
+          return;
+        }
+        if (signal.aborted) {
+          reject(signal.reason);
+        } else {
+          signal.addEventListener("abort", () => {
+            reject(signal.reason);
+          });
+        }
+      });
+    }
+    getTransactionConfirmationPromise({
+      commitment,
+      signature
+    }) {
+      let signatureSubscriptionId;
+      let disposeSignatureSubscriptionStateChangeObserver;
+      let done = false;
+      const confirmationPromise = new Promise((resolve, reject) => {
+        try {
+          signatureSubscriptionId = this.onSignature(signature, (result, context) => {
+            signatureSubscriptionId = void 0;
+            const response = {
+              context,
+              value: result
+            };
+            resolve({
+              __type: TransactionStatus.PROCESSED,
+              response
+            });
+          }, commitment);
+          const subscriptionSetupPromise = new Promise((resolveSubscriptionSetup) => {
+            if (signatureSubscriptionId == null) {
+              resolveSubscriptionSetup();
+            } else {
+              disposeSignatureSubscriptionStateChangeObserver = this._onSubscriptionStateChange(signatureSubscriptionId, (nextState) => {
+                if (nextState === "subscribed") {
+                  resolveSubscriptionSetup();
+                }
+              });
+            }
+          });
+          (async () => {
+            await subscriptionSetupPromise;
+            if (done)
+              return;
+            const response = await this.getSignatureStatus(signature);
+            if (done)
+              return;
+            if (response == null) {
+              return;
+            }
+            const {
+              context,
+              value
+            } = response;
+            if (value == null) {
+              return;
+            }
+            if (value == null ? void 0 : value.err) {
+              reject(value.err);
+            } else {
+              switch (commitment) {
+                case "confirmed":
+                case "single":
+                case "singleGossip": {
+                  if (value.confirmationStatus === "processed") {
+                    return;
+                  }
+                  break;
+                }
+                case "finalized":
+                case "max":
+                case "root": {
+                  if (value.confirmationStatus === "processed" || value.confirmationStatus === "confirmed") {
+                    return;
+                  }
+                  break;
+                }
+                case "processed":
+                case "recent":
+              }
+              done = true;
+              resolve({
+                __type: TransactionStatus.PROCESSED,
+                response: {
+                  context,
+                  value
+                }
+              });
+            }
+          })();
+        } catch (err) {
+          reject(err);
+        }
+      });
+      const abortConfirmation = () => {
+        if (disposeSignatureSubscriptionStateChangeObserver) {
+          disposeSignatureSubscriptionStateChangeObserver();
+          disposeSignatureSubscriptionStateChangeObserver = void 0;
+        }
+        if (signatureSubscriptionId != null) {
+          this.removeSignatureListener(signatureSubscriptionId);
+          signatureSubscriptionId = void 0;
+        }
+      };
+      return {
+        abortConfirmation,
+        confirmationPromise
+      };
+    }
+    async confirmTransactionUsingBlockHeightExceedanceStrategy({
+      commitment,
+      strategy: {
+        abortSignal,
+        lastValidBlockHeight,
+        signature
+      }
+    }) {
+      let done = false;
+      const expiryPromise = new Promise((resolve) => {
+        const checkBlockHeight = async () => {
+          try {
+            const blockHeight = await this.getBlockHeight(commitment);
+            return blockHeight;
+          } catch (_e2) {
+            return -1;
+          }
+        };
+        (async () => {
+          let currentBlockHeight = await checkBlockHeight();
+          if (done)
+            return;
+          while (currentBlockHeight <= lastValidBlockHeight) {
+            await sleep(1e3);
+            if (done)
+              return;
+            currentBlockHeight = await checkBlockHeight();
+            if (done)
+              return;
+          }
+          resolve({
+            __type: TransactionStatus.BLOCKHEIGHT_EXCEEDED
+          });
+        })();
+      });
+      const {
+        abortConfirmation,
+        confirmationPromise
+      } = this.getTransactionConfirmationPromise({
+        commitment,
+        signature
+      });
+      const cancellationPromise = this.getCancellationPromise(abortSignal);
+      let result;
+      try {
+        const outcome = await Promise.race([cancellationPromise, confirmationPromise, expiryPromise]);
+        if (outcome.__type === TransactionStatus.PROCESSED) {
+          result = outcome.response;
+        } else {
+          throw new TransactionExpiredBlockheightExceededError(signature);
+        }
+      } finally {
+        done = true;
+        abortConfirmation();
+      }
+      return result;
+    }
+    async confirmTransactionUsingDurableNonceStrategy({
+      commitment,
+      strategy: {
+        abortSignal,
+        minContextSlot,
+        nonceAccountPubkey,
+        nonceValue,
+        signature
+      }
+    }) {
+      let done = false;
+      const expiryPromise = new Promise((resolve) => {
+        let currentNonceValue = nonceValue;
+        let lastCheckedSlot = null;
+        const getCurrentNonceValue = async () => {
+          try {
+            const {
+              context,
+              value: nonceAccount
+            } = await this.getNonceAndContext(nonceAccountPubkey, {
+              commitment,
+              minContextSlot
+            });
+            lastCheckedSlot = context.slot;
+            return nonceAccount == null ? void 0 : nonceAccount.nonce;
+          } catch (e2) {
+            return currentNonceValue;
+          }
+        };
+        (async () => {
+          currentNonceValue = await getCurrentNonceValue();
+          if (done)
+            return;
+          while (true) {
+            if (nonceValue !== currentNonceValue) {
+              resolve({
+                __type: TransactionStatus.NONCE_INVALID,
+                slotInWhichNonceDidAdvance: lastCheckedSlot
+              });
+              return;
+            }
+            await sleep(2e3);
+            if (done)
+              return;
+            currentNonceValue = await getCurrentNonceValue();
+            if (done)
+              return;
+          }
+        })();
+      });
+      const {
+        abortConfirmation,
+        confirmationPromise
+      } = this.getTransactionConfirmationPromise({
+        commitment,
+        signature
+      });
+      const cancellationPromise = this.getCancellationPromise(abortSignal);
+      let result;
+      try {
+        const outcome = await Promise.race([cancellationPromise, confirmationPromise, expiryPromise]);
+        if (outcome.__type === TransactionStatus.PROCESSED) {
+          result = outcome.response;
+        } else {
+          let signatureStatus;
+          while (true) {
+            const status = await this.getSignatureStatus(signature);
+            if (status == null) {
+              break;
+            }
+            if (status.context.slot < (outcome.slotInWhichNonceDidAdvance ?? minContextSlot)) {
+              await sleep(400);
+              continue;
+            }
+            signatureStatus = status;
+            break;
+          }
+          if (signatureStatus == null ? void 0 : signatureStatus.value) {
+            const commitmentForStatus = commitment || "finalized";
+            const {
+              confirmationStatus
+            } = signatureStatus.value;
+            switch (commitmentForStatus) {
+              case "processed":
+              case "recent":
+                if (confirmationStatus !== "processed" && confirmationStatus !== "confirmed" && confirmationStatus !== "finalized") {
+                  throw new TransactionExpiredNonceInvalidError(signature);
+                }
+                break;
+              case "confirmed":
+              case "single":
+              case "singleGossip":
+                if (confirmationStatus !== "confirmed" && confirmationStatus !== "finalized") {
+                  throw new TransactionExpiredNonceInvalidError(signature);
+                }
+                break;
+              case "finalized":
+              case "max":
+              case "root":
+                if (confirmationStatus !== "finalized") {
+                  throw new TransactionExpiredNonceInvalidError(signature);
+                }
+                break;
+              default:
+                ((_2) => {
+                })(commitmentForStatus);
+            }
+            result = {
+              context: signatureStatus.context,
+              value: {
+                err: signatureStatus.value.err
+              }
+            };
+          } else {
+            throw new TransactionExpiredNonceInvalidError(signature);
+          }
+        }
+      } finally {
+        done = true;
+        abortConfirmation();
+      }
+      return result;
+    }
+    async confirmTransactionUsingLegacyTimeoutStrategy({
+      commitment,
+      signature
+    }) {
+      let timeoutId;
+      const expiryPromise = new Promise((resolve) => {
+        let timeoutMs = this._confirmTransactionInitialTimeout || 60 * 1e3;
+        switch (commitment) {
+          case "processed":
+          case "recent":
+          case "single":
+          case "confirmed":
+          case "singleGossip": {
+            timeoutMs = this._confirmTransactionInitialTimeout || 30 * 1e3;
+            break;
+          }
+        }
+        timeoutId = setTimeout(() => resolve({
+          __type: TransactionStatus.TIMED_OUT,
+          timeoutMs
+        }), timeoutMs);
+      });
+      const {
+        abortConfirmation,
+        confirmationPromise
+      } = this.getTransactionConfirmationPromise({
+        commitment,
+        signature
+      });
+      let result;
+      try {
+        const outcome = await Promise.race([confirmationPromise, expiryPromise]);
+        if (outcome.__type === TransactionStatus.PROCESSED) {
+          result = outcome.response;
+        } else {
+          throw new TransactionExpiredTimeoutError(signature, outcome.timeoutMs / 1e3);
+        }
+      } finally {
+        clearTimeout(timeoutId);
+        abortConfirmation();
+      }
+      return result;
+    }
+    /**
+     * Return the list of nodes that are currently participating in the cluster
+     */
+    async getClusterNodes() {
+      const unsafeRes = await this._rpcRequest("getClusterNodes", []);
+      const res = create(unsafeRes, jsonRpcResult(array(ContactInfoResult)));
+      if ("error" in res) {
+        throw new SolanaJSONRPCError(res.error, "failed to get cluster nodes");
+      }
+      return res.result;
+    }
+    /**
+     * Return the list of nodes that are currently participating in the cluster
+     */
+    async getVoteAccounts(commitment) {
+      const args = this._buildArgs([], commitment);
+      const unsafeRes = await this._rpcRequest("getVoteAccounts", args);
+      const res = create(unsafeRes, GetVoteAccounts);
+      if ("error" in res) {
+        throw new SolanaJSONRPCError(res.error, "failed to get vote accounts");
+      }
+      return res.result;
+    }
+    /**
+     * Fetch the current slot that the node is processing
+     */
+    async getSlot(commitmentOrConfig) {
+      const {
+        commitment,
+        config
+      } = extractCommitmentFromConfig(commitmentOrConfig);
+      const args = this._buildArgs([], commitment, void 0, config);
+      const unsafeRes = await this._rpcRequest("getSlot", args);
+      const res = create(unsafeRes, jsonRpcResult(number()));
+      if ("error" in res) {
+        throw new SolanaJSONRPCError(res.error, "failed to get slot");
+      }
+      return res.result;
+    }
+    /**
+     * Fetch the current slot leader of the cluster
+     */
+    async getSlotLeader(commitmentOrConfig) {
+      const {
+        commitment,
+        config
+      } = extractCommitmentFromConfig(commitmentOrConfig);
+      const args = this._buildArgs([], commitment, void 0, config);
+      const unsafeRes = await this._rpcRequest("getSlotLeader", args);
+      const res = create(unsafeRes, jsonRpcResult(string()));
+      if ("error" in res) {
+        throw new SolanaJSONRPCError(res.error, "failed to get slot leader");
+      }
+      return res.result;
+    }
+    /**
+     * Fetch `limit` number of slot leaders starting from `startSlot`
+     *
+     * @param startSlot fetch slot leaders starting from this slot
+     * @param limit number of slot leaders to return
+     */
+    async getSlotLeaders(startSlot, limit) {
+      const args = [startSlot, limit];
+      const unsafeRes = await this._rpcRequest("getSlotLeaders", args);
+      const res = create(unsafeRes, jsonRpcResult(array(PublicKeyFromString)));
+      if ("error" in res) {
+        throw new SolanaJSONRPCError(res.error, "failed to get slot leaders");
+      }
+      return res.result;
+    }
+    /**
+     * Fetch the current status of a signature
+     */
+    async getSignatureStatus(signature, config) {
+      const {
+        context,
+        value: values
+      } = await this.getSignatureStatuses([signature], config);
+      assert(values.length === 1);
+      const value = values[0];
+      return {
+        context,
+        value
+      };
+    }
+    /**
+     * Fetch the current statuses of a batch of signatures
+     */
+    async getSignatureStatuses(signatures, config) {
+      const params = [signatures];
+      if (config) {
+        params.push(config);
+      }
+      const unsafeRes = await this._rpcRequest("getSignatureStatuses", params);
+      const res = create(unsafeRes, GetSignatureStatusesRpcResult);
+      if ("error" in res) {
+        throw new SolanaJSONRPCError(res.error, "failed to get signature status");
+      }
+      return res.result;
+    }
+    /**
+     * Fetch the current transaction count of the cluster
+     */
+    async getTransactionCount(commitmentOrConfig) {
+      const {
+        commitment,
+        config
+      } = extractCommitmentFromConfig(commitmentOrConfig);
+      const args = this._buildArgs([], commitment, void 0, config);
+      const unsafeRes = await this._rpcRequest("getTransactionCount", args);
+      const res = create(unsafeRes, jsonRpcResult(number()));
+      if ("error" in res) {
+        throw new SolanaJSONRPCError(res.error, "failed to get transaction count");
+      }
+      return res.result;
+    }
+    /**
+     * Fetch the current total currency supply of the cluster in lamports
+     *
+     * @deprecated Deprecated since v1.2.8. Please use {@link getSupply} instead.
+     */
+    async getTotalSupply(commitment) {
+      const result = await this.getSupply({
+        commitment,
+        excludeNonCirculatingAccountsList: true
+      });
+      return result.value.total;
+    }
+    /**
+     * Fetch the cluster InflationGovernor parameters
+     */
+    async getInflationGovernor(commitment) {
+      const args = this._buildArgs([], commitment);
+      const unsafeRes = await this._rpcRequest("getInflationGovernor", args);
+      const res = create(unsafeRes, GetInflationGovernorRpcResult);
+      if ("error" in res) {
+        throw new SolanaJSONRPCError(res.error, "failed to get inflation");
+      }
+      return res.result;
+    }
+    /**
+     * Fetch the inflation reward for a list of addresses for an epoch
+     */
+    async getInflationReward(addresses, epoch, commitmentOrConfig) {
+      const {
+        commitment,
+        config
+      } = extractCommitmentFromConfig(commitmentOrConfig);
+      const args = this._buildArgs([addresses.map((pubkey) => pubkey.toBase58())], commitment, void 0, {
+        ...config,
+        epoch: epoch != null ? epoch : config == null ? void 0 : config.epoch
+      });
+      const unsafeRes = await this._rpcRequest("getInflationReward", args);
+      const res = create(unsafeRes, GetInflationRewardResult);
+      if ("error" in res) {
+        throw new SolanaJSONRPCError(res.error, "failed to get inflation reward");
+      }
+      return res.result;
+    }
+    /**
+     * Fetch the specific inflation values for the current epoch
+     */
+    async getInflationRate() {
+      const unsafeRes = await this._rpcRequest("getInflationRate", []);
+      const res = create(unsafeRes, GetInflationRateRpcResult);
+      if ("error" in res) {
+        throw new SolanaJSONRPCError(res.error, "failed to get inflation rate");
+      }
+      return res.result;
+    }
+    /**
+     * Fetch the Epoch Info parameters
+     */
+    async getEpochInfo(commitmentOrConfig) {
+      const {
+        commitment,
+        config
+      } = extractCommitmentFromConfig(commitmentOrConfig);
+      const args = this._buildArgs([], commitment, void 0, config);
+      const unsafeRes = await this._rpcRequest("getEpochInfo", args);
+      const res = create(unsafeRes, GetEpochInfoRpcResult);
+      if ("error" in res) {
+        throw new SolanaJSONRPCError(res.error, "failed to get epoch info");
+      }
+      return res.result;
+    }
+    /**
+     * Fetch the Epoch Schedule parameters
+     */
+    async getEpochSchedule() {
+      const unsafeRes = await this._rpcRequest("getEpochSchedule", []);
+      const res = create(unsafeRes, GetEpochScheduleRpcResult);
+      if ("error" in res) {
+        throw new SolanaJSONRPCError(res.error, "failed to get epoch schedule");
+      }
+      const epochSchedule = res.result;
+      return new EpochSchedule(epochSchedule.slotsPerEpoch, epochSchedule.leaderScheduleSlotOffset, epochSchedule.warmup, epochSchedule.firstNormalEpoch, epochSchedule.firstNormalSlot);
+    }
+    /**
+     * Fetch the leader schedule for the current epoch
+     * @return {Promise<RpcResponseAndContext<LeaderSchedule>>}
+     */
+    async getLeaderSchedule() {
+      const unsafeRes = await this._rpcRequest("getLeaderSchedule", []);
+      const res = create(unsafeRes, GetLeaderScheduleRpcResult);
+      if ("error" in res) {
+        throw new SolanaJSONRPCError(res.error, "failed to get leader schedule");
+      }
+      return res.result;
+    }
+    /**
+     * Fetch the minimum balance needed to exempt an account of `dataLength`
+     * size from rent
+     */
+    async getMinimumBalanceForRentExemption(dataLength, commitment) {
+      const args = this._buildArgs([dataLength], commitment);
+      const unsafeRes = await this._rpcRequest("getMinimumBalanceForRentExemption", args);
+      const res = create(unsafeRes, GetMinimumBalanceForRentExemptionRpcResult);
+      if ("error" in res) {
+        formatAppLog("warn", "at node_modules/@solana/web3.js/lib/index.browser.esm.js:6255", "Unable to fetch minimum balance for rent exemption");
+        return 0;
+      }
+      return res.result;
+    }
+    /**
+     * Fetch a recent blockhash from the cluster, return with context
+     * @return {Promise<RpcResponseAndContext<{blockhash: Blockhash, feeCalculator: FeeCalculator}>>}
+     *
+     * @deprecated Deprecated since Solana v1.8.0. Please use {@link getLatestBlockhash} instead.
+     */
+    async getRecentBlockhashAndContext(commitment) {
+      const args = this._buildArgs([], commitment);
+      const unsafeRes = await this._rpcRequest("getRecentBlockhash", args);
+      const res = create(unsafeRes, GetRecentBlockhashAndContextRpcResult);
+      if ("error" in res) {
+        throw new SolanaJSONRPCError(res.error, "failed to get recent blockhash");
+      }
+      return res.result;
+    }
+    /**
+     * Fetch recent performance samples
+     * @return {Promise<Array<PerfSample>>}
+     */
+    async getRecentPerformanceSamples(limit) {
+      const unsafeRes = await this._rpcRequest("getRecentPerformanceSamples", limit ? [limit] : []);
+      const res = create(unsafeRes, GetRecentPerformanceSamplesRpcResult);
+      if ("error" in res) {
+        throw new SolanaJSONRPCError(res.error, "failed to get recent performance samples");
+      }
+      return res.result;
+    }
+    /**
+     * Fetch the fee calculator for a recent blockhash from the cluster, return with context
+     *
+     * @deprecated Deprecated since Solana v1.8.0. Please use {@link getFeeForMessage} instead.
+     */
+    async getFeeCalculatorForBlockhash(blockhash, commitment) {
+      const args = this._buildArgs([blockhash], commitment);
+      const unsafeRes = await this._rpcRequest("getFeeCalculatorForBlockhash", args);
+      const res = create(unsafeRes, GetFeeCalculatorRpcResult);
+      if ("error" in res) {
+        throw new SolanaJSONRPCError(res.error, "failed to get fee calculator");
+      }
+      const {
+        context,
+        value
+      } = res.result;
+      return {
+        context,
+        value: value !== null ? value.feeCalculator : null
+      };
+    }
+    /**
+     * Fetch the fee for a message from the cluster, return with context
+     */
+    async getFeeForMessage(message, commitment) {
+      const wireMessage = toBuffer(message.serialize()).toString("base64");
+      const args = this._buildArgs([wireMessage], commitment);
+      const unsafeRes = await this._rpcRequest("getFeeForMessage", args);
+      const res = create(unsafeRes, jsonRpcResultAndContext(nullable(number())));
+      if ("error" in res) {
+        throw new SolanaJSONRPCError(res.error, "failed to get fee for message");
+      }
+      if (res.result === null) {
+        throw new Error("invalid blockhash");
+      }
+      return res.result;
+    }
+    /**
+     * Fetch a list of prioritization fees from recent blocks.
+     */
+    async getRecentPrioritizationFees(config) {
+      var _a;
+      const accounts = (_a = config == null ? void 0 : config.lockedWritableAccounts) == null ? void 0 : _a.map((key) => key.toBase58());
+      const args = (accounts == null ? void 0 : accounts.length) ? [accounts] : [];
+      const unsafeRes = await this._rpcRequest("getRecentPrioritizationFees", args);
+      const res = create(unsafeRes, GetRecentPrioritizationFeesRpcResult);
+      if ("error" in res) {
+        throw new SolanaJSONRPCError(res.error, "failed to get recent prioritization fees");
+      }
+      return res.result;
+    }
+    /**
+     * Fetch a recent blockhash from the cluster
+     * @return {Promise<{blockhash: Blockhash, feeCalculator: FeeCalculator}>}
+     *
+     * @deprecated Deprecated since Solana v1.8.0. Please use {@link getLatestBlockhash} instead.
+     */
+    async getRecentBlockhash(commitment) {
+      try {
+        const res = await this.getRecentBlockhashAndContext(commitment);
+        return res.value;
+      } catch (e2) {
+        throw new Error("failed to get recent blockhash: " + e2);
+      }
+    }
+    /**
+     * Fetch the latest blockhash from the cluster
+     * @return {Promise<BlockhashWithExpiryBlockHeight>}
+     */
+    async getLatestBlockhash(commitmentOrConfig) {
+      try {
+        const res = await this.getLatestBlockhashAndContext(commitmentOrConfig);
+        return res.value;
+      } catch (e2) {
+        throw new Error("failed to get recent blockhash: " + e2);
+      }
+    }
+    /**
+     * Fetch the latest blockhash from the cluster
+     * @return {Promise<BlockhashWithExpiryBlockHeight>}
+     */
+    async getLatestBlockhashAndContext(commitmentOrConfig) {
+      const {
+        commitment,
+        config
+      } = extractCommitmentFromConfig(commitmentOrConfig);
+      const args = this._buildArgs([], commitment, void 0, config);
+      const unsafeRes = await this._rpcRequest("getLatestBlockhash", args);
+      const res = create(unsafeRes, GetLatestBlockhashRpcResult);
+      if ("error" in res) {
+        throw new SolanaJSONRPCError(res.error, "failed to get latest blockhash");
+      }
+      return res.result;
+    }
+    /**
+     * Returns whether a blockhash is still valid or not
+     */
+    async isBlockhashValid(blockhash, rawConfig) {
+      const {
+        commitment,
+        config
+      } = extractCommitmentFromConfig(rawConfig);
+      const args = this._buildArgs([blockhash], commitment, void 0, config);
+      const unsafeRes = await this._rpcRequest("isBlockhashValid", args);
+      const res = create(unsafeRes, IsBlockhashValidRpcResult);
+      if ("error" in res) {
+        throw new SolanaJSONRPCError(res.error, "failed to determine if the blockhash `" + blockhash + "`is valid");
+      }
+      return res.result;
+    }
+    /**
+     * Fetch the node version
+     */
+    async getVersion() {
+      const unsafeRes = await this._rpcRequest("getVersion", []);
+      const res = create(unsafeRes, jsonRpcResult(VersionResult));
+      if ("error" in res) {
+        throw new SolanaJSONRPCError(res.error, "failed to get version");
+      }
+      return res.result;
+    }
+    /**
+     * Fetch the genesis hash
+     */
+    async getGenesisHash() {
+      const unsafeRes = await this._rpcRequest("getGenesisHash", []);
+      const res = create(unsafeRes, jsonRpcResult(string()));
+      if ("error" in res) {
+        throw new SolanaJSONRPCError(res.error, "failed to get genesis hash");
+      }
+      return res.result;
+    }
+    /**
+     * Fetch a processed block from the cluster.
+     *
+     * @deprecated Instead, call `getBlock` using a `GetVersionedBlockConfig` by
+     * setting the `maxSupportedTransactionVersion` property.
+     */
+    /**
+     * @deprecated Instead, call `getBlock` using a `GetVersionedBlockConfig` by
+     * setting the `maxSupportedTransactionVersion` property.
+     */
+    // eslint-disable-next-line no-dupe-class-members
+    /**
+     * @deprecated Instead, call `getBlock` using a `GetVersionedBlockConfig` by
+     * setting the `maxSupportedTransactionVersion` property.
+     */
+    // eslint-disable-next-line no-dupe-class-members
+    /**
+     * Fetch a processed block from the cluster.
+     */
+    // eslint-disable-next-line no-dupe-class-members
+    // eslint-disable-next-line no-dupe-class-members
+    // eslint-disable-next-line no-dupe-class-members
+    /**
+     * Fetch a processed block from the cluster.
+     */
+    // eslint-disable-next-line no-dupe-class-members
+    async getBlock(slot, rawConfig) {
+      const {
+        commitment,
+        config
+      } = extractCommitmentFromConfig(rawConfig);
+      const args = this._buildArgsAtLeastConfirmed([slot], commitment, void 0, config);
+      const unsafeRes = await this._rpcRequest("getBlock", args);
+      try {
+        switch (config == null ? void 0 : config.transactionDetails) {
+          case "accounts": {
+            const res = create(unsafeRes, GetAccountsModeBlockRpcResult);
+            if ("error" in res) {
+              throw res.error;
+            }
+            return res.result;
+          }
+          case "none": {
+            const res = create(unsafeRes, GetNoneModeBlockRpcResult);
+            if ("error" in res) {
+              throw res.error;
+            }
+            return res.result;
+          }
+          default: {
+            const res = create(unsafeRes, GetBlockRpcResult);
+            if ("error" in res) {
+              throw res.error;
+            }
+            const {
+              result
+            } = res;
+            return result ? {
+              ...result,
+              transactions: result.transactions.map(({
+                transaction,
+                meta,
+                version: version2
+              }) => ({
+                meta,
+                transaction: {
+                  ...transaction,
+                  message: versionedMessageFromResponse(version2, transaction.message)
+                },
+                version: version2
+              }))
+            } : null;
+          }
+        }
+      } catch (e2) {
+        throw new SolanaJSONRPCError(e2, "failed to get confirmed block");
+      }
+    }
+    /**
+     * Fetch parsed transaction details for a confirmed or finalized block
+     */
+    // eslint-disable-next-line no-dupe-class-members
+    // eslint-disable-next-line no-dupe-class-members
+    // eslint-disable-next-line no-dupe-class-members
+    async getParsedBlock(slot, rawConfig) {
+      const {
+        commitment,
+        config
+      } = extractCommitmentFromConfig(rawConfig);
+      const args = this._buildArgsAtLeastConfirmed([slot], commitment, "jsonParsed", config);
+      const unsafeRes = await this._rpcRequest("getBlock", args);
+      try {
+        switch (config == null ? void 0 : config.transactionDetails) {
+          case "accounts": {
+            const res = create(unsafeRes, GetParsedAccountsModeBlockRpcResult);
+            if ("error" in res) {
+              throw res.error;
+            }
+            return res.result;
+          }
+          case "none": {
+            const res = create(unsafeRes, GetParsedNoneModeBlockRpcResult);
+            if ("error" in res) {
+              throw res.error;
+            }
+            return res.result;
+          }
+          default: {
+            const res = create(unsafeRes, GetParsedBlockRpcResult);
+            if ("error" in res) {
+              throw res.error;
+            }
+            return res.result;
+          }
+        }
+      } catch (e2) {
+        throw new SolanaJSONRPCError(e2, "failed to get block");
+      }
+    }
+    /*
+     * Returns recent block production information from the current or previous epoch
+     */
+    async getBlockProduction(configOrCommitment) {
+      let extra;
+      let commitment;
+      if (typeof configOrCommitment === "string") {
+        commitment = configOrCommitment;
+      } else if (configOrCommitment) {
+        const {
+          commitment: c2,
+          ...rest
+        } = configOrCommitment;
+        commitment = c2;
+        extra = rest;
+      }
+      const args = this._buildArgs([], commitment, "base64", extra);
+      const unsafeRes = await this._rpcRequest("getBlockProduction", args);
+      const res = create(unsafeRes, BlockProductionResponseStruct);
+      if ("error" in res) {
+        throw new SolanaJSONRPCError(res.error, "failed to get block production information");
+      }
+      return res.result;
+    }
+    /**
+     * Fetch a confirmed or finalized transaction from the cluster.
+     *
+     * @deprecated Instead, call `getTransaction` using a
+     * `GetVersionedTransactionConfig` by setting the
+     * `maxSupportedTransactionVersion` property.
+     */
+    /**
+     * Fetch a confirmed or finalized transaction from the cluster.
+     */
+    // eslint-disable-next-line no-dupe-class-members
+    /**
+     * Fetch a confirmed or finalized transaction from the cluster.
+     */
+    // eslint-disable-next-line no-dupe-class-members
+    async getTransaction(signature, rawConfig) {
+      const {
+        commitment,
+        config
+      } = extractCommitmentFromConfig(rawConfig);
+      const args = this._buildArgsAtLeastConfirmed([signature], commitment, void 0, config);
+      const unsafeRes = await this._rpcRequest("getTransaction", args);
+      const res = create(unsafeRes, GetTransactionRpcResult);
+      if ("error" in res) {
+        throw new SolanaJSONRPCError(res.error, "failed to get transaction");
+      }
+      const result = res.result;
+      if (!result)
+        return result;
+      return {
+        ...result,
+        transaction: {
+          ...result.transaction,
+          message: versionedMessageFromResponse(result.version, result.transaction.message)
+        }
+      };
+    }
+    /**
+     * Fetch parsed transaction details for a confirmed or finalized transaction
+     */
+    async getParsedTransaction(signature, commitmentOrConfig) {
+      const {
+        commitment,
+        config
+      } = extractCommitmentFromConfig(commitmentOrConfig);
+      const args = this._buildArgsAtLeastConfirmed([signature], commitment, "jsonParsed", config);
+      const unsafeRes = await this._rpcRequest("getTransaction", args);
+      const res = create(unsafeRes, GetParsedTransactionRpcResult);
+      if ("error" in res) {
+        throw new SolanaJSONRPCError(res.error, "failed to get transaction");
+      }
+      return res.result;
+    }
+    /**
+     * Fetch parsed transaction details for a batch of confirmed transactions
+     */
+    async getParsedTransactions(signatures, commitmentOrConfig) {
+      const {
+        commitment,
+        config
+      } = extractCommitmentFromConfig(commitmentOrConfig);
+      const batch = signatures.map((signature) => {
+        const args = this._buildArgsAtLeastConfirmed([signature], commitment, "jsonParsed", config);
+        return {
+          methodName: "getTransaction",
+          args
+        };
+      });
+      const unsafeRes = await this._rpcBatchRequest(batch);
+      const res = unsafeRes.map((unsafeRes2) => {
+        const res2 = create(unsafeRes2, GetParsedTransactionRpcResult);
+        if ("error" in res2) {
+          throw new SolanaJSONRPCError(res2.error, "failed to get transactions");
+        }
+        return res2.result;
+      });
+      return res;
+    }
+    /**
+     * Fetch transaction details for a batch of confirmed transactions.
+     * Similar to {@link getParsedTransactions} but returns a {@link TransactionResponse}.
+     *
+     * @deprecated Instead, call `getTransactions` using a
+     * `GetVersionedTransactionConfig` by setting the
+     * `maxSupportedTransactionVersion` property.
+     */
+    /**
+     * Fetch transaction details for a batch of confirmed transactions.
+     * Similar to {@link getParsedTransactions} but returns a {@link
+     * VersionedTransactionResponse}.
+     */
+    // eslint-disable-next-line no-dupe-class-members
+    /**
+     * Fetch transaction details for a batch of confirmed transactions.
+     * Similar to {@link getParsedTransactions} but returns a {@link
+     * VersionedTransactionResponse}.
+     */
+    // eslint-disable-next-line no-dupe-class-members
+    async getTransactions(signatures, commitmentOrConfig) {
+      const {
+        commitment,
+        config
+      } = extractCommitmentFromConfig(commitmentOrConfig);
+      const batch = signatures.map((signature) => {
+        const args = this._buildArgsAtLeastConfirmed([signature], commitment, void 0, config);
+        return {
+          methodName: "getTransaction",
+          args
+        };
+      });
+      const unsafeRes = await this._rpcBatchRequest(batch);
+      const res = unsafeRes.map((unsafeRes2) => {
+        const res2 = create(unsafeRes2, GetTransactionRpcResult);
+        if ("error" in res2) {
+          throw new SolanaJSONRPCError(res2.error, "failed to get transactions");
+        }
+        const result = res2.result;
+        if (!result)
+          return result;
+        return {
+          ...result,
+          transaction: {
+            ...result.transaction,
+            message: versionedMessageFromResponse(result.version, result.transaction.message)
+          }
+        };
+      });
+      return res;
+    }
+    /**
+     * Fetch a list of Transactions and transaction statuses from the cluster
+     * for a confirmed block.
+     *
+     * @deprecated Deprecated since v1.13.0. Please use {@link getBlock} instead.
+     */
+    async getConfirmedBlock(slot, commitment) {
+      const args = this._buildArgsAtLeastConfirmed([slot], commitment);
+      const unsafeRes = await this._rpcRequest("getConfirmedBlock", args);
+      const res = create(unsafeRes, GetConfirmedBlockRpcResult);
+      if ("error" in res) {
+        throw new SolanaJSONRPCError(res.error, "failed to get confirmed block");
+      }
+      const result = res.result;
+      if (!result) {
+        throw new Error("Confirmed block " + slot + " not found");
+      }
+      const block = {
+        ...result,
+        transactions: result.transactions.map(({
+          transaction,
+          meta
+        }) => {
+          const message = new Message(transaction.message);
+          return {
+            meta,
+            transaction: {
+              ...transaction,
+              message
+            }
+          };
+        })
+      };
+      return {
+        ...block,
+        transactions: block.transactions.map(({
+          transaction,
+          meta
+        }) => {
+          return {
+            meta,
+            transaction: Transaction.populate(transaction.message, transaction.signatures)
+          };
+        })
+      };
+    }
+    /**
+     * Fetch confirmed blocks between two slots
+     */
+    async getBlocks(startSlot, endSlot, commitment) {
+      const args = this._buildArgsAtLeastConfirmed(endSlot !== void 0 ? [startSlot, endSlot] : [startSlot], commitment);
+      const unsafeRes = await this._rpcRequest("getBlocks", args);
+      const res = create(unsafeRes, jsonRpcResult(array(number())));
+      if ("error" in res) {
+        throw new SolanaJSONRPCError(res.error, "failed to get blocks");
+      }
+      return res.result;
+    }
+    /**
+     * Fetch a list of Signatures from the cluster for a block, excluding rewards
+     */
+    async getBlockSignatures(slot, commitment) {
+      const args = this._buildArgsAtLeastConfirmed([slot], commitment, void 0, {
+        transactionDetails: "signatures",
+        rewards: false
+      });
+      const unsafeRes = await this._rpcRequest("getBlock", args);
+      const res = create(unsafeRes, GetBlockSignaturesRpcResult);
+      if ("error" in res) {
+        throw new SolanaJSONRPCError(res.error, "failed to get block");
+      }
+      const result = res.result;
+      if (!result) {
+        throw new Error("Block " + slot + " not found");
+      }
+      return result;
+    }
+    /**
+     * Fetch a list of Signatures from the cluster for a confirmed block, excluding rewards
+     *
+     * @deprecated Deprecated since Solana v1.8.0. Please use {@link getBlockSignatures} instead.
+     */
+    async getConfirmedBlockSignatures(slot, commitment) {
+      const args = this._buildArgsAtLeastConfirmed([slot], commitment, void 0, {
+        transactionDetails: "signatures",
+        rewards: false
+      });
+      const unsafeRes = await this._rpcRequest("getConfirmedBlock", args);
+      const res = create(unsafeRes, GetBlockSignaturesRpcResult);
+      if ("error" in res) {
+        throw new SolanaJSONRPCError(res.error, "failed to get confirmed block");
+      }
+      const result = res.result;
+      if (!result) {
+        throw new Error("Confirmed block " + slot + " not found");
+      }
+      return result;
+    }
+    /**
+     * Fetch a transaction details for a confirmed transaction
+     *
+     * @deprecated Deprecated since Solana v1.8.0. Please use {@link getTransaction} instead.
+     */
+    async getConfirmedTransaction(signature, commitment) {
+      const args = this._buildArgsAtLeastConfirmed([signature], commitment);
+      const unsafeRes = await this._rpcRequest("getConfirmedTransaction", args);
+      const res = create(unsafeRes, GetTransactionRpcResult);
+      if ("error" in res) {
+        throw new SolanaJSONRPCError(res.error, "failed to get transaction");
+      }
+      const result = res.result;
+      if (!result)
+        return result;
+      const message = new Message(result.transaction.message);
+      const signatures = result.transaction.signatures;
+      return {
+        ...result,
+        transaction: Transaction.populate(message, signatures)
+      };
+    }
+    /**
+     * Fetch parsed transaction details for a confirmed transaction
+     *
+     * @deprecated Deprecated since Solana v1.8.0. Please use {@link getParsedTransaction} instead.
+     */
+    async getParsedConfirmedTransaction(signature, commitment) {
+      const args = this._buildArgsAtLeastConfirmed([signature], commitment, "jsonParsed");
+      const unsafeRes = await this._rpcRequest("getConfirmedTransaction", args);
+      const res = create(unsafeRes, GetParsedTransactionRpcResult);
+      if ("error" in res) {
+        throw new SolanaJSONRPCError(res.error, "failed to get confirmed transaction");
+      }
+      return res.result;
+    }
+    /**
+     * Fetch parsed transaction details for a batch of confirmed transactions
+     *
+     * @deprecated Deprecated since Solana v1.8.0. Please use {@link getParsedTransactions} instead.
+     */
+    async getParsedConfirmedTransactions(signatures, commitment) {
+      const batch = signatures.map((signature) => {
+        const args = this._buildArgsAtLeastConfirmed([signature], commitment, "jsonParsed");
+        return {
+          methodName: "getConfirmedTransaction",
+          args
+        };
+      });
+      const unsafeRes = await this._rpcBatchRequest(batch);
+      const res = unsafeRes.map((unsafeRes2) => {
+        const res2 = create(unsafeRes2, GetParsedTransactionRpcResult);
+        if ("error" in res2) {
+          throw new SolanaJSONRPCError(res2.error, "failed to get confirmed transactions");
+        }
+        return res2.result;
+      });
+      return res;
+    }
+    /**
+     * Fetch a list of all the confirmed signatures for transactions involving an address
+     * within a specified slot range. Max range allowed is 10,000 slots.
+     *
+     * @deprecated Deprecated since v1.3. Please use {@link getConfirmedSignaturesForAddress2} instead.
+     *
+     * @param address queried address
+     * @param startSlot start slot, inclusive
+     * @param endSlot end slot, inclusive
+     */
+    async getConfirmedSignaturesForAddress(address, startSlot, endSlot) {
+      let options = {};
+      let firstAvailableBlock = await this.getFirstAvailableBlock();
+      while (!("until" in options)) {
+        startSlot--;
+        if (startSlot <= 0 || startSlot < firstAvailableBlock) {
+          break;
+        }
+        try {
+          const block = await this.getConfirmedBlockSignatures(startSlot, "finalized");
+          if (block.signatures.length > 0) {
+            options.until = block.signatures[block.signatures.length - 1].toString();
+          }
+        } catch (err) {
+          if (err instanceof Error && err.message.includes("skipped")) {
+            continue;
+          } else {
+            throw err;
+          }
+        }
+      }
+      let highestConfirmedRoot = await this.getSlot("finalized");
+      while (!("before" in options)) {
+        endSlot++;
+        if (endSlot > highestConfirmedRoot) {
+          break;
+        }
+        try {
+          const block = await this.getConfirmedBlockSignatures(endSlot);
+          if (block.signatures.length > 0) {
+            options.before = block.signatures[block.signatures.length - 1].toString();
+          }
+        } catch (err) {
+          if (err instanceof Error && err.message.includes("skipped")) {
+            continue;
+          } else {
+            throw err;
+          }
+        }
+      }
+      const confirmedSignatureInfo = await this.getConfirmedSignaturesForAddress2(address, options);
+      return confirmedSignatureInfo.map((info) => info.signature);
+    }
+    /**
+     * Returns confirmed signatures for transactions involving an
+     * address backwards in time from the provided signature or most recent confirmed block
+     *
+     *
+     * @param address queried address
+     * @param options
+     */
+    async getConfirmedSignaturesForAddress2(address, options, commitment) {
+      const args = this._buildArgsAtLeastConfirmed([address.toBase58()], commitment, void 0, options);
+      const unsafeRes = await this._rpcRequest("getConfirmedSignaturesForAddress2", args);
+      const res = create(unsafeRes, GetConfirmedSignaturesForAddress2RpcResult);
+      if ("error" in res) {
+        throw new SolanaJSONRPCError(res.error, "failed to get confirmed signatures for address");
+      }
+      return res.result;
+    }
+    /**
+     * Returns confirmed signatures for transactions involving an
+     * address backwards in time from the provided signature or most recent confirmed block
+     *
+     *
+     * @param address queried address
+     * @param options
+     */
+    async getSignaturesForAddress(address, options, commitment) {
+      const args = this._buildArgsAtLeastConfirmed([address.toBase58()], commitment, void 0, options);
+      const unsafeRes = await this._rpcRequest("getSignaturesForAddress", args);
+      const res = create(unsafeRes, GetSignaturesForAddressRpcResult);
+      if ("error" in res) {
+        throw new SolanaJSONRPCError(res.error, "failed to get signatures for address");
+      }
+      return res.result;
+    }
+    async getAddressLookupTable(accountKey, config) {
+      const {
+        context,
+        value: accountInfo
+      } = await this.getAccountInfoAndContext(accountKey, config);
+      let value = null;
+      if (accountInfo !== null) {
+        value = new AddressLookupTableAccount({
+          key: accountKey,
+          state: AddressLookupTableAccount.deserialize(accountInfo.data)
+        });
+      }
+      return {
+        context,
+        value
+      };
+    }
+    /**
+     * Fetch the contents of a Nonce account from the cluster, return with context
+     */
+    async getNonceAndContext(nonceAccount, commitmentOrConfig) {
+      const {
+        context,
+        value: accountInfo
+      } = await this.getAccountInfoAndContext(nonceAccount, commitmentOrConfig);
+      let value = null;
+      if (accountInfo !== null) {
+        value = NonceAccount.fromAccountData(accountInfo.data);
+      }
+      return {
+        context,
+        value
+      };
+    }
+    /**
+     * Fetch the contents of a Nonce account from the cluster
+     */
+    async getNonce(nonceAccount, commitmentOrConfig) {
+      return await this.getNonceAndContext(nonceAccount, commitmentOrConfig).then((x) => x.value).catch((e2) => {
+        throw new Error("failed to get nonce for account " + nonceAccount.toBase58() + ": " + e2);
+      });
+    }
+    /**
+     * Request an allocation of lamports to the specified address
+     *
+     * ```typescript
+     * import { Connection, PublicKey, LAMPORTS_PER_SOL } from "@solana/web3.js";
+     *
+     * (async () => {
+     *   const connection = new Connection("https://api.testnet.solana.com", "confirmed");
+     *   const myAddress = new PublicKey("2nr1bHFT86W9tGnyvmYW4vcHKsQB3sVQfnddasz4kExM");
+     *   const signature = await connection.requestAirdrop(myAddress, LAMPORTS_PER_SOL);
+     *   await connection.confirmTransaction(signature);
+     * })();
+     * ```
+     */
+    async requestAirdrop(to, lamports) {
+      const unsafeRes = await this._rpcRequest("requestAirdrop", [to.toBase58(), lamports]);
+      const res = create(unsafeRes, RequestAirdropRpcResult);
+      if ("error" in res) {
+        throw new SolanaJSONRPCError(res.error, `airdrop to ${to.toBase58()} failed`);
+      }
+      return res.result;
+    }
+    /**
+     * @internal
+     */
+    async _blockhashWithExpiryBlockHeight(disableCache) {
+      if (!disableCache) {
+        while (this._pollingBlockhash) {
+          await sleep(100);
+        }
+        const timeSinceFetch = Date.now() - this._blockhashInfo.lastFetch;
+        const expired = timeSinceFetch >= BLOCKHASH_CACHE_TIMEOUT_MS;
+        if (this._blockhashInfo.latestBlockhash !== null && !expired) {
+          return this._blockhashInfo.latestBlockhash;
+        }
+      }
+      return await this._pollNewBlockhash();
+    }
+    /**
+     * @internal
+     */
+    async _pollNewBlockhash() {
+      this._pollingBlockhash = true;
+      try {
+        const startTime = Date.now();
+        const cachedLatestBlockhash = this._blockhashInfo.latestBlockhash;
+        const cachedBlockhash = cachedLatestBlockhash ? cachedLatestBlockhash.blockhash : null;
+        for (let i2 = 0; i2 < 50; i2++) {
+          const latestBlockhash = await this.getLatestBlockhash("finalized");
+          if (cachedBlockhash !== latestBlockhash.blockhash) {
+            this._blockhashInfo = {
+              latestBlockhash,
+              lastFetch: Date.now(),
+              transactionSignatures: [],
+              simulatedSignatures: []
+            };
+            return latestBlockhash;
+          }
+          await sleep(MS_PER_SLOT / 2);
+        }
+        throw new Error(`Unable to obtain a new blockhash after ${Date.now() - startTime}ms`);
+      } finally {
+        this._pollingBlockhash = false;
+      }
+    }
+    /**
+     * get the stake minimum delegation
+     */
+    async getStakeMinimumDelegation(config) {
+      const {
+        commitment,
+        config: configArg
+      } = extractCommitmentFromConfig(config);
+      const args = this._buildArgs([], commitment, "base64", configArg);
+      const unsafeRes = await this._rpcRequest("getStakeMinimumDelegation", args);
+      const res = create(unsafeRes, jsonRpcResultAndContext(number()));
+      if ("error" in res) {
+        throw new SolanaJSONRPCError(res.error, `failed to get stake minimum delegation`);
+      }
+      return res.result;
+    }
+    /**
+     * Simulate a transaction
+     *
+     * @deprecated Instead, call {@link simulateTransaction} with {@link
+     * VersionedTransaction} and {@link SimulateTransactionConfig} parameters
+     */
+    /**
+     * Simulate a transaction
+     */
+    // eslint-disable-next-line no-dupe-class-members
+    /**
+     * Simulate a transaction
+     */
+    // eslint-disable-next-line no-dupe-class-members
+    async simulateTransaction(transactionOrMessage, configOrSigners, includeAccounts) {
+      if ("message" in transactionOrMessage) {
+        const versionedTx = transactionOrMessage;
+        const wireTransaction2 = versionedTx.serialize();
+        const encodedTransaction2 = buffer.Buffer.from(wireTransaction2).toString("base64");
+        if (Array.isArray(configOrSigners) || includeAccounts !== void 0) {
+          throw new Error("Invalid arguments");
+        }
+        const config2 = configOrSigners || {};
+        config2.encoding = "base64";
+        if (!("commitment" in config2)) {
+          config2.commitment = this.commitment;
+        }
+        const args2 = [encodedTransaction2, config2];
+        const unsafeRes2 = await this._rpcRequest("simulateTransaction", args2);
+        const res2 = create(unsafeRes2, SimulatedTransactionResponseStruct);
+        if ("error" in res2) {
+          throw new Error("failed to simulate transaction: " + res2.error.message);
+        }
+        return res2.result;
+      }
+      let transaction;
+      if (transactionOrMessage instanceof Transaction) {
+        let originalTx = transactionOrMessage;
+        transaction = new Transaction();
+        transaction.feePayer = originalTx.feePayer;
+        transaction.instructions = transactionOrMessage.instructions;
+        transaction.nonceInfo = originalTx.nonceInfo;
+        transaction.signatures = originalTx.signatures;
+      } else {
+        transaction = Transaction.populate(transactionOrMessage);
+        transaction._message = transaction._json = void 0;
+      }
+      if (configOrSigners !== void 0 && !Array.isArray(configOrSigners)) {
+        throw new Error("Invalid arguments");
+      }
+      const signers = configOrSigners;
+      if (transaction.nonceInfo && signers) {
+        transaction.sign(...signers);
+      } else {
+        let disableCache = this._disableBlockhashCaching;
+        for (; ; ) {
+          const latestBlockhash = await this._blockhashWithExpiryBlockHeight(disableCache);
+          transaction.lastValidBlockHeight = latestBlockhash.lastValidBlockHeight;
+          transaction.recentBlockhash = latestBlockhash.blockhash;
+          if (!signers)
+            break;
+          transaction.sign(...signers);
+          if (!transaction.signature) {
+            throw new Error("!signature");
+          }
+          const signature = transaction.signature.toString("base64");
+          if (!this._blockhashInfo.simulatedSignatures.includes(signature) && !this._blockhashInfo.transactionSignatures.includes(signature)) {
+            this._blockhashInfo.simulatedSignatures.push(signature);
+            break;
+          } else {
+            disableCache = true;
+          }
+        }
+      }
+      const message = transaction._compile();
+      const signData = message.serialize();
+      const wireTransaction = transaction._serialize(signData);
+      const encodedTransaction = wireTransaction.toString("base64");
+      const config = {
+        encoding: "base64",
+        commitment: this.commitment
+      };
+      if (includeAccounts) {
+        const addresses = (Array.isArray(includeAccounts) ? includeAccounts : message.nonProgramIds()).map((key) => key.toBase58());
+        config["accounts"] = {
+          encoding: "base64",
+          addresses
+        };
+      }
+      if (signers) {
+        config.sigVerify = true;
+      }
+      const args = [encodedTransaction, config];
+      const unsafeRes = await this._rpcRequest("simulateTransaction", args);
+      const res = create(unsafeRes, SimulatedTransactionResponseStruct);
+      if ("error" in res) {
+        let logs;
+        if ("data" in res.error) {
+          logs = res.error.data.logs;
+          if (logs && Array.isArray(logs)) {
+            const traceIndent = "\n    ";
+            const logTrace = traceIndent + logs.join(traceIndent);
+            formatAppLog("error", "at node_modules/@solana/web3.js/lib/index.browser.esm.js:7219", res.error.message, logTrace);
+          }
+        }
+        throw new SendTransactionError("failed to simulate transaction: " + res.error.message, logs);
+      }
+      return res.result;
+    }
+    /**
+     * Sign and send a transaction
+     *
+     * @deprecated Instead, call {@link sendTransaction} with a {@link
+     * VersionedTransaction}
+     */
+    /**
+     * Send a signed transaction
+     */
+    // eslint-disable-next-line no-dupe-class-members
+    /**
+     * Sign and send a transaction
+     */
+    // eslint-disable-next-line no-dupe-class-members
+    async sendTransaction(transaction, signersOrOptions, options) {
+      if ("version" in transaction) {
+        if (signersOrOptions && Array.isArray(signersOrOptions)) {
+          throw new Error("Invalid arguments");
+        }
+        const wireTransaction2 = transaction.serialize();
+        return await this.sendRawTransaction(wireTransaction2, signersOrOptions);
+      }
+      if (signersOrOptions === void 0 || !Array.isArray(signersOrOptions)) {
+        throw new Error("Invalid arguments");
+      }
+      const signers = signersOrOptions;
+      if (transaction.nonceInfo) {
+        transaction.sign(...signers);
+      } else {
+        let disableCache = this._disableBlockhashCaching;
+        for (; ; ) {
+          const latestBlockhash = await this._blockhashWithExpiryBlockHeight(disableCache);
+          transaction.lastValidBlockHeight = latestBlockhash.lastValidBlockHeight;
+          transaction.recentBlockhash = latestBlockhash.blockhash;
+          transaction.sign(...signers);
+          if (!transaction.signature) {
+            throw new Error("!signature");
+          }
+          const signature = transaction.signature.toString("base64");
+          if (!this._blockhashInfo.transactionSignatures.includes(signature)) {
+            this._blockhashInfo.transactionSignatures.push(signature);
+            break;
+          } else {
+            disableCache = true;
+          }
+        }
+      }
+      const wireTransaction = transaction.serialize();
+      return await this.sendRawTransaction(wireTransaction, options);
+    }
+    /**
+     * Send a transaction that has already been signed and serialized into the
+     * wire format
+     */
+    async sendRawTransaction(rawTransaction, options) {
+      const encodedTransaction = toBuffer(rawTransaction).toString("base64");
+      const result = await this.sendEncodedTransaction(encodedTransaction, options);
+      return result;
+    }
+    /**
+     * Send a transaction that has already been signed, serialized into the
+     * wire format, and encoded as a base64 string
+     */
+    async sendEncodedTransaction(encodedTransaction, options) {
+      const config = {
+        encoding: "base64"
+      };
+      const skipPreflight = options && options.skipPreflight;
+      const preflightCommitment = skipPreflight === true ? "processed" : options && options.preflightCommitment || this.commitment;
+      if (options && options.maxRetries != null) {
+        config.maxRetries = options.maxRetries;
+      }
+      if (options && options.minContextSlot != null) {
+        config.minContextSlot = options.minContextSlot;
+      }
+      if (skipPreflight) {
+        config.skipPreflight = skipPreflight;
+      }
+      if (preflightCommitment) {
+        config.preflightCommitment = preflightCommitment;
+      }
+      const args = [encodedTransaction, config];
+      const unsafeRes = await this._rpcRequest("sendTransaction", args);
+      const res = create(unsafeRes, SendTransactionRpcResult);
+      if ("error" in res) {
+        let logs;
+        if ("data" in res.error) {
+          logs = res.error.data.logs;
+        }
+        throw new SendTransactionError("failed to send transaction: " + res.error.message, logs);
+      }
+      return res.result;
+    }
+    /**
+     * @internal
+     */
+    _wsOnOpen() {
+      this._rpcWebSocketConnected = true;
+      this._rpcWebSocketHeartbeat = setInterval(() => {
+        (async () => {
+          try {
+            await this._rpcWebSocket.notify("ping");
+          } catch {
+          }
+        })();
+      }, 5e3);
+      this._updateSubscriptions();
+    }
+    /**
+     * @internal
+     */
+    _wsOnError(err) {
+      this._rpcWebSocketConnected = false;
+      formatAppLog("error", "at node_modules/@solana/web3.js/lib/index.browser.esm.js:7354", "ws error:", err.message);
+    }
+    /**
+     * @internal
+     */
+    _wsOnClose(code2) {
+      this._rpcWebSocketConnected = false;
+      this._rpcWebSocketGeneration = (this._rpcWebSocketGeneration + 1) % Number.MAX_SAFE_INTEGER;
+      if (this._rpcWebSocketIdleTimeout) {
+        clearTimeout(this._rpcWebSocketIdleTimeout);
+        this._rpcWebSocketIdleTimeout = null;
+      }
+      if (this._rpcWebSocketHeartbeat) {
+        clearInterval(this._rpcWebSocketHeartbeat);
+        this._rpcWebSocketHeartbeat = null;
+      }
+      if (code2 === 1e3) {
+        this._updateSubscriptions();
+        return;
+      }
+      this._subscriptionCallbacksByServerSubscriptionId = {};
+      Object.entries(this._subscriptionsByHash).forEach(([hash2, subscription]) => {
+        this._setSubscription(hash2, {
+          ...subscription,
+          state: "pending"
+        });
+      });
+    }
+    /**
+     * @internal
+     */
+    _setSubscription(hash2, nextSubscription) {
+      var _a;
+      const prevState = (_a = this._subscriptionsByHash[hash2]) == null ? void 0 : _a.state;
+      this._subscriptionsByHash[hash2] = nextSubscription;
+      if (prevState !== nextSubscription.state) {
+        const stateChangeCallbacks = this._subscriptionStateChangeCallbacksByHash[hash2];
+        if (stateChangeCallbacks) {
+          stateChangeCallbacks.forEach((cb) => {
+            try {
+              cb(nextSubscription.state);
+            } catch {
+            }
+          });
+        }
+      }
+    }
+    /**
+     * @internal
+     */
+    _onSubscriptionStateChange(clientSubscriptionId, callback) {
+      var _a;
+      const hash2 = this._subscriptionHashByClientSubscriptionId[clientSubscriptionId];
+      if (hash2 == null) {
+        return () => {
+        };
+      }
+      const stateChangeCallbacks = (_a = this._subscriptionStateChangeCallbacksByHash)[hash2] || (_a[hash2] = /* @__PURE__ */ new Set());
+      stateChangeCallbacks.add(callback);
+      return () => {
+        stateChangeCallbacks.delete(callback);
+        if (stateChangeCallbacks.size === 0) {
+          delete this._subscriptionStateChangeCallbacksByHash[hash2];
+        }
+      };
+    }
+    /**
+     * @internal
+     */
+    async _updateSubscriptions() {
+      if (Object.keys(this._subscriptionsByHash).length === 0) {
+        if (this._rpcWebSocketConnected) {
+          this._rpcWebSocketConnected = false;
+          this._rpcWebSocketIdleTimeout = setTimeout(() => {
+            this._rpcWebSocketIdleTimeout = null;
+            try {
+              this._rpcWebSocket.close();
+            } catch (err) {
+              if (err instanceof Error) {
+                formatAppLog("log", "at node_modules/@solana/web3.js/lib/index.browser.esm.js:7438", `Error when closing socket connection: ${err.message}`);
+              }
+            }
+          }, 500);
+        }
+        return;
+      }
+      if (this._rpcWebSocketIdleTimeout !== null) {
+        clearTimeout(this._rpcWebSocketIdleTimeout);
+        this._rpcWebSocketIdleTimeout = null;
+        this._rpcWebSocketConnected = true;
+      }
+      if (!this._rpcWebSocketConnected) {
+        this._rpcWebSocket.connect();
+        return;
+      }
+      const activeWebSocketGeneration = this._rpcWebSocketGeneration;
+      const isCurrentConnectionStillActive = () => {
+        return activeWebSocketGeneration === this._rpcWebSocketGeneration;
+      };
+      await Promise.all(
+        // Don't be tempted to change this to `Object.entries`. We call
+        // `_updateSubscriptions` recursively when processing the state,
+        // so it's important that we look up the *current* version of
+        // each subscription, every time we process a hash.
+        Object.keys(this._subscriptionsByHash).map(async (hash2) => {
+          const subscription = this._subscriptionsByHash[hash2];
+          if (subscription === void 0) {
+            return;
+          }
+          switch (subscription.state) {
+            case "pending":
+            case "unsubscribed":
+              if (subscription.callbacks.size === 0) {
+                delete this._subscriptionsByHash[hash2];
+                if (subscription.state === "unsubscribed") {
+                  delete this._subscriptionCallbacksByServerSubscriptionId[subscription.serverSubscriptionId];
+                }
+                await this._updateSubscriptions();
+                return;
+              }
+              await (async () => {
+                const {
+                  args,
+                  method
+                } = subscription;
+                try {
+                  this._setSubscription(hash2, {
+                    ...subscription,
+                    state: "subscribing"
+                  });
+                  const serverSubscriptionId = await this._rpcWebSocket.call(method, args);
+                  this._setSubscription(hash2, {
+                    ...subscription,
+                    serverSubscriptionId,
+                    state: "subscribed"
+                  });
+                  this._subscriptionCallbacksByServerSubscriptionId[serverSubscriptionId] = subscription.callbacks;
+                  await this._updateSubscriptions();
+                } catch (e2) {
+                  if (e2 instanceof Error) {
+                    formatAppLog("error", "at node_modules/@solana/web3.js/lib/index.browser.esm.js:7513", `${method} error for argument`, args, e2.message);
+                  }
+                  if (!isCurrentConnectionStillActive()) {
+                    return;
+                  }
+                  this._setSubscription(hash2, {
+                    ...subscription,
+                    state: "pending"
+                  });
+                  await this._updateSubscriptions();
+                }
+              })();
+              break;
+            case "subscribed":
+              if (subscription.callbacks.size === 0) {
+                await (async () => {
+                  const {
+                    serverSubscriptionId,
+                    unsubscribeMethod
+                  } = subscription;
+                  if (this._subscriptionsAutoDisposedByRpc.has(serverSubscriptionId)) {
+                    this._subscriptionsAutoDisposedByRpc.delete(serverSubscriptionId);
+                  } else {
+                    this._setSubscription(hash2, {
+                      ...subscription,
+                      state: "unsubscribing"
+                    });
+                    this._setSubscription(hash2, {
+                      ...subscription,
+                      state: "unsubscribing"
+                    });
+                    try {
+                      await this._rpcWebSocket.call(unsubscribeMethod, [serverSubscriptionId]);
+                    } catch (e2) {
+                      if (e2 instanceof Error) {
+                        formatAppLog("error", "at node_modules/@solana/web3.js/lib/index.browser.esm.js:7561", `${unsubscribeMethod} error:`, e2.message);
+                      }
+                      if (!isCurrentConnectionStillActive()) {
+                        return;
+                      }
+                      this._setSubscription(hash2, {
+                        ...subscription,
+                        state: "subscribed"
+                      });
+                      await this._updateSubscriptions();
+                      return;
+                    }
+                  }
+                  this._setSubscription(hash2, {
+                    ...subscription,
+                    state: "unsubscribed"
+                  });
+                  await this._updateSubscriptions();
+                })();
+              }
+              break;
+          }
+        })
+      );
+    }
+    /**
+     * @internal
+     */
+    _handleServerNotification(serverSubscriptionId, callbackArgs) {
+      const callbacks = this._subscriptionCallbacksByServerSubscriptionId[serverSubscriptionId];
+      if (callbacks === void 0) {
+        return;
+      }
+      callbacks.forEach((cb) => {
+        try {
+          cb(
+            ...callbackArgs
+          );
+        } catch (e2) {
+          formatAppLog("error", "at node_modules/@solana/web3.js/lib/index.browser.esm.js:7604", e2);
+        }
+      });
+    }
+    /**
+     * @internal
+     */
+    _wsOnAccountNotification(notification) {
+      const {
+        result,
+        subscription
+      } = create(notification, AccountNotificationResult);
+      this._handleServerNotification(subscription, [result.value, result.context]);
+    }
+    /**
+     * @internal
+     */
+    _makeSubscription(subscriptionConfig, args) {
+      const clientSubscriptionId = this._nextClientSubscriptionId++;
+      const hash2 = fastStableStringify$1([subscriptionConfig.method, args]);
+      const existingSubscription = this._subscriptionsByHash[hash2];
+      if (existingSubscription === void 0) {
+        this._subscriptionsByHash[hash2] = {
+          ...subscriptionConfig,
+          args,
+          callbacks: /* @__PURE__ */ new Set([subscriptionConfig.callback]),
+          state: "pending"
+        };
+      } else {
+        existingSubscription.callbacks.add(subscriptionConfig.callback);
+      }
+      this._subscriptionHashByClientSubscriptionId[clientSubscriptionId] = hash2;
+      this._subscriptionDisposeFunctionsByClientSubscriptionId[clientSubscriptionId] = async () => {
+        delete this._subscriptionDisposeFunctionsByClientSubscriptionId[clientSubscriptionId];
+        delete this._subscriptionHashByClientSubscriptionId[clientSubscriptionId];
+        const subscription = this._subscriptionsByHash[hash2];
+        assert(subscription !== void 0, `Could not find a \`Subscription\` when tearing down client subscription #${clientSubscriptionId}`);
+        subscription.callbacks.delete(subscriptionConfig.callback);
+        await this._updateSubscriptions();
+      };
+      this._updateSubscriptions();
+      return clientSubscriptionId;
+    }
+    /**
+     * Register a callback to be invoked whenever the specified account changes
+     *
+     * @param publicKey Public key of the account to monitor
+     * @param callback Function to invoke whenever the account is changed
+     * @param commitment Specify the commitment level account changes must reach before notification
+     * @return subscription id
+     */
+    onAccountChange(publicKey2, callback, commitment) {
+      const args = this._buildArgs(
+        [publicKey2.toBase58()],
+        commitment || this._commitment || "finalized",
+        // Apply connection/server default.
+        "base64"
+      );
+      return this._makeSubscription({
+        callback,
+        method: "accountSubscribe",
+        unsubscribeMethod: "accountUnsubscribe"
+      }, args);
+    }
+    /**
+     * Deregister an account notification callback
+     *
+     * @param clientSubscriptionId client subscription id to deregister
+     */
+    async removeAccountChangeListener(clientSubscriptionId) {
+      await this._unsubscribeClientSubscription(clientSubscriptionId, "account change");
+    }
+    /**
+     * @internal
+     */
+    _wsOnProgramAccountNotification(notification) {
+      const {
+        result,
+        subscription
+      } = create(notification, ProgramAccountNotificationResult);
+      this._handleServerNotification(subscription, [{
+        accountId: result.value.pubkey,
+        accountInfo: result.value.account
+      }, result.context]);
+    }
+    /**
+     * Register a callback to be invoked whenever accounts owned by the
+     * specified program change
+     *
+     * @param programId Public key of the program to monitor
+     * @param callback Function to invoke whenever the account is changed
+     * @param commitment Specify the commitment level account changes must reach before notification
+     * @param filters The program account filters to pass into the RPC method
+     * @return subscription id
+     */
+    onProgramAccountChange(programId, callback, commitment, filters) {
+      const args = this._buildArgs(
+        [programId.toBase58()],
+        commitment || this._commitment || "finalized",
+        // Apply connection/server default.
+        "base64",
+        filters ? {
+          filters
+        } : void 0
+        /* extra */
+      );
+      return this._makeSubscription({
+        callback,
+        method: "programSubscribe",
+        unsubscribeMethod: "programUnsubscribe"
+      }, args);
+    }
+    /**
+     * Deregister an account notification callback
+     *
+     * @param clientSubscriptionId client subscription id to deregister
+     */
+    async removeProgramAccountChangeListener(clientSubscriptionId) {
+      await this._unsubscribeClientSubscription(clientSubscriptionId, "program account change");
+    }
+    /**
+     * Registers a callback to be invoked whenever logs are emitted.
+     */
+    onLogs(filter, callback, commitment) {
+      const args = this._buildArgs(
+        [typeof filter === "object" ? {
+          mentions: [filter.toString()]
+        } : filter],
+        commitment || this._commitment || "finalized"
+        // Apply connection/server default.
+      );
+      return this._makeSubscription({
+        callback,
+        method: "logsSubscribe",
+        unsubscribeMethod: "logsUnsubscribe"
+      }, args);
+    }
+    /**
+     * Deregister a logs callback.
+     *
+     * @param clientSubscriptionId client subscription id to deregister.
+     */
+    async removeOnLogsListener(clientSubscriptionId) {
+      await this._unsubscribeClientSubscription(clientSubscriptionId, "logs");
+    }
+    /**
+     * @internal
+     */
+    _wsOnLogsNotification(notification) {
+      const {
+        result,
+        subscription
+      } = create(notification, LogsNotificationResult);
+      this._handleServerNotification(subscription, [result.value, result.context]);
+    }
+    /**
+     * @internal
+     */
+    _wsOnSlotNotification(notification) {
+      const {
+        result,
+        subscription
+      } = create(notification, SlotNotificationResult);
+      this._handleServerNotification(subscription, [result]);
+    }
+    /**
+     * Register a callback to be invoked upon slot changes
+     *
+     * @param callback Function to invoke whenever the slot changes
+     * @return subscription id
+     */
+    onSlotChange(callback) {
+      return this._makeSubscription(
+        {
+          callback,
+          method: "slotSubscribe",
+          unsubscribeMethod: "slotUnsubscribe"
+        },
+        []
+        /* args */
+      );
+    }
+    /**
+     * Deregister a slot notification callback
+     *
+     * @param clientSubscriptionId client subscription id to deregister
+     */
+    async removeSlotChangeListener(clientSubscriptionId) {
+      await this._unsubscribeClientSubscription(clientSubscriptionId, "slot change");
+    }
+    /**
+     * @internal
+     */
+    _wsOnSlotUpdatesNotification(notification) {
+      const {
+        result,
+        subscription
+      } = create(notification, SlotUpdateNotificationResult);
+      this._handleServerNotification(subscription, [result]);
+    }
+    /**
+     * Register a callback to be invoked upon slot updates. {@link SlotUpdate}'s
+     * may be useful to track live progress of a cluster.
+     *
+     * @param callback Function to invoke whenever the slot updates
+     * @return subscription id
+     */
+    onSlotUpdate(callback) {
+      return this._makeSubscription(
+        {
+          callback,
+          method: "slotsUpdatesSubscribe",
+          unsubscribeMethod: "slotsUpdatesUnsubscribe"
+        },
+        []
+        /* args */
+      );
+    }
+    /**
+     * Deregister a slot update notification callback
+     *
+     * @param clientSubscriptionId client subscription id to deregister
+     */
+    async removeSlotUpdateListener(clientSubscriptionId) {
+      await this._unsubscribeClientSubscription(clientSubscriptionId, "slot update");
+    }
+    /**
+     * @internal
+     */
+    async _unsubscribeClientSubscription(clientSubscriptionId, subscriptionName) {
+      const dispose = this._subscriptionDisposeFunctionsByClientSubscriptionId[clientSubscriptionId];
+      if (dispose) {
+        await dispose();
+      } else {
+        formatAppLog("warn", "at node_modules/@solana/web3.js/lib/index.browser.esm.js:7862", `Ignored unsubscribe request because an active subscription with id \`${clientSubscriptionId}\` for '${subscriptionName}' events could not be found.`);
+      }
+    }
+    _buildArgs(args, override, encoding2, extra) {
+      const commitment = override || this._commitment;
+      if (commitment || encoding2 || extra) {
+        let options = {};
+        if (encoding2) {
+          options.encoding = encoding2;
+        }
+        if (commitment) {
+          options.commitment = commitment;
+        }
+        if (extra) {
+          options = Object.assign(options, extra);
+        }
+        args.push(options);
+      }
+      return args;
+    }
+    /**
+     * @internal
+     */
+    _buildArgsAtLeastConfirmed(args, override, encoding2, extra) {
+      const commitment = override || this._commitment;
+      if (commitment && !["confirmed", "finalized"].includes(commitment)) {
+        throw new Error("Using Connection with default commitment: `" + this._commitment + "`, but method requires at least `confirmed`");
+      }
+      return this._buildArgs(args, override, encoding2, extra);
+    }
+    /**
+     * @internal
+     */
+    _wsOnSignatureNotification(notification) {
+      const {
+        result,
+        subscription
+      } = create(notification, SignatureNotificationResult);
+      if (result.value !== "receivedSignature") {
+        this._subscriptionsAutoDisposedByRpc.add(subscription);
+      }
+      this._handleServerNotification(subscription, result.value === "receivedSignature" ? [{
+        type: "received"
+      }, result.context] : [{
+        type: "status",
+        result: result.value
+      }, result.context]);
+    }
+    /**
+     * Register a callback to be invoked upon signature updates
+     *
+     * @param signature Transaction signature string in base 58
+     * @param callback Function to invoke on signature notifications
+     * @param commitment Specify the commitment level signature must reach before notification
+     * @return subscription id
+     */
+    onSignature(signature, callback, commitment) {
+      const args = this._buildArgs(
+        [signature],
+        commitment || this._commitment || "finalized"
+        // Apply connection/server default.
+      );
+      const clientSubscriptionId = this._makeSubscription({
+        callback: (notification, context) => {
+          if (notification.type === "status") {
+            callback(notification.result, context);
+            try {
+              this.removeSignatureListener(clientSubscriptionId);
+            } catch (_err) {
+            }
+          }
+        },
+        method: "signatureSubscribe",
+        unsubscribeMethod: "signatureUnsubscribe"
+      }, args);
+      return clientSubscriptionId;
+    }
+    /**
+     * Register a callback to be invoked when a transaction is
+     * received and/or processed.
+     *
+     * @param signature Transaction signature string in base 58
+     * @param callback Function to invoke on signature notifications
+     * @param options Enable received notifications and set the commitment
+     *   level that signature must reach before notification
+     * @return subscription id
+     */
+    onSignatureWithOptions(signature, callback, options) {
+      const {
+        commitment,
+        ...extra
+      } = {
+        ...options,
+        commitment: options && options.commitment || this._commitment || "finalized"
+        // Apply connection/server default.
+      };
+      const args = this._buildArgs([signature], commitment, void 0, extra);
+      const clientSubscriptionId = this._makeSubscription({
+        callback: (notification, context) => {
+          callback(notification, context);
+          try {
+            this.removeSignatureListener(clientSubscriptionId);
+          } catch (_err) {
+          }
+        },
+        method: "signatureSubscribe",
+        unsubscribeMethod: "signatureUnsubscribe"
+      }, args);
+      return clientSubscriptionId;
+    }
+    /**
+     * Deregister a signature notification callback
+     *
+     * @param clientSubscriptionId client subscription id to deregister
+     */
+    async removeSignatureListener(clientSubscriptionId) {
+      await this._unsubscribeClientSubscription(clientSubscriptionId, "signature result");
+    }
+    /**
+     * @internal
+     */
+    _wsOnRootNotification(notification) {
+      const {
+        result,
+        subscription
+      } = create(notification, RootNotificationResult);
+      this._handleServerNotification(subscription, [result]);
+    }
+    /**
+     * Register a callback to be invoked upon root changes
+     *
+     * @param callback Function to invoke whenever the root changes
+     * @return subscription id
+     */
+    onRootChange(callback) {
+      return this._makeSubscription(
+        {
+          callback,
+          method: "rootSubscribe",
+          unsubscribeMethod: "rootUnsubscribe"
+        },
+        []
+        /* args */
+      );
+    }
+    /**
+     * Deregister a root notification callback
+     *
+     * @param clientSubscriptionId client subscription id to deregister
+     */
+    async removeRootChangeListener(clientSubscriptionId) {
+      await this._unsubscribeClientSubscription(clientSubscriptionId, "root change");
+    }
+  }
   class Keypair {
     /**
      * Create a new keypair instance.
@@ -17958,7 +22347,30 @@ ${i3}
     seq(struct([nu64("epoch"), nu64("credits"), nu64("prevCredits")]), offset(u32(), -8), "epochCredits"),
     struct([nu64("slot"), nu64("timestamp")], "lastTimestamp")
   ]);
-  const _sfc_main$1 = {
+  const endpoint = {
+    http: {
+      devnet: "http://api.devnet.solana.com",
+      testnet: "http://api.testnet.solana.com",
+      "mainnet-beta": "http://api.mainnet-beta.solana.com/"
+    },
+    https: {
+      devnet: "https://api.devnet.solana.com",
+      testnet: "https://api.testnet.solana.com",
+      "mainnet-beta": "https://api.mainnet-beta.solana.com/"
+    }
+  };
+  function clusterApiUrl(cluster, tls) {
+    const key = tls === false ? "http" : "https";
+    if (!cluster) {
+      return endpoint[key]["devnet"];
+    }
+    const url = endpoint[key][cluster];
+    if (!url) {
+      throw new Error(`Unknown ${key} cluster: ${cluster}`);
+    }
+    return url;
+  }
+  const _sfc_main$2 = {
     data() {
       return {
         chooseCoin: 0,
@@ -18035,16 +22447,30 @@ ${i3}
         return newHex;
       },
       exportToExcel(data, sheetName, fileName) {
+        uni.setClipboardData({
+          data,
+          success: function() {
+            formatAppLog("log", "at pages/adds_manager/adds_manager.vue:130", "复制成功");
+            uni.showToast({
+              title: "复制成功",
+              icon: "success",
+              duration: 2e3
+            });
+          },
+          fail: function() {
+            formatAppLog("log", "at pages/adds_manager/adds_manager.vue:139", "复制失败");
+          }
+        });
         uni.shareWithSystem({
           summary: data
         });
       }
     }
   };
-  function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_uni_data_select = resolveEasycom(vue.resolveDynamicComponent("uni-data-select"), __easycom_0);
+  function _sfc_render$1(_ctx, _cache, $props, $setup, $data, $options) {
+    const _component_uni_data_select = resolveEasycom(vue.resolveDynamicComponent("uni-data-select"), __easycom_0$1);
     const _component_uni_section = resolveEasycom(vue.resolveDynamicComponent("uni-section"), __easycom_1);
-    const _component_uni_easyinput = resolveEasycom(vue.resolveDynamicComponent("uni-easyinput"), __easycom_2);
+    const _component_uni_easyinput = resolveEasycom(vue.resolveDynamicComponent("uni-easyinput"), __easycom_0);
     return vue.openBlock(), vue.createElementBlock("div", { style: { "margin-left": "20px", "margin-right": "20px", "margin-bottom": "20px" } }, [
       vue.createVNode(_component_uni_section, {
         title: "选择链",
@@ -18139,9 +22565,259 @@ ${i3}
       })
     ]);
   }
-  const PagesAdds_managerAdds_manager = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["render", _sfc_render], ["__file", "/Users/windpro/Documents/Code/cryptorobot_frontend/pages/adds_manager/adds_manager.vue"]]);
+  const PagesAdds_managerAdds_manager = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["render", _sfc_render$1], ["__file", "/Users/windpro/Documents/Code/cryptorobot_frontend/pages/adds_manager/adds_manager.vue"]]);
+  const _sfc_main$1 = {
+    data() {
+      return {
+        scrollTop: 0,
+        old: {
+          scrollTop: 0
+        },
+        addsjson: "",
+        showAdds: [],
+        batchBalanceToken: ""
+      };
+    },
+    methods: {
+      upper: function(e2) {
+      },
+      lower: function(e2) {
+      },
+      scroll: function(e2) {
+        this.old.scrollTop = e2.detail.scrollTop;
+      },
+      inputconfirm(e2) {
+        formatAppLog("log", "at pages/transsign/transsign.vue:83", e2);
+        try {
+          this.showAdds = JSON.parse(e2);
+        } catch (e3) {
+          uni.showToast({
+            title: "json格式有问题",
+            icon: "error"
+          });
+        }
+      },
+      async batchSolBalance() {
+        if (this.showAdds.length == 0) {
+          uni.showToast({
+            title: "先导入地址数据",
+            icon: "error"
+          });
+          return;
+        }
+        clusterApiUrl("mainnet-beta");
+        try {
+          for (var i2 = 0; i2 < this.showAdds.length; i2++) {
+            var addInfos = this.showAdds[i2];
+            formatAppLog("log", "at pages/transsign/transsign.vue:112", addInfos.adds);
+            var resp = await this.$http("POST", {
+              "method": "getBalance",
+              "jsonrpc": "2.0",
+              "params": [addInfos.adds],
+              "id": "1"
+            });
+            formatAppLog("log", "at pages/transsign/transsign.vue:134", resp.data.result.value);
+            formatAppLog("log", "at pages/transsign/transsign.vue:135", i2);
+            addInfos.solBal = resp.data.result.value / Math.pow(10, 9);
+            this.showAdds[i2] = addInfos;
+          }
+        } catch (e2) {
+          formatAppLog("log", "at pages/transsign/transsign.vue:142", e2);
+          uni.showToast({
+            title: e2.message,
+            icon: "error"
+          });
+        }
+      },
+      async batchSPLBalance() {
+        if (this.showAdds.length == 0) {
+          uni.showToast({
+            title: "先导入地址数据",
+            icon: "error"
+          });
+          return;
+        }
+        if (this.batchBalanceToken.length == 0) {
+          uni.showToast({
+            title: "输入合约地址",
+            icon: "error"
+          });
+          return;
+        }
+        const connection = new Connection(
+          "https://morning-misty-market.solana-mainnet.quiknode.pro/8b949c125233f0acc461a5b8aa47d4943ba0ee10/"
+        );
+        try {
+          for (var i2 = 0; i2 < this.showAdds.length; i2++) {
+            var addInfos = this.showAdds[i2];
+            formatAppLog("log", "at pages/transsign/transsign.vue:172", addInfos.adds);
+            const from = new PublicKey(addInfos.adds);
+            const token = new PublicKey(this.batchBalanceToken);
+            var dataBal = await connection.getTokenAccountsByOwner(from, {
+              mint: token
+            });
+            var lamports = dataBal.value[0].account.lamports;
+            addInfos.splBal = lamports;
+            this.showAdds[i2] = addInfos;
+          }
+        } catch (e2) {
+          formatAppLog("log", "at pages/transsign/transsign.vue:185", e2);
+          uni.showToast({
+            title: e2.message,
+            icon: "error"
+          });
+        }
+      }
+    }
+  };
+  function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
+    const _component_uni_easyinput = resolveEasycom(vue.resolveDynamicComponent("uni-easyinput"), __easycom_0);
+    const _component_uni_section = resolveEasycom(vue.resolveDynamicComponent("uni-section"), __easycom_1);
+    return vue.openBlock(), vue.createElementBlock("view", { style: { "margin": "20px" } }, [
+      vue.createVNode(_component_uni_section, {
+        title: "地址Json数据",
+        type: "line"
+      }, {
+        default: vue.withCtx(() => [
+          vue.createVNode(_component_uni_easyinput, {
+            type: "textarea",
+            modelValue: $data.addsjson,
+            "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => $data.addsjson = $event),
+            onInput: $options.inputconfirm,
+            placeholder: "地址json数据",
+            maxlength: "-1"
+          }, null, 8, ["modelValue", "onInput"])
+        ]),
+        _: 1
+        /* STABLE */
+      }),
+      vue.createVNode(_component_uni_section, {
+        title: "地址数据",
+        type: "line"
+      }, {
+        default: vue.withCtx(() => [
+          vue.createElementVNode("scroll-view", {
+            "scroll-top": $data.scrollTop,
+            "scroll-y": "true",
+            class: "scroll-Y",
+            onScrolltoupper: _cache[1] || (_cache[1] = (...args) => $options.upper && $options.upper(...args)),
+            onScrolltolower: _cache[2] || (_cache[2] = (...args) => $options.lower && $options.lower(...args)),
+            onScroll: _cache[3] || (_cache[3] = (...args) => $options.scroll && $options.scroll(...args))
+          }, [
+            (vue.openBlock(true), vue.createElementBlock(
+              vue.Fragment,
+              null,
+              vue.renderList($data.showAdds, (item, index) => {
+                return vue.openBlock(), vue.createElementBlock("div", {
+                  style: { "background-color": "aliceblue", "margin-bottom": "20px", "display": "flex" },
+                  key: index
+                }, [
+                  vue.createElementVNode(
+                    "div",
+                    { class: "index-text" },
+                    vue.toDisplayString(index + 1),
+                    1
+                    /* TEXT */
+                  ),
+                  vue.createElementVNode("div", { style: { "background-color": "transparent", "padding": "20px" } }, [
+                    vue.createElementVNode("div", { style: { "display": "flex" } }, [
+                      vue.createElementVNode(
+                        "div",
+                        { class: "long-text" },
+                        " 地址：" + vue.toDisplayString(item.adds),
+                        1
+                        /* TEXT */
+                      )
+                    ]),
+                    vue.createElementVNode(
+                      "div",
+                      { class: "long-text" },
+                      " 128私钥：" + vue.toDisplayString(item.prv),
+                      1
+                      /* TEXT */
+                    ),
+                    vue.createElementVNode(
+                      "div",
+                      { class: "long-text" },
+                      " sol余额：" + vue.toDisplayString(item.solBal),
+                      1
+                      /* TEXT */
+                    ),
+                    vue.createElementVNode(
+                      "div",
+                      { class: "long-text" },
+                      " token余额：" + vue.toDisplayString(item.splBal),
+                      1
+                      /* TEXT */
+                    )
+                  ])
+                ]);
+              }),
+              128
+              /* KEYED_FRAGMENT */
+            ))
+          ], 40, ["scroll-top"]),
+          vue.createElementVNode("button", {
+            style: { "margin-top": "20px" },
+            onClick: _cache[4] || (_cache[4] = (...args) => $options.batchSolBalance && $options.batchSolBalance(...args)),
+            type: "primary"
+          }, " 批量检查SOL余额 "),
+          vue.createElementVNode("div", { style: { "margin-top": "20px", "display": "flex" } }, [
+            vue.createVNode(_component_uni_easyinput, {
+              type: "text",
+              modelValue: $data.batchBalanceToken,
+              "onUpdate:modelValue": _cache[5] || (_cache[5] = ($event) => $data.batchBalanceToken = $event),
+              placeholder: "合约地址数据",
+              maxlength: "-1"
+            }, null, 8, ["modelValue"]),
+            vue.createElementVNode("button", {
+              style: { "margin-left": "20px" },
+              onClick: _cache[6] || (_cache[6] = (...args) => $options.batchSPLBalance && $options.batchSPLBalance(...args)),
+              type: "primary"
+            }, " 批量检查Token余额 ")
+          ])
+        ]),
+        _: 1
+        /* STABLE */
+      }),
+      vue.createVNode(_component_uni_section, {
+        title: "多转一",
+        type: "line"
+      }, {
+        default: vue.withCtx(() => [
+          vue.createVNode(_component_uni_easyinput, {
+            type: "text",
+            modelValue: $data.addsjson,
+            "onUpdate:modelValue": _cache[7] || (_cache[7] = ($event) => $data.addsjson = $event),
+            placeholder: "归集地址",
+            maxlength: "-1"
+          }, null, 8, ["modelValue"])
+        ]),
+        _: 1
+        /* STABLE */
+      }),
+      vue.createVNode(_component_uni_section, {
+        title: "一转多",
+        type: "line"
+      }, {
+        default: vue.withCtx(() => [
+          vue.createVNode(_component_uni_easyinput, {
+            type: "text",
+            modelValue: $data.addsjson,
+            "onUpdate:modelValue": _cache[8] || (_cache[8] = ($event) => $data.addsjson = $event),
+            placeholder: "发送私钥",
+            maxlength: "-1"
+          }, null, 8, ["modelValue"])
+        ]),
+        _: 1
+        /* STABLE */
+      })
+    ]);
+  }
+  const PagesTranssignTranssign = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["render", _sfc_render], ["__file", "/Users/windpro/Documents/Code/cryptorobot_frontend/pages/transsign/transsign.vue"]]);
   __definePage("pages/index/index", PagesIndexIndex);
   __definePage("pages/adds_manager/adds_manager", PagesAdds_managerAdds_manager);
+  __definePage("pages/transsign/transsign", PagesTranssignTranssign);
   const _sfc_main = {
     onLaunch: function() {
       formatAppLog("log", "at App.vue:4", "App Launch");

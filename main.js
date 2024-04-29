@@ -6,15 +6,35 @@ import './uni.promisify.adaptor'
 Vue.config.productionTip = false
 App.mpType = 'app'
 
-Vue.prototype.$nav = function navTopath(path){
-    uni.navigateTo({
-        url:path,
-        fail(err){
-          console.log('navigateTo--err', err)
-        }
-    })
+const app = new Vue({
+	...App
+})
+app.$mount()
+
+
+// #endif
+
+// #ifdef VUE3
+import {
+	createSSRApp
+} from 'vue'
+const myApp function createApp() {
+	const app = createSSRApp(App)
+	return {
+		app
+	}
 }
-Vue.prototype.$toHex = function byteToHex(byte) {
+
+
+myApp.config.globalProperties.$nav = function navTopath(path) {
+	uni.navigateTo({
+		url: path,
+		fail(err) {
+			console.log('navigateTo--err', err)
+		}
+	})
+}
+myApp.config.globalProperties.$toHex = function byteToHex(byte) {
 	const key = '0123456789abcdef'
 	let bytes = new Uint8Array(byte)
 	let newHex = ''
@@ -28,7 +48,7 @@ Vue.prototype.$toHex = function byteToHex(byte) {
 	return newHex;
 }
 
-Vue.prototype.$toByte = function hexToByte(hex) {
+myApp.config.globalProperties.$toByte = function hexToByte(hex) {
 	const key = '0123456789abcdef'
 	let newBytes = []
 	let currentChar = 0
@@ -46,20 +66,5 @@ Vue.prototype.$toByte = function hexToByte(hex) {
 	return new Uint8Array(newBytes);
 }
 
-const app = new Vue({
-	...App
-})
-app.$mount()
-// #endif
-
-// #ifdef VUE3
-import {
-	createSSRApp
-} from 'vue'
-export function createApp() {
-	const app = createSSRApp(App)
-	return {
-		app
-	}
-}
+export myApp;
 // #endif
